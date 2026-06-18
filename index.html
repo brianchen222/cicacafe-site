@@ -114,10 +114,10 @@ nav.light .nav-cta:hover{background:var(--ink);color:var(--white)}
 .p-card-img{margin:-30px -26px 20px;overflow:hidden;background:#000;border-bottom:1px solid #2a2a2a}
 .p-card-img img{width:100%;display:block;aspect-ratio:1081/1251;object-fit:cover;transition:transform .6s ease,filter .45s ease,opacity .45s ease}
 .p-card:hover .p-card-img img{transform:scale(1.05)}
-/* 焦點一次集中一個：預設三張皆黑白；滑到的轉彩色，其餘維持黑白並變暗 */
-#sp-galaxy .p-card-img img{filter:grayscale(1)}
-#sp-galaxy .prod-grid:hover .p-card-img img{filter:grayscale(1);opacity:.45}
-#sp-galaxy .prod-grid .p-card:hover .p-card-img img{filter:grayscale(0);opacity:1}
+/* 焦點一次集中一個（銀河／城市等含主視覺的系列共用）：預設皆黑白；滑到的轉彩色，其餘維持黑白並變暗 */
+.p-card-img img{filter:grayscale(1)}
+.prod-grid:hover .p-card-img img{filter:grayscale(1);opacity:.45}
+.prod-grid .p-card:hover .p-card-img img{filter:grayscale(0);opacity:1}
 .p-card-name{font-size:clamp(16px,1.6vw,22px);font-weight:800;color:var(--white);margin-bottom:4px}
 .p-card-sub{font-size:11px;color:var(--ink-60);margin-bottom:14px;letter-spacing:.04em;line-height:1.5}
 .p-card-flavor{font-size:13px;color:var(--ink-40);line-height:1.7;margin-bottom:18px}
@@ -154,6 +154,10 @@ nav.light .nav-cta:hover{background:var(--ink);color:var(--white)}
 .phil-title{font-size:clamp(16px,1.6vw,22px);font-weight:700;margin-bottom:14px;margin-top:-6px}
 .phil-body{font-size:13px;color:var(--ink-60);line-height:1.9}
 .phil-ph{background:var(--mist);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:var(--ink-40);font-size:11px;letter-spacing:.12em}
+/* 命名哲學圖：預設黑白；桌機 hover 變彩色；手機(≤900px)滑到畫面中央變彩色 */
+.phil-img{filter:grayscale(1);transition:filter .55s ease}
+@media(hover:hover){ .phil-ph:hover .phil-img{filter:grayscale(0)} }
+@media(max-width:900px){ .phil-img.in-view{filter:grayscale(0)} }
 
 /* CLOSING */
 .closing{padding:140px 6vw;background:var(--ink);text-align:center}
@@ -214,7 +218,7 @@ footer{background:#000;border-top:1px solid #111;padding:44px 6vw}
   .footer-inner{flex-direction:column;align-items:flex-start}
   .prod-grid-4{grid-template-columns:1fr 1fr}
   /* 手機：產品滑到畫面中央時主視覺由黑白轉彩色，離開恢復黑白 */
-  #sp-galaxy .p-card.in-view .p-card-img img{filter:grayscale(0)!important;opacity:1!important}
+  .p-card.in-view .p-card-img img{filter:grayscale(0)!important;opacity:1!important}
 }
 @media(max-width:520px){
   .taste-grid,.prod-grid-4{grid-template-columns:1fr}
@@ -396,6 +400,7 @@ footer{background:#000;border-top:1px solid #111;padding:44px 6vw}
       </div>
       <div class="prod-grid prod-grid-3">
         <div class="p-card">
+          <div class="p-card-img"><img src="img/honus.jpg" alt="赫諾斯 01 主視覺" loading="lazy"></div>
           <div class="p-card-dot" style="background:#d4873a"></div>
           <p class="p-card-name">赫諾斯 01</p>
           <p class="p-card-sub">HONUS · 衣索比亞、瓜地馬拉、哥倫比亞、巴西 · 中焙</p>
@@ -404,6 +409,7 @@ footer{background:#000;border-top:1px solid #111;padding:44px 6vw}
           <p class="p-card-note">MLB 名人堂 Honus Wagner · 首席烘豆師個人宣言<br>早午餐代工 · 第三波咖啡館配豆首選</p>
         </div>
         <div class="p-card">
+          <div class="p-card-img"><img src="img/montreal.jpg" alt="蒙特婁 02 主視覺" loading="lazy"></div>
           <div class="p-card-dot" style="background:#b87a3a"></div>
           <p class="p-card-name">蒙特婁 02</p>
           <p class="p-card-sub">MONTREAL · 中焙 · 含低因羅布斯塔</p>
@@ -412,6 +418,7 @@ footer{background:#000;border-top:1px solid #111;padding:44px 6vw}
           <p class="p-card-note">加拿大城市意象 · 楓糖甜感<br>低因羅布斯塔比例精準，下午茶首選</p>
         </div>
         <div class="p-card">
+          <div class="p-card-img"><img src="img/ihola.jpg" alt="早安 03 主視覺" loading="lazy"></div>
           <div class="p-card-dot" style="background:#3d2a1a"></div>
           <p class="p-card-name">早安 03</p>
           <p class="p-card-sub">IHOLA · 印度、哥倫比亞 · 深焙</p>
@@ -440,6 +447,7 @@ footer{background:#000;border-top:1px solid #111;padding:44px 6vw}
       </div>
       <div class="prod-grid prod-grid-2">
         <div class="p-card">
+          <div class="p-card-img"><img src="img/kokoo.jpg" alt="可庫 主視覺" loading="lazy"></div>
           <div class="p-card-dot" style="background:#2a1a0a"></div>
           <p class="p-card-name">可庫</p>
           <p class="p-card-sub">KOKOO · 祕魯、薩爾瓦多、衣索比亞 · 中深焙</p>
@@ -448,6 +456,7 @@ footer{background:#000;border-top:1px solid #111;padding:44px 6vw}
           <p class="p-card-note">KOKOO 源自西非語的「可可」<br>🌿 有機 · 永續 · 雨林聯盟 · MAYACERT · HACCP 認證</p>
         </div>
         <div class="p-card">
+          <div class="p-card-img"><img src="img/fangfei.jpg" alt="芳菲 主視覺" loading="lazy"></div>
           <div class="p-card-dot" style="background:#4a7a5c"></div>
           <p class="p-card-name">芳菲</p>
           <p class="p-card-sub">FANGFEI · 中深焙</p>
@@ -476,6 +485,7 @@ footer{background:#000;border-top:1px solid #111;padding:44px 6vw}
       </div>
       <div class="prod-grid prod-grid-2">
         <div class="p-card">
+          <div class="p-card-img"><img src="img/freya.jpg" alt="芙蕾雅 主視覺" loading="lazy"></div>
           <div class="p-card-dot" style="background:#d4853a"></div>
           <p class="p-card-name">芙蕾雅</p>
           <p class="p-card-sub">FREYA · 北歐神話豐饒女神</p>
@@ -484,6 +494,7 @@ footer{background:#000;border-top:1px solid #111;padding:44px 6vw}
           <p class="p-card-note">象徵果實豐收的甜美與豐盛<br>午後輕食 · 水果塔搭配 · 美式 / 手沖皆宜</p>
         </div>
         <div class="p-card">
+          <div class="p-card-img"><img src="img/nysus.jpg" alt="尼修斯 主視覺" loading="lazy"></div>
           <div class="p-card-dot" style="background:#d4803a"></div>
           <p class="p-card-name">尼修斯</p>
           <p class="p-card-sub">NYSUS · 酒神戴奧尼修斯 · 中至中深焙</p>
@@ -650,7 +661,7 @@ footer{background:#000;border-top:1px solid #111;padding:44px 6vw}
         <h3 class="phil-title">命名哲學——每個名字都是一個世界</h3>
         <p class="phil-body">人物（Honus Wagner）、城市（紐約、蒙特婁）、神話（芙蕾雅、尼修斯）、銀河（火星、金星、獵戶座）——名字本身承載了風味設計師想傳達的精神座標。你不是在買一包豆，你是在選擇一個想進入的世界。</p>
       </div>
-      <div class="phil-ph">命名哲學 · 視覺</div>
+      <div class="phil-ph" style="background:#fff"><img src="img/naming-philosophy.jpg" class="phil-img" alt="命名哲學 視覺" loading="lazy" style="width:100%;height:100%;object-fit:contain;display:block"></div>
     </div>
     <div class="phil-block fi">
       <div class="phil-ph">風味意象 · 視覺</div>
@@ -720,7 +731,7 @@ const io = new IntersectionObserver(entries => {
 }, { threshold: 0.1 });
 document.querySelectorAll('.fi').forEach(el => io.observe(el));
 /* 手機：銀河系列產品滑到畫面中央 → 加 in-view（轉彩色），離開 → 移除（恢復黑白） */
-const galaxyCards = document.querySelectorAll('#sp-galaxy .p-card');
+const galaxyCards = document.querySelectorAll('#sp-galaxy .p-card, #sp-city .p-card, #sp-botanical .p-card, #sp-myth .p-card');
 if (galaxyCards.length) {
   const focusIO = new IntersectionObserver(entries => {
     entries.forEach(e => e.target.classList.toggle('in-view', e.isIntersecting));
@@ -738,6 +749,14 @@ if (giftCards.length) {
     /* 手機點按切換高亮（桌機 .sel 無對應樣式，不受影響） */
     c.addEventListener('click', () => c.classList.toggle('sel'));
   });
+}
+/* 命名哲學圖：手機滑到畫面中央 → in-view（轉彩色），離開 → 移除 */
+const philImgs = document.querySelectorAll('.phil-img');
+if (philImgs.length) {
+  const philIO = new IntersectionObserver(entries => {
+    entries.forEach(e => e.target.classList.toggle('in-view', e.isIntersecting));
+  }, { rootMargin: '-30% 0px -30% 0px', threshold: 0 });
+  philImgs.forEach(el => philIO.observe(el));
 }
 </script>
 </body>
