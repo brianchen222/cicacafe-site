@@ -186,6 +186,8 @@ footer{background:#000;border-top:1px solid #111;padding:44px 6vw}
   .pkg-explainer{grid-template-columns:1fr}
   .footer-inner{flex-direction:column;align-items:flex-start}
   .prod-grid-4{grid-template-columns:1fr 1fr}
+  /* 手機：產品滑到畫面中央時主視覺由黑白轉彩色，離開恢復黑白 */
+  #sp-galaxy .p-card.in-view .p-card-img img{filter:grayscale(0)!important;opacity:1!important}
 }
 @media(max-width:520px){
   .taste-grid,.prod-grid-4{grid-template-columns:1fr}
@@ -690,6 +692,14 @@ const io = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('v'); io.unobserve(e.target); } });
 }, { threshold: 0.1 });
 document.querySelectorAll('.fi').forEach(el => io.observe(el));
+/* 手機：銀河系列產品滑到畫面中央 → 加 in-view（轉彩色），離開 → 移除（恢復黑白） */
+const galaxyCards = document.querySelectorAll('#sp-galaxy .p-card');
+if (galaxyCards.length) {
+  const focusIO = new IntersectionObserver(entries => {
+    entries.forEach(e => e.target.classList.toggle('in-view', e.isIntersecting));
+  }, { rootMargin: '-38% 0px -38% 0px', threshold: 0 });
+  galaxyCards.forEach(c => focusIO.observe(c));
+}
 </script>
 </body>
 </html>
