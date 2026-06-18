@@ -193,8 +193,8 @@ footer{background:#000;border-top:1px solid #111;padding:44px 6vw}
   }
   .gift-card:hover .gift-btn{background:#f0e8c0;border-color:#f0e8c0;color:#0a0e2a;font-weight:600}
 }
-/* 手機/觸控（無 hover）：點按(.sel) 或 滑入畫面中央(.in-view) 時觸發 */
-@media(hover:none){
+/* 手機/窄螢幕（≤900px）：點按(.sel) 或 滑入畫面中央(.in-view) 時觸發 —— 改用寬度判斷較可靠，避免部分手機 hover:none 偵測失準 */
+@media(max-width:900px){
   .gift-card.in-view,.gift-card.sel{
     transform:translateY(-8px);
     background:rgba(22,26,55,.6)!important;
