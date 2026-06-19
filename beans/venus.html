@@ -132,9 +132,11 @@ body{font-family:var(--f);color:var(--ink);background:var(--white);-webkit-font-
 .collect-sub{font-size:13px;color:var(--ink-60);margin-bottom:28px}
 .collect-btn{display:inline-block;background:var(--ink);color:var(--white);font-size:14px;font-weight:700;letter-spacing:.08em;padding:16px 44px;border-radius:999px;text-decoration:none;transition:opacity .25s}
 .collect-btn:hover{opacity:.8}
-.share-row{display:flex;align-items:center;gap:16px;margin-top:18px;flex-wrap:wrap}
-.share-btn{font-family:inherit;font-size:13px;font-weight:700;letter-spacing:.04em;color:var(--ink);background:none;border:1px solid var(--ink-20);border-radius:999px;padding:11px 22px;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
-.share-btn:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.share-row{display:flex;align-items:center;gap:14px 18px;margin-top:18px;flex-wrap:wrap}
+.share-socials{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.share-label{font-size:12px;color:var(--ink-40);letter-spacing:.04em}
+.share-btn{font-family:inherit;font-size:12px;font-weight:700;letter-spacing:.04em;color:var(--ink);background:none;border:none;border-bottom:1px solid var(--ink-40);padding:0 0 1px;cursor:pointer;transition:color .2s,border-color .2s}
+.share-btn:hover{color:var(--ink-60);border-color:var(--ink-60)}
 .share-line{font-size:12px;font-weight:700;letter-spacing:.04em;color:var(--ink-60);text-decoration:none;border-bottom:1px solid var(--ink-20);transition:color .2s,border-color .2s}
 .share-line:hover{color:#06C755;border-color:#06C755}
 .share-fb:hover{color:#1877F2;border-color:#1877F2}
@@ -143,6 +145,7 @@ body{font-family:var(--f);color:var(--ink);background:var(--white);-webkit-font-
 .share-ig:hover{color:#E4405F;border-color:#E4405F}
 .share-copied{font-size:12px;color:var(--ink-40);opacity:0;transition:opacity .3s}
 .share-copied.show{opacity:1}
+@media(max-width:680px){.share-row{flex-direction:column;align-items:center;text-align:center;gap:16px}.share-socials{justify-content:center}}
 .pack-show{max-width:430px;margin:0 auto 34px}
 .pack-show img{width:100%;height:auto;display:block;filter:drop-shadow(0 26px 44px rgba(0,0,0,.18))}
 
@@ -220,6 +223,7 @@ body{font-family:var(--f);color:var(--ink);background:var(--white);-webkit-font-
   <section class="sec reveal">
     <p class="sec-label">命名 / The Name</p>
     <h2 class="sec-h">名字的由來</h2>
+    <p class="sec-text">延續「星球」系列的信念——好的濃縮，該像一顆飽滿的星球，有重量、也有溫度。金星，是其中最溫柔的那一顆。</p>
     <p class="sec-text">金星，從地球望去，是一顆乳白帶淡黃光澤的星——那正是這支咖啡在杯中的色澤與印象。</p>
     <p class="sec-text">它也是羅馬神話裡愛與美的女神維納斯：溫柔、豐饒，光芒卻令人難以忽視。一如 Espresso 的基底，既溫柔又堅定，穩定地給予每一杯支撐。</p>
     <p class="sec-text">編號 <strong>#1930</strong>，致敬 1930 年代——義式咖啡設備革新的探索年代（水平鍋爐、真空系統、摩卡壺），那是一段對品質與感官不斷實驗的時光。</p>
@@ -291,17 +295,20 @@ body{font-family:var(--f);color:var(--ink);background:var(--white);-webkit-font-
 
 <section class="collect reveal">
   <div class="collect-inner">
-    <div class="collect-img"><img src="../img/venus-pack.png" alt="金星 VENUS 半磅金獎咖啡豆包裝"></div>
+    <div class="collect-img"><img src="../img/venus-pack.png" alt="金星 VENUS 金獎咖啡豆包裝"></div>
     <div class="collect-copy">
       <h2 class="collect-h">收藏這件作品</h2>
-      <p class="collect-sub">金星 · 半磅 500g 金獎典藏——為你的每一杯，打下溫柔而穩定的底。</p>
+      <p class="collect-sub">金星・咖啡豆 250g／濾掛咖啡 金獎典藏——為你的每一杯，打下溫柔而穩定的底。</p>
       <a class="collect-btn" href="https://cicacafe.shop/?utm_source=cicacafe&utm_medium=referral&utm_campaign=shop&utm_content=bean_venus" target="_blank" rel="noopener noreferrer">前往選購 →</a>
       <div class="share-row">
-        <button type="button" class="share-btn" data-url="https://www.cicacafe.com.tw/beans/venus.html" data-title="金星 VENUS｜CICACAFE 風味藝廊" data-text="最溫柔的力量，是穩定。">分享這件作品</button>
-        <a class="share-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Fwww.cicacafe.com.tw%2Fbeans%2Fvenus.html" target="_blank" rel="noopener noreferrer">分享到 LINE</a>
+        <span class="share-label">喜歡嗎？分享給朋友</span>
+        <div class="share-socials">
+        <button type="button" class="share-btn" data-url="https://www.cicacafe.com.tw/beans/venus.html" data-title="金星 VENUS｜CICACAFE 風味藝廊" data-text="最溫柔的力量，是穩定。">分享 ↗</button>
+        <a class="share-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Fwww.cicacafe.com.tw%2Fbeans%2Fvenus.html" target="_blank" rel="noopener noreferrer">LINE</a>
         <a class="share-line share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.cicacafe.com.tw%2Fbeans%2Fvenus.html" target="_blank" rel="noopener noreferrer">Facebook</a>
         <a class="share-line share-x" href="https://twitter.com/intent/tweet?text=%E6%9C%80%E6%BA%AB%E6%9F%94%E7%9A%84%E5%8A%9B%E9%87%8F%EF%BC%8C%E6%98%AF%E7%A9%A9%E5%AE%9A%E3%80%82%20&url=https%3A%2F%2Fwww.cicacafe.com.tw%2Fbeans%2Fvenus.html" target="_blank" rel="noopener noreferrer">X</a>
-        <button type="button" class="share-line share-ig" data-url="https://www.cicacafe.com.tw/beans/venus.html" data-title="金星 VENUS｜CICACAFE 風味藝廊" data-text="最溫柔的力量，是穩定。" data-msg="已複製連結 · 在手機可分享到 IG 限動">Instagram</button>
+        <button type="button" class="share-line share-ig" data-url="https://www.cicacafe.com.tw/beans/venus.html" data-title="金星 VENUS｜CICACAFE 風味藝廊" data-text="最溫柔的力量，是穩定。" data-msg="已複製連結 · 在手機可分享到 IG 限動">IG</button>
+        </div>
         <span class="share-copied">已複製連結 ✓</span>
       </div>
     </div>

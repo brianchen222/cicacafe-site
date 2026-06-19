@@ -132,9 +132,11 @@ body{font-family:var(--f);color:var(--ink);background:var(--white);-webkit-font-
 .collect-sub{font-size:13px;color:var(--ink-60);margin-bottom:28px}
 .collect-btn{display:inline-block;background:var(--ink);color:var(--white);font-size:14px;font-weight:700;letter-spacing:.08em;padding:16px 44px;border-radius:999px;text-decoration:none;transition:opacity .25s}
 .collect-btn:hover{opacity:.8}
-.share-row{display:flex;align-items:center;gap:16px;margin-top:18px;flex-wrap:wrap}
-.share-btn{font-family:inherit;font-size:13px;font-weight:700;letter-spacing:.04em;color:var(--ink);background:none;border:1px solid var(--ink-20);border-radius:999px;padding:11px 22px;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
-.share-btn:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.share-row{display:flex;align-items:center;gap:14px 18px;margin-top:18px;flex-wrap:wrap}
+.share-socials{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.share-label{font-size:12px;color:var(--ink-40);letter-spacing:.04em}
+.share-btn{font-family:inherit;font-size:12px;font-weight:700;letter-spacing:.04em;color:var(--ink);background:none;border:none;border-bottom:1px solid var(--ink-40);padding:0 0 1px;cursor:pointer;transition:color .2s,border-color .2s}
+.share-btn:hover{color:var(--ink-60);border-color:var(--ink-60)}
 .share-line{font-size:12px;font-weight:700;letter-spacing:.04em;color:var(--ink-60);text-decoration:none;border-bottom:1px solid var(--ink-20);transition:color .2s,border-color .2s}
 .share-line:hover{color:#06C755;border-color:#06C755}
 .share-fb:hover{color:#1877F2;border-color:#1877F2}
@@ -143,6 +145,7 @@ body{font-family:var(--f);color:var(--ink);background:var(--white);-webkit-font-
 .share-ig:hover{color:#E4405F;border-color:#E4405F}
 .share-copied{font-size:12px;color:var(--ink-40);opacity:0;transition:opacity .3s}
 .share-copied.show{opacity:1}
+@media(max-width:680px){.share-row{flex-direction:column;align-items:center;text-align:center;gap:16px}.share-socials{justify-content:center}}
 .pack-show{max-width:430px;margin:0 auto 34px}
 .pack-show img{width:100%;height:auto;display:block;filter:drop-shadow(0 26px 44px rgba(0,0,0,.18))}
 
@@ -220,8 +223,8 @@ body{font-family:var(--f);color:var(--ink);background:var(--white);-webkit-font-
   <section class="sec reveal">
     <p class="sec-label">命名 / The Name</p>
     <h2 class="sec-h">名字的由來</h2>
-    <p class="sec-text">火星，是夜空裡最有侵略性的一顆星，也是羅馬神話的戰神 Mars。</p>
-    <p class="sec-text">紅是火、是熱血、是爆發。我們把這支力量最飽滿的得獎濃縮命名為火星，因為它喝起來，正是那種紅色的、毫不退讓的能量——像引擎點火，像倒數歸零後的升空。</p>
+    <p class="sec-text">火星，是這個以「星球」命名的系列起點。我們相信，一杯出色的濃縮，應該同時擁有能量的衝擊力，又能圓潤滑順地在口中展開——像一顆飽滿、扎實而溫暖的球體。</p>
+    <p class="sec-text">當我們以 2024 ICT 金獎豆萃出濃縮，那股橘紅色的活力、豐沛的甜感與溫熱的能量，彷彿就是「火星」給人的直覺印象——熱烈、堅定、充滿生命力。所以，我們給它一個名字：火星。</p>
   </section>
 
   <section class="pullquote-band reveal lit-media">
@@ -290,17 +293,20 @@ body{font-family:var(--f);color:var(--ink);background:var(--white);-webkit-font-
 
 <section class="collect reveal">
   <div class="collect-inner">
-    <div class="collect-img"><img src="../img/mars-pack.png" alt="火星 MARS 半磅金獎咖啡豆包裝"></div>
+    <div class="collect-img"><img src="../img/mars-pack.png" alt="火星 MARS 金獎咖啡豆包裝"></div>
     <div class="collect-copy">
       <h2 class="collect-h">收藏這件作品</h2>
-      <p class="collect-sub">火星・半磅 500g 金獎典藏——把第一口的震撼帶回家。</p>
+      <p class="collect-sub">火星・咖啡豆 250g／濾掛咖啡 金獎典藏——把第一口的震撼帶回家。</p>
       <a class="collect-btn" href="https://cicacafe.shop/?utm_source=cicacafe&utm_medium=referral&utm_campaign=shop&utm_content=bean_mars" target="_blank" rel="noopener noreferrer">前往選購 →</a>
       <div class="share-row">
-        <button type="button" class="share-btn" data-url="https://www.cicacafe.com.tw/beans/mars.html" data-title="火星 MARS｜CICACAFE 風味藝廊" data-text="第一口，像一顆星球在味蕾上爆炸。">分享這件作品</button>
-        <a class="share-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Fwww.cicacafe.com.tw%2Fbeans%2Fmars.html" target="_blank" rel="noopener noreferrer">分享到 LINE</a>
+        <span class="share-label">喜歡嗎？分享給朋友</span>
+        <div class="share-socials">
+        <button type="button" class="share-btn" data-url="https://www.cicacafe.com.tw/beans/mars.html" data-title="火星 MARS｜CICACAFE 風味藝廊" data-text="第一口，像一顆星球在味蕾上爆炸。">分享 ↗</button>
+        <a class="share-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Fwww.cicacafe.com.tw%2Fbeans%2Fmars.html" target="_blank" rel="noopener noreferrer">LINE</a>
         <a class="share-line share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.cicacafe.com.tw%2Fbeans%2Fmars.html" target="_blank" rel="noopener noreferrer">Facebook</a>
         <a class="share-line share-x" href="https://twitter.com/intent/tweet?text=%E7%AC%AC%E4%B8%80%E5%8F%A3%EF%BC%8C%E5%83%8F%E4%B8%80%E9%A1%86%E6%98%9F%E7%90%83%E5%9C%A8%E5%91%B3%E8%95%BE%E4%B8%8A%E7%88%86%E7%82%B8%E3%80%82%20&url=https%3A%2F%2Fwww.cicacafe.com.tw%2Fbeans%2Fmars.html" target="_blank" rel="noopener noreferrer">X</a>
-        <button type="button" class="share-line share-ig" data-url="https://www.cicacafe.com.tw/beans/mars.html" data-title="火星 MARS｜CICACAFE 風味藝廊" data-text="第一口，像一顆星球在味蕾上爆炸。" data-msg="已複製連結 · 在手機可分享到 IG 限動">Instagram</button>
+        <button type="button" class="share-line share-ig" data-url="https://www.cicacafe.com.tw/beans/mars.html" data-title="火星 MARS｜CICACAFE 風味藝廊" data-text="第一口，像一顆星球在味蕾上爆炸。" data-msg="已複製連結 · 在手機可分享到 IG 限動">IG</button>
+        </div>
         <span class="share-copied">已複製連結 ✓</span>
       </div>
     </div>

@@ -132,9 +132,11 @@ body{font-family:var(--f);color:var(--ink);background:var(--white);-webkit-font-
 .collect-sub{font-size:13px;color:var(--ink-60);margin-bottom:28px}
 .collect-btn{display:inline-block;background:var(--ink);color:var(--white);font-size:14px;font-weight:700;letter-spacing:.08em;padding:16px 44px;border-radius:999px;text-decoration:none;transition:opacity .25s}
 .collect-btn:hover{opacity:.8}
-.share-row{display:flex;align-items:center;gap:16px;margin-top:18px;flex-wrap:wrap}
-.share-btn{font-family:inherit;font-size:13px;font-weight:700;letter-spacing:.04em;color:var(--ink);background:none;border:1px solid var(--ink-20);border-radius:999px;padding:11px 22px;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
-.share-btn:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.share-row{display:flex;align-items:center;gap:14px 18px;margin-top:18px;flex-wrap:wrap}
+.share-socials{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.share-label{font-size:12px;color:var(--ink-40);letter-spacing:.04em}
+.share-btn{font-family:inherit;font-size:12px;font-weight:700;letter-spacing:.04em;color:var(--ink);background:none;border:none;border-bottom:1px solid var(--ink-40);padding:0 0 1px;cursor:pointer;transition:color .2s,border-color .2s}
+.share-btn:hover{color:var(--ink-60);border-color:var(--ink-60)}
 .share-line{font-size:12px;font-weight:700;letter-spacing:.04em;color:var(--ink-60);text-decoration:none;border-bottom:1px solid var(--ink-20);transition:color .2s,border-color .2s}
 .share-line:hover{color:#06C755;border-color:#06C755}
 .share-fb:hover{color:#1877F2;border-color:#1877F2}
@@ -143,6 +145,7 @@ body{font-family:var(--f);color:var(--ink);background:var(--white);-webkit-font-
 .share-ig:hover{color:#E4405F;border-color:#E4405F}
 .share-copied{font-size:12px;color:var(--ink-40);opacity:0;transition:opacity .3s}
 .share-copied.show{opacity:1}
+@media(max-width:680px){.share-row{flex-direction:column;align-items:center;text-align:center;gap:16px}.share-socials{justify-content:center}}
 .pack-show{max-width:430px;margin:0 auto 34px}
 .pack-show img{width:100%;height:auto;display:block;filter:drop-shadow(0 26px 44px rgba(0,0,0,.18))}
 
@@ -220,6 +223,7 @@ body{font-family:var(--f);color:var(--ink);background:var(--white);-webkit-font-
   <section class="sec reveal">
     <p class="sec-label">命名 / The Name</p>
     <h2 class="sec-h">名字的由來</h2>
+    <p class="sec-text">同樣以「星球」為名——這個系列相信，出色的濃縮該像一片星空，有層次、也有生命力。獵戶座，是其中最絢爛的一隅。</p>
     <p class="sec-text">獵戶座星雲，在多數時刻的觀測裡，呈現的是一片紫紅。這支單一產區、混合多種處理法的綜合豆，風味的印象正是如此——層疊、流動、帶著紫紅般的浪漫。</p>
     <p class="sec-text">編號 <strong>#1955</strong>，致敬 1955 年——這一年 La Cimbali 推出革命性的 Granluce，以液壓系統達到約 9 bar 的壓力，讓濃縮萃取更有效率、也更美好。那是義式濃縮走向自動化、走進千家萬戶的關鍵轉捩點。</p>
   </section>
@@ -290,17 +294,20 @@ body{font-family:var(--f);color:var(--ink);background:var(--white);-webkit-font-
 
 <section class="collect reveal">
   <div class="collect-inner">
-    <div class="collect-img"><img src="../img/orion-pack.png" alt="獵戶座 ORION 半磅金獎咖啡豆包裝"></div>
+    <div class="collect-img"><img src="../img/orion-pack.png" alt="獵戶座 ORION 金獎咖啡豆包裝"></div>
     <div class="collect-copy">
       <h2 class="collect-h">收藏這件作品</h2>
-      <p class="collect-sub">獵戶座 · 半磅 500g 金獎典藏——把一整片星雲的層次，帶回杯中。</p>
+      <p class="collect-sub">獵戶座・咖啡豆 250g／濾掛咖啡 金獎典藏——把一整片星雲的層次，帶回杯中。</p>
       <a class="collect-btn" href="https://cicacafe.shop/?utm_source=cicacafe&utm_medium=referral&utm_campaign=shop&utm_content=bean_orion" target="_blank" rel="noopener noreferrer">前往選購 →</a>
       <div class="share-row">
-        <button type="button" class="share-btn" data-url="https://www.cicacafe.com.tw/beans/orion.html" data-title="獵戶座 ORION｜CICACAFE 風味藝廊" data-text="紫紅色的星雲，落進一杯裡。">分享這件作品</button>
-        <a class="share-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Fwww.cicacafe.com.tw%2Fbeans%2Forion.html" target="_blank" rel="noopener noreferrer">分享到 LINE</a>
+        <span class="share-label">喜歡嗎？分享給朋友</span>
+        <div class="share-socials">
+        <button type="button" class="share-btn" data-url="https://www.cicacafe.com.tw/beans/orion.html" data-title="獵戶座 ORION｜CICACAFE 風味藝廊" data-text="紫紅色的星雲，落進一杯裡。">分享 ↗</button>
+        <a class="share-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Fwww.cicacafe.com.tw%2Fbeans%2Forion.html" target="_blank" rel="noopener noreferrer">LINE</a>
         <a class="share-line share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.cicacafe.com.tw%2Fbeans%2Forion.html" target="_blank" rel="noopener noreferrer">Facebook</a>
         <a class="share-line share-x" href="https://twitter.com/intent/tweet?text=%E7%B4%AB%E7%B4%85%E8%89%B2%E7%9A%84%E6%98%9F%E9%9B%B2%EF%BC%8C%E8%90%BD%E9%80%B2%E4%B8%80%E6%9D%AF%E8%A3%A1%E3%80%82%20&url=https%3A%2F%2Fwww.cicacafe.com.tw%2Fbeans%2Forion.html" target="_blank" rel="noopener noreferrer">X</a>
-        <button type="button" class="share-line share-ig" data-url="https://www.cicacafe.com.tw/beans/orion.html" data-title="獵戶座 ORION｜CICACAFE 風味藝廊" data-text="紫紅色的星雲，落進一杯裡。" data-msg="已複製連結 · 在手機可分享到 IG 限動">Instagram</button>
+        <button type="button" class="share-line share-ig" data-url="https://www.cicacafe.com.tw/beans/orion.html" data-title="獵戶座 ORION｜CICACAFE 風味藝廊" data-text="紫紅色的星雲，落進一杯裡。" data-msg="已複製連結 · 在手機可分享到 IG 限動">IG</button>
+        </div>
         <span class="share-copied">已複製連結 ✓</span>
       </div>
     </div>
