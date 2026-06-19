@@ -100,6 +100,17 @@ body{font-family:var(--f);color:var(--ink);background:var(--white);-webkit-font-
 .timecode-num{font-size:clamp(34px,5vw,58px);font-weight:300;letter-spacing:.2em;color:var(--ink);line-height:1}
 .timecode-cap{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-40);margin-bottom:18px}
 .timecode-badge{display:inline-block;margin-top:22px;font-size:12px;letter-spacing:.14em;font-weight:700;color:var(--ink);border:1px solid var(--ink-20);border-radius:999px;padding:9px 20px}
+.award-row{display:flex;align-items:center;gap:34px;margin-top:8px}
+.award-badge{flex:0 0 150px}
+.award-badge img{width:150px;height:150px;border-radius:50%;display:block}
+.award-info{flex:1}
+.award-score{font-size:clamp(40px,7vw,68px);font-weight:700;line-height:1;color:var(--ink)}
+.award-score small{font-size:.36em;font-weight:300;color:var(--ink-40);letter-spacing:.05em}
+.award-meta{font-size:13px;color:var(--ink-60);line-height:1.95;margin-top:14px}
+.award-cert{margin:34px auto 0;max-width:720px;background:var(--mist);padding:22px;border:1px solid var(--fog)}
+.award-cert img{width:100%;display:block}
+.award-cert figcaption{font-size:11px;letter-spacing:.1em;color:var(--ink-40);text-align:center;margin-top:14px}
+@media(max-width:680px){.award-row{flex-direction:column;text-align:center;gap:20px}.award-badge{flex:auto}}
 
 /* RELATED */
 .related{border-top:1px solid var(--fog);padding:64px 6vw 20px;max-width:1080px;margin:0 auto}
@@ -207,7 +218,7 @@ body{font-family:var(--f);color:var(--ink);background:var(--white);-webkit-font-
     <div class="flavor-row">
       <div class="flavor-copy">
       <h2 class="sec-h">想呈現的個性</h2>
-    <p class="sec-text">它不溫吞。領銜的是<strong>烏梅</strong>——深沉、回甘、帶著時間醞釀過的酸甜，像炸開後緩緩沉降的星塵。其後是麥芽與可可的層次堆疊，酒體紮實飽滿，尾韻悠長帶餘溫。第一口是衝擊，最後一口是回甘——最烈，也最值得回味的那道光。</p>
+    <p class="sec-text">它不溫吞。領銜的是<strong>煙燻烏梅與棗蜜</strong>——深沉回甘、帶著時間醞釀過的酸甜，像冬日木屋裡慢火熬煮的一壺果蜜茶。其後是麥芽糖、巧克力與杉木的層次堆疊，醇厚低酸、酒體紮實，收於堅果木質的悠長尾韻。第一口是衝擊，最後一口是回甘——最烈，也最值得回味的那道光。</p>
     <div class="flavor-tags">
       <span class="ftag lead">烏梅 · Smoked Plum</span>
       <span class="ftag">麥芽 · Malt</span>
@@ -229,12 +240,27 @@ body{font-family:var(--f);color:var(--ink);background:var(--white);-webkit-font-
   </section>
 
   <section class="sec reveal">
+    <p class="sec-label">得獎認證 / The Award</p>
+    <h2 class="sec-h">92.10 分，金獎的重量</h2>
+    <div class="award-row">
+      <div class="award-badge"><img src="../img/mars-award-badge.jpg" alt="IIAC International Coffee Tasting 2024 Gold Medal 金牌標章"></div>
+      <div class="award-info">
+        <p class="award-score">92.10<small> / 100</small></p>
+        <p class="award-meta">International Coffee Tasting 2024 — Gold Medal<br>Category E · Espresso Blend（義式濃縮拼配組）<br>單場排名前 25% 方授予金獎</p>
+      </div>
+    </div>
+    <figure class="award-cert">
+      <img src="../img/mars-cert.jpg" alt="火星 MARS 2024 IIAC 國際咖啡品鑑金獎獎狀">
+      <figcaption>IIAC 金獎獎狀 · Brescia, Italy · 2024.10.20</figcaption>
+    </figure>
+  </section>
+
+  <section class="sec reveal">
     <p class="sec-label">編號 / The Code</p>
     <h2 class="sec-h">時間代碼的意義</h2>
     <div class="timecode">
-      <p class="timecode-cap">2024 International Coffee Tasting · Gold Medal（ICT）</p>
+      <p class="timecode-cap">得獎日 · Awarded</p>
       <p class="timecode-num">2024 · 10 · 20</p>
-      <p class="timecode-badge">義大利 ICT 金獎認證</p>
     </div>
     <p class="sec-text" style="margin-top:26px">這支的典藏編號，不用流水號，而是得獎的那一天——<strong>2024.10.20</strong>。那是 CICACAFE 第一次把自己送上賽場、也第一次帶回獎的日子。把這個日期刻進編號裡，是讓每一位收藏的人都記得：品牌是從這一刻、帶著火星這一杯，開始被世界看見的。</p>
   </section>
