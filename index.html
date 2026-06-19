@@ -143,8 +143,29 @@ nav.light .nav-cta:hover{background:var(--ink);color:var(--white)}
 .p-card:hover{background:#1c1c1c}
 .p-card-dot{width:24px;height:24px;border-radius:50%;margin-bottom:14px;opacity:.7}
 .p-card-img{margin:-30px -26px 20px;overflow:hidden;background:#000;border-bottom:1px solid #2a2a2a}
-.p-card-img img{width:100%;display:block;aspect-ratio:1081/1251;object-fit:cover;transition:transform .6s ease,filter .45s ease,opacity .45s ease}
-.p-card:hover .p-card-img img{transform:scale(1.05)}
+.p-card-img img{width:100%;display:block;aspect-ratio:1/1;object-fit:cover;transform-origin:left bottom;transition:transform .6s ease,filter .45s ease,opacity .45s ease}
+.p-card:hover .p-card-img img{transform:scale(1.04)}
+/* 銀河系列主視覺為直式，維持原比例避免上下裁切 */
+#sp-galaxy .p-card-img img{aspect-ratio:900/1042}
+/* 系列導覽提示帶 */
+.series-more{background:var(--mist);border-top:1px solid var(--fog)}
+.series-more-inner{max-width:1100px;margin:0 auto;padding:64px 6vw 72px;text-align:center}
+.series-more-lbl{font-size:10px;letter-spacing:.24em;color:var(--ink-40);text-transform:uppercase;margin-bottom:16px}
+.series-more-h2{font-size:clamp(20px,2.6vw,32px);font-weight:800;color:var(--ink);line-height:1.35;margin-bottom:14px}
+.series-more-body{font-size:13px;color:var(--ink-60);line-height:1.85;max-width:520px;margin:0 auto 34px}
+.series-more-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.sm-chip{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border:1px solid var(--fog);border-radius:999px;background:#fff;color:var(--ink);font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;transition:background .25s ease,color .25s ease,border-color .25s ease,transform .25s ease}
+.sm-chip-n{font-size:10px;font-weight:700;letter-spacing:.08em;color:var(--ink-40);transition:color .25s ease}
+.sm-chip:hover{background:var(--ink);color:#fff;border-color:var(--ink);transform:translateY(-2px)}
+.sm-chip:hover .sm-chip-n{color:rgba(255,255,255,.6)}
+/* 已瀏覽過的系列：膠囊點亮（黑底白字＋勾選） */
+.sm-chip.visited{background:var(--ink);color:#fff;border-color:var(--ink)}
+.sm-chip.visited .sm-chip-n{color:rgba(255,255,255,.55)}
+.sm-chip.visited::after{content:"✓";font-size:11px;font-weight:700;margin-left:2px;color:rgba(255,255,255,.85)}
+.sm-chip.visited:hover{transform:translateY(-2px)}
+/* 目前正在看的系列：加咖啡色點標記 */
+.sm-chip.current .sm-chip-n{color:#b88a4a}
+.sm-chip.current.visited .sm-chip-n{color:#e0b878}
 /* 焦點一次集中一個（銀河／城市等含主視覺的系列共用）：預設皆黑白；滑到的轉彩色，其餘維持黑白並變暗 */
 .p-card-img img{filter:grayscale(1)}
 .prod-grid:hover .p-card-img img{filter:grayscale(1);opacity:.45}
@@ -630,6 +651,22 @@ footer{background:#000;border-top:1px solid #111;padding:44px 6vw}
   </div>
 </section>
 
+<!-- SERIES PROGRESS NUDGE：提醒還有其他系列尚未瀏覽 -->
+<section class="series-more">
+  <div class="series-more-inner fi">
+    <p class="series-more-lbl">還沒看完</p>
+    <h2 class="series-more-h2">五個系列，你才剛走進其中一個世界。</h2>
+    <p class="series-more-body">每一個系列，都是一組完整的風味宇宙。點選下方系列，回到上方繼續探索——別錯過任何一支作品。</p>
+    <div class="series-more-chips">
+      <button type="button" class="sm-chip" data-series="galaxy" onclick="goSeries('galaxy')"><span class="sm-chip-n">01</span>銀河系列</button>
+      <button type="button" class="sm-chip" data-series="city" onclick="goSeries('city')"><span class="sm-chip-n">02</span>城市生活系列</button>
+      <button type="button" class="sm-chip" data-series="botanical" onclick="goSeries('botanical')"><span class="sm-chip-n">03</span>自然植物系列</button>
+      <button type="button" class="sm-chip" data-series="myth" onclick="goSeries('myth')"><span class="sm-chip-n">04</span>人物神話系列</button>
+      <button type="button" class="sm-chip" data-series="single" onclick="goSeries('single')"><span class="sm-chip-n">05</span>手沖單品系列</button>
+    </div>
+  </div>
+</section>
+
 <!-- GIFT BOX ENTRY -->
 <section style="position:relative;overflow:hidden;min-height:80vh;display:flex;align-items:center">
 
@@ -753,14 +790,63 @@ footer{background:#000;border-top:1px solid #111;padding:44px 6vw}
 </footer>
 
 <script>
+/* 系列瀏覽進度：點亮對應膠囊 */
+function markSeriesVisited(id) {
+  var chip = document.querySelector('.sm-chip[data-series="' + id + '"]');
+  if (chip) chip.classList.add('visited');
+}
+function setSeriesCurrent(id) {
+  document.querySelectorAll('.sm-chip.current').forEach(function (c) { c.classList.remove('current'); });
+  var chip = document.querySelector('.sm-chip[data-series="' + id + '"]');
+  if (chip) chip.classList.add('current');
+}
+
 function sw(id, btn) {
   document.querySelectorAll('.s-panel').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.s-btn').forEach(b => b.classList.remove('active'));
   document.getElementById('sp-' + id).classList.add('active');
   btn.classList.add('active');
+  markSeriesVisited(id);
+  setSeriesCurrent(id);
   /* C：點選後把該頁籤滑到可視中央（手機橫滑時不會卡在邊緣） */
   btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
 }
+/* 系列提示帶：點膠囊 → 切到該系列並捲回系列區 */
+function goSeries(id) {
+  var btn = Array.prototype.slice.call(document.querySelectorAll('.series-nav .s-btn'))
+    .find(function (b) {
+      var oc = b.getAttribute('onclick') || '';
+      return oc.indexOf("'" + id + "'") > -1;
+    });
+  var sec = document.getElementById('products');
+  if (sec) sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  if (btn) {
+    document.querySelectorAll('.s-panel').forEach(function (p) { p.classList.remove('active'); });
+    document.querySelectorAll('.s-btn').forEach(function (b) { b.classList.remove('active'); });
+    document.getElementById('sp-' + id).classList.add('active');
+    btn.classList.add('active');
+  }
+  markSeriesVisited(id);
+  setSeriesCurrent(id);
+}
+/* 進入系列區時，把當前顯示中的系列標記為已瀏覽（讓預設的銀河系列在抵達時點亮） */
+(function () {
+  var sec = document.getElementById('products');
+  if (!sec || !('IntersectionObserver' in window)) return;
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) {
+        var active = document.querySelector('.s-panel.active');
+        if (active) {
+          var id = active.id.replace('sp-', '');
+          markSeriesVisited(id);
+          setSeriesCurrent(id);
+        }
+      }
+    });
+  }, { threshold: 0.25 });
+  io.observe(sec);
+})();
 const nav = document.getElementById('nav');
 /* 手機漢堡選單開合 */
 const navToggle = document.querySelector('.nav-toggle');
