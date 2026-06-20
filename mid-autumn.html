@@ -35,7 +35,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .ntog{font-size:12px;font-weight:500;letter-spacing:.04em;padding:7px 16px;border-radius:999px;text-decoration:none;color:var(--gold-lt);border:1px solid var(--gold);background:transparent;transition:background .25s,color .25s,border-color .25s}
 .ntog.on{color:#0c0a12;background:var(--gold);border-color:var(--gold)}
 .ntog:hover{border-color:var(--gold-lt)}
-@media(max-width:760px){.nav-toggle{display:none}}
+@media(max-width:760px){.nav-toggle{display:flex;gap:6px}.ntog{font-size:11px;padding:6px 12px;letter-spacing:.02em}.nav-order{display:none}}
+@media(max-width:380px){.ntog{padding:6px 10px;font-size:10.5px}.nav-r{gap:10px}}
 @media(max-width:680px){.nav-back{display:none}.nav-sub{display:none}}
 /* hero */
 .hero{position:relative;min-height:96vh;display:flex;align-items:center;overflow:hidden}
@@ -112,6 +113,26 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
  .tl-node::before{top:21px;left:4px;transform:translate(-50%,-50%)}
  .tl-cap{display:inline;margin-left:10px}
 }
+/* 特展海報 × 預購時程（圖文合併區）*/
+.poster-band{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:84px 0;overflow:hidden}
+.feat-grid{display:grid;grid-template-columns:.94fr 1.06fr;gap:6vw;align-items:center}
+.feat-img{min-width:0}
+.poster-frame{position:relative;border-radius:12px;overflow:hidden;box-shadow:0 26px 64px rgba(0,0,0,.22);transform:translateY(26px) scale(.98);opacity:0;transition:opacity 1s ease,transform 1s ease}
+.poster-frame.in{opacity:1;transform:none}
+.poster-frame img{width:100%;display:block}
+.poster-cap{font-size:13.5px;color:var(--silver);letter-spacing:.06em;font-weight:300}
+.feat-cue{display:inline-block;margin-left:10px;font-size:18px;color:var(--gold-lt);text-decoration:none;animation:posterCue 1.8s ease-in-out infinite}
+@keyframes posterCue{0%,100%{transform:translateY(0);opacity:.55}50%{transform:translateY(5px);opacity:1}}
+.vtl{list-style:none;position:relative;margin:28px 0 0;padding-left:26px}
+.vtl::before{content:"";position:absolute;left:4px;top:9px;bottom:9px;width:1px;background:var(--line)}
+.vtl li{position:relative;padding:10px 0}
+.vtl li::before{content:"";position:absolute;left:0;top:18px;width:9px;height:9px;border-radius:50%;background:var(--dim)}
+.vtl li.hot::before{background:var(--gold);width:11px;height:11px;left:-1px;box-shadow:0 0 0 4px rgba(201,162,75,.18)}
+.vtl .d{font-size:15px;font-weight:500;color:var(--white);letter-spacing:.03em;margin-right:12px}
+.vtl li.hot .d{color:var(--gold-lt)}
+.vtl .c{font-size:13px;color:var(--silver);font-weight:300}
+@media(max-width:860px){.feat-grid{grid-template-columns:1fr;gap:30px}.feat-img{order:2}.feat-txt{order:1}}
+@media(max-width:680px){.poster-band{padding:58px 0}}
 /* B2B band */
 .band{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .path{display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.2em;color:var(--gold-lt);text-transform:uppercase;margin-bottom:22px;font-weight:400}
@@ -278,7 +299,6 @@ footer a{font-size:12px;color:var(--silver);text-decoration:none;font-weight:300
 .mcta.show{transform:translateY(0)}
 .mcta a{flex:1;text-align:center;font-size:13px;font-weight:500;letter-spacing:.06em;padding:13px 8px;border-radius:999px;text-decoration:none;color:var(--gold-lt);border:1px solid var(--gold);background:transparent;transition:background .3s,color .3s,border-color .3s}
 .mcta a.on{color:#0c0a12;background:var(--gold);border-color:var(--gold)}
-@media(max-width:760px){.mcta{display:flex}body{padding-bottom:66px}}
 /* themes */
 :root{--bg:#ffffff;--panel:#faf9f6;--panel2:#ffffff;--gold:#b1862f;--gold-lt:#8f6c1c;--white:#1b1b1b;--silver:rgba(28,28,28,.66);--dim:rgba(28,28,28,.4);--line:rgba(0,0,0,.12);--save:#3f8f55;--navbg:rgba(255,255,255,.9)}
 body.t-cream{--bg:#f4ede0;--panel:#fbf6ec;--panel2:#fbf5ea;--gold:#b1862f;--gold-lt:#9a6f17;--white:#241c12;--silver:rgba(36,28,18,.7);--dim:rgba(36,28,18,.42);--line:rgba(122,92,40,.2);--navbg:rgba(247,241,229,.9)}
@@ -364,7 +384,7 @@ nav,.mcta{background:var(--navbg)}
   <div class="stat-strip">
     <div class="stat"><div class="num">35<small>年</small></div><div class="cap">咖啡專業背景</div></div>
     <div class="stat"><div class="num">8<small>位</small></div><div class="cap">CQI Q Grader 杯測團隊</div></div>
-    <div class="stat"><div class="num">2<small>×</small></div><div class="cap">IIAC 義大利國際金獎</div></div>
+    <div class="stat"><div class="num">3<small>×</small></div><div class="cap">IIAC 義大利國際金獎</div></div>
     <div class="stat"><div class="num">唯一</div><div class="cap">台灣 IIAC 課程豆供應資格</div></div>
   </div>
   <div class="orbs">
@@ -374,17 +394,24 @@ nav,.mcta{background:var(--navbg)}
   </div>
 </div></section>
 
-<!-- 預購時程 -->
-<section class="sec" style="padding-top:0"><div class="wrap narrow reveal" style="margin:0 auto">
-  <p class="eyebrow center">預購時程 · 2026 中秋（09/25）</p>
-  <h2 class="h2 center">什麼時候下單、什麼時候出貨</h2>
-  <div class="tl">
-    <div class="tl-node hot"><div class="tl-date">07/31 前</div><div class="tl-cap">超早鳥優惠</div></div>
-    <div class="tl-node"><div class="tl-date">09/01 起</div><div class="tl-cap">陸續出貨</div></div>
-    <div class="tl-node"><div class="tl-date">09/10 前</div><div class="tl-cap">早鳥優惠</div></div>
-    <div class="tl-node hot"><div class="tl-date">09/18</div><div class="tl-cap">最後訂購日</div></div>
-    <div class="tl-node"><div class="tl-date">09/21</div><div class="tl-cap">最後宅配日</div></div>
-    <div class="tl-node"><div class="tl-date">09/25</div><div class="tl-cap">中秋節</div></div>
+<!-- 特展海報 × 預購時程（合併：桌機左圖右文／手機上文下圖）-->
+<section class="poster-band"><div class="wrap feat-grid reveal">
+  <div class="feat-img">
+    <div class="poster-frame"><img src="img/ma-dm-poster.jpg" alt="CICACAFE 2026 中秋禮盒 藏月・留星 主視覺 DM"></div>
+  </div>
+  <div class="feat-txt">
+    <p class="eyebrow">2026 中秋限定 · 藏月 × 留星</p>
+    <h2 class="h2">什麼時候下單、<br>什麼時候出貨</h2>
+    <p class="lead" style="margin:0 0 6px">預購時程 · 2026 中秋節 09/25</p>
+    <ol class="vtl">
+      <li class="hot"><span class="d">07/31 前</span><span class="c">超早鳥優惠</span></li>
+      <li><span class="d">09/01 起</span><span class="c">陸續出貨</span></li>
+      <li><span class="d">09/10 前</span><span class="c">早鳥優惠</span></li>
+      <li class="hot"><span class="d">09/18</span><span class="c">最後訂購日</span></li>
+      <li><span class="d">09/21</span><span class="c">最後宅配日</span></li>
+      <li><span class="d">09/25</span><span class="c">中秋節</span></li>
+    </ol>
+    <p class="poster-cap" style="margin-top:22px">金獎咖啡，化作一份中秋的體面心意。<a href="#corporate" class="feat-cue" aria-label="往下看">↓</a></p>
   </div>
 </div></section>
 
@@ -663,6 +690,8 @@ if(bar&&hero){var ho=new IntersectionObserver(function(es){es.forEach(function(e
 (function(){var cmp=document.querySelector('.cmp');if(!cmp)return;if(!('IntersectionObserver' in window)){cmp.classList.add('cmp-in');return;}var io=new IntersectionObserver(function(es){es.forEach(function(e){cmp.classList.toggle('cmp-in',e.isIntersecting);});},{threshold:0.25});io.observe(cmp);})();
 /* 比較卡片：手機跟著捲動聚焦，目前看到的卡片亮起 */
 (function(){var cols=document.querySelectorAll('.cmp .cmp-col');if(!cols.length||!('IntersectionObserver' in window))return;var io=new IntersectionObserver(function(es){es.forEach(function(e){e.target.classList.toggle('col-on',e.isIntersecting);});},{rootMargin:'-45% 0px -45% 0px',threshold:0});cols.forEach(function(c){io.observe(c);});})();
+/* 特展海報進場 */
+(function(){var f=document.querySelector('.poster-frame');if(!f)return;if(!('IntersectionObserver' in window)){f.classList.add('in');return;}var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.15});io.observe(f);})();
 /* 金獎三星：手機進入畫面變彩色，離開變黑白 */
 (function(){var stars=document.querySelectorAll('.stars .star');if(!stars.length||!('IntersectionObserver' in window))return;var io=new IntersectionObserver(function(es){es.forEach(function(e){e.target.classList.toggle('lit',e.isIntersecting);});},{threshold:0.4});stars.forEach(function(s){io.observe(s);});})();
 </script>
