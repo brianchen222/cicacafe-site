@@ -922,5 +922,22 @@ if (philImgs.length) {
   philImgs.forEach(el => philIO.observe(el));
 }
 </script>
+<script>
+/* 依網址 hash 自動切到對應系列分頁（供咖啡豆頁麵包屑「系列」連結使用）*/
+(function(){
+ function act(){
+   var m=(location.hash||'').match(/^#(sp-[a-z]+)$/); if(!m) return;
+   var pid=m[1], sid=pid.replace('sp-','');
+   var panel=document.getElementById(pid); if(!panel) return;
+   document.querySelectorAll('.s-panel').forEach(function(p){p.classList.remove('active');});
+   panel.classList.add('active');
+   document.querySelectorAll('.s-btn').forEach(function(b){var oc=b.getAttribute('onclick')||'';b.classList.toggle('active',oc.indexOf("'"+sid+"'")>-1);});
+   var sec=document.getElementById('products'); if(sec) sec.scrollIntoView({block:'start'});
+ }
+ window.addEventListener('load',function(){ if(/^#sp-/.test(location.hash)) setTimeout(act,80); });
+ window.addEventListener('hashchange',act);
+})();
+</script>
+
 </body>
 </html>
