@@ -80,6 +80,29 @@ body{font-family:var(--f);color:var(--ink);background:var(--white);-webkit-font-
 .sec-text{font-size:16px;line-height:2;color:var(--ink-80);font-weight:300}
 .sec-text strong{font-weight:700;color:var(--ink)}
 .sec-text + .sec-text{margin-top:18px}
+.artwork{position:relative;margin:30px auto 0;max-width:440px;border:1px solid var(--fog);background:var(--mist);overflow:hidden}
+.artwork img{width:100%;display:block}
+.artwork .base{filter:grayscale(1);transition:filter .5s ease}
+.art-color{position:absolute;inset:0;height:100%;object-fit:cover;opacity:0;transition:opacity .5s ease;pointer-events:none;z-index:2;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}
+.artwork.g-active .art-color{opacity:1}
+.artwork.g-nyc .art-color{-webkit-mask-image:radial-gradient(circle at 42% 32%,#000 13%,transparent 21%),radial-gradient(circle at 50% 35%,#000 26%,transparent 36%),radial-gradient(circle at 46% 66%,#000 20%,transparent 30%),radial-gradient(circle at 14% 75%,#000 10%,transparent 17%),radial-gradient(circle at 88% 87%,#000 10%,transparent 17%);mask-image:radial-gradient(circle at 42% 32%,#000 13%,transparent 21%),radial-gradient(circle at 50% 35%,#000 26%,transparent 36%),radial-gradient(circle at 46% 66%,#000 20%,transparent 30%),radial-gradient(circle at 14% 75%,#000 10%,transparent 17%),radial-gradient(circle at 88% 87%,#000 10%,transparent 17%)}
+.artwork.g-ball .art-color{-webkit-mask-image:radial-gradient(circle at 15% 52%,#000 12%,transparent 20%),radial-gradient(circle at 79% 66%,#000 12%,transparent 20%),radial-gradient(circle at 28% 56%,#000 8%,transparent 14%),radial-gradient(circle at 84% 41%,#000 9%,transparent 16%),radial-gradient(circle at 33% 81%,#000 9%,transparent 16%);mask-image:radial-gradient(circle at 15% 52%,#000 12%,transparent 20%),radial-gradient(circle at 79% 66%,#000 12%,transparent 20%),radial-gradient(circle at 28% 56%,#000 8%,transparent 14%),radial-gradient(circle at 84% 41%,#000 9%,transparent 16%),radial-gradient(circle at 33% 81%,#000 9%,transparent 16%)}
+.artwork.g-citrus .art-color{-webkit-mask-image:radial-gradient(circle at 50% 25%,#000 10%,transparent 17%),radial-gradient(circle at 76% 89%,#000 8%,transparent 14%);mask-image:radial-gradient(circle at 50% 25%,#000 10%,transparent 17%),radial-gradient(circle at 76% 89%,#000 8%,transparent 14%)}
+.art-dim{position:absolute;inset:0;background:rgba(10,8,12,.58);opacity:0;transition:opacity .4s ease;pointer-events:none;z-index:2}
+.spot{position:absolute;transform:translate(-50%,-50%) scale(.82);border-radius:50%;background:radial-gradient(circle,rgba(255,251,238,.98) 0%,rgba(255,236,180,.55) 26%,rgba(255,232,170,.16) 50%,rgba(255,232,170,0) 70%);opacity:0;transition:opacity .55s ease,transform .55s ease;mix-blend-mode:screen;pointer-events:none;z-index:3;filter:blur(1px)}
+.artwork.g-nyc .spot[data-g="nyc"],.artwork.g-ball .spot[data-g="ball"],.artwork.g-citrus .spot[data-g="citrus"]{transform:translate(-50%,-50%) scale(1)}
+.artwork.g-nyc .spot[data-g="nyc"],.artwork.g-ball .spot[data-g="ball"],.artwork.g-citrus .spot[data-g="citrus"]{opacity:1}
+.art-essence > div{cursor:default;transition:opacity .3s}
+@media(max-width:760px){
+ .artwork{max-width:320px;margin:24px auto 0}
+ .art-essence{margin-top:30px;gap:5vh}
+}
+@media(max-width:680px){.artwork{max-width:280px}}
+.art-essence{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:36px}
+.art-essence h4{font-size:13px;letter-spacing:.12em;color:var(--ink);margin-bottom:10px;font-weight:700;display:flex;align-items:center;gap:9px}
+.art-essence h4::before{content:"";width:18px;height:1px;background:var(--ink-40)}
+.art-essence p{font-size:14px;color:var(--ink-60);line-height:1.85;font-weight:300}
+@media(max-width:760px){.art-essence{grid-template-columns:1fr;gap:24px}}
 .pullquote-band{position:relative;left:50%;margin-left:-50vw;width:100vw;margin-top:54px;padding:100px 6vw;background:#0c0a0e url('../img/mars-space.jpg') center top/cover no-repeat}
 .pullquote-band::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,6,10,.48),rgba(8,6,10,.64))}
 .pullquote-inner{position:relative;max-width:1080px;margin:0 auto}
@@ -232,7 +255,7 @@ body{font-family:var(--f);color:var(--ink);background:var(--white);-webkit-font-
   <section class="sec reveal">
     <p class="sec-label">命名 / The Name</p>
     <h2 class="sec-h">名字的由來</h2>
-    <p class="sec-text">赫諾斯 HONUS，取自 MLB 名人堂的傳奇游擊手 Honus Wagner，也是首席烘豆師的個人宣言。</p>
+    <p class="sec-text">赫諾斯 HONUS，取自 MLB 名人堂的傳奇游擊手 Honus Wagner，也是 CICACAFE 首席烘豆師的個人宣言。</p>
     <p class="sec-text">它象徵第三波咖啡的精神：講究、踏實，把每一個基本功都做到最好——不炫技，但每一口都站得住腳。</p>
   </section>
 
@@ -271,7 +294,28 @@ body{font-family:var(--f);color:var(--ink);background:var(--white);-webkit-font-
   <section class="sec reveal">
     <p class="sec-label">視覺 / The Artwork</p>
     <h2 class="sec-h">視覺解讀</h2>
-    <p class="sec-text">主視覺以紐約城市意象鋪陳——自由女神、城市天際線與棒球場上的身影，呼應傳奇 Honus Wagner 與第三波咖啡的踏實精神。</p>
+    <p class="sec-text">主視覺以<strong>棒球傳奇 Honus Wagner</strong>為核心，融合紐約地標與棒球文化——自由女神、摩天樓天際線與球場上的身影，呼應這位傳奇與第三波咖啡的踏實精神；藏在畫面裡的柳橙，則悄悄點出這支豆的柑橘調性。</p>
+    <figure class="artwork">
+      <img class="base" src="../img/honus-hero-sq.jpg" alt="赫諾斯 HONUS 主視覺設計">
+      <img class="art-color" src="../img/honus-hero-sq.jpg" alt="" aria-hidden="true">
+      <span class="spot" data-g="nyc" style="left:42%;top:32%;width:26%;height:45%"></span>
+      <span class="spot" data-g="nyc" style="left:50%;top:35%;width:72%;height:29%"></span>
+      <span class="spot" data-g="nyc" style="left:46%;top:66%;width:42%;height:23%"></span>
+      <span class="spot" data-g="nyc" style="left:14%;top:75%;width:18%;height:20%"></span>
+      <span class="spot" data-g="nyc" style="left:88%;top:87%;width:18%;height:20%"></span>
+      <span class="spot" data-g="ball" style="left:15%;top:52%;width:22%;height:32%"></span>
+      <span class="spot" data-g="ball" style="left:79%;top:66%;width:22%;height:32%"></span>
+      <span class="spot" data-g="ball" style="left:28%;top:56%;width:13%;height:14%"></span>
+      <span class="spot" data-g="ball" style="left:84%;top:41%;width:16%;height:27%"></span>
+      <span class="spot" data-g="ball" style="left:33%;top:81%;width:17%;height:25%"></span>
+      <span class="spot" data-g="citrus" style="left:50%;top:25%;width:18%;height:17%"></span>
+      <span class="spot" data-g="citrus" style="left:76%;top:89%;width:13%;height:15%"></span>
+    </figure>
+    <div class="art-essence">
+      <div data-g="nyc"><h4>紐約地標</h4><p>自由女神、克萊斯勒大廈、凱旋門與名人堂般的殿堂，鋪陳紐約的世界都會氣場。</p></div>
+      <div data-g="ball"><h4>棒球傳奇</h4><p>揮棒的打擊者、疾速的投手與飛行的棒球，致敬以速度著稱的 Honus Wagner。</p></div>
+      <div data-g="citrus"><h4>柑橘風味</h4><p>藏在畫面裡的橙片與柳橙，悄悄點出這支豆明亮的柑橘果香。</p></div>
+    </div>
   </section>
 
 </div>
@@ -324,6 +368,14 @@ body{font-family:var(--f);color:var(--ink);background:var(--white);-webkit-font-
 </script>
 <script>
 (function(){var els=document.querySelectorAll('.flavor-chart-img');if(!('IntersectionObserver' in window))return;var io=new IntersectionObserver(function(es){es.forEach(function(e){e.target.classList.toggle('in-view',e.isIntersecting);});},{threshold:0.4});els.forEach(function(e){io.observe(e);});})();
+/* 視覺解讀：移到某欄→圖上對應元素打燈、其餘變暗 */
+(function(){var art=document.querySelector('.artwork');var cols=document.querySelectorAll('.art-essence > div[data-g]');if(!art||!cols.length)return;
+function on(g,c){art.classList.remove('g-nyc','g-ball','g-citrus');art.classList.add('g-active','g-'+g);cols.forEach(function(o){o.style.opacity=o===c?'1':'.4';});}
+function off(){art.classList.remove('g-active','g-nyc','g-ball','g-citrus');cols.forEach(function(o){o.style.opacity='';});}
+/* 桌機：滑到某欄→圖上對應元素探照燈 */
+cols.forEach(function(c){var g=c.getAttribute('data-g');c.addEventListener('mouseenter',function(){on(g,c);});c.addEventListener('mouseleave',off);});
+/* 手機：捲到某欄置中→相同打燈效果 */
+if('IntersectionObserver' in window){var io2=new IntersectionObserver(function(es){es.forEach(function(e){var g=e.target.getAttribute('data-g');if(e.isIntersecting){on(g,e.target);}else if(art.classList.contains('g-'+g)){off();}});},{rootMargin:'-38% 0px -38% 0px',threshold:0});cols.forEach(function(c){io2.observe(c);});}})();
 </script>
 </body>
 </html>
