@@ -80,6 +80,23 @@ body{font-family:var(--f);color:var(--ink);background:var(--white);-webkit-font-
 .sec-text{font-size:16px;line-height:2;color:var(--ink-80);font-weight:300}
 .sec-text strong{font-weight:700;color:var(--ink)}
 .sec-text + .sec-text{margin-top:18px}
+.artwork{position:relative;margin:30px auto 0;max-width:440px;border:1px solid var(--fog);background:var(--mist);overflow:hidden}
+.artwork img{width:100%;display:block}
+.artwork .base{filter:grayscale(1);transition:filter .5s ease}
+.art-color{position:absolute;inset:0;height:100%;object-fit:cover;opacity:0;transition:opacity .5s ease;pointer-events:none;z-index:2;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}
+.artwork.g-active .art-color{opacity:1}
+.artwork.g-flower .art-color{-webkit-mask-image:radial-gradient(circle at 29% 45%,#000 10%,transparent 16%),radial-gradient(circle at 37% 30%,#000 10%,transparent 16%),radial-gradient(circle at 86% 60%,#000 10%,transparent 16%),radial-gradient(circle at 16% 83%,#000 10%,transparent 16%),radial-gradient(circle at 34% 83%,#000 10%,transparent 16%),radial-gradient(circle at 92% 82%,#000 10%,transparent 16%),radial-gradient(circle at 3% 73%,#000 10%,transparent 16%),radial-gradient(circle at 99% 29%,#000 10%,transparent 16%);mask-image:radial-gradient(circle at 29% 45%,#000 10%,transparent 16%),radial-gradient(circle at 37% 30%,#000 10%,transparent 16%),radial-gradient(circle at 86% 60%,#000 10%,transparent 16%),radial-gradient(circle at 16% 83%,#000 10%,transparent 16%),radial-gradient(circle at 34% 83%,#000 10%,transparent 16%),radial-gradient(circle at 92% 82%,#000 10%,transparent 16%),radial-gradient(circle at 3% 73%,#000 10%,transparent 16%),radial-gradient(circle at 99% 29%,#000 10%,transparent 16%)}
+.artwork.g-leaf .art-color{-webkit-mask-image:radial-gradient(circle at 9% 26%,#000 7%,transparent 12%),radial-gradient(circle at 50% 30%,#000 7%,transparent 12%),radial-gradient(circle at 55% 49%,#000 7%,transparent 12%),radial-gradient(circle at 5% 52%,#000 7%,transparent 12%),radial-gradient(circle at 38% 61%,#000 7%,transparent 12%),radial-gradient(circle at 38% 71%,#000 7%,transparent 12%),radial-gradient(circle at 80% 34%,#000 7%,transparent 12%),radial-gradient(circle at 64% 63%,#000 7%,transparent 12%),radial-gradient(circle at 24% 73%,#000 7%,transparent 12%);mask-image:radial-gradient(circle at 9% 26%,#000 7%,transparent 12%),radial-gradient(circle at 50% 30%,#000 7%,transparent 12%),radial-gradient(circle at 55% 49%,#000 7%,transparent 12%),radial-gradient(circle at 5% 52%,#000 7%,transparent 12%),radial-gradient(circle at 38% 61%,#000 7%,transparent 12%),radial-gradient(circle at 38% 71%,#000 7%,transparent 12%),radial-gradient(circle at 80% 34%,#000 7%,transparent 12%),radial-gradient(circle at 64% 63%,#000 7%,transparent 12%),radial-gradient(circle at 24% 73%,#000 7%,transparent 12%)}
+.artwork.g-berry .art-color{-webkit-mask-image:radial-gradient(circle at 22% 67%,#000 6%,transparent 11%),radial-gradient(circle at 53% 32%,#000 6%,transparent 11%),radial-gradient(circle at 72% 47%,#000 6%,transparent 11%),radial-gradient(circle at 57% 77%,#000 6%,transparent 11%),radial-gradient(circle at 79% 39%,#000 6%,transparent 11%),radial-gradient(circle at 15% 66%,#000 6%,transparent 11%),radial-gradient(circle at 76% 78%,#000 6%,transparent 11%),radial-gradient(circle at 64% 54%,#000 6%,transparent 11%),radial-gradient(circle at 86% 36%,#000 6%,transparent 11%),radial-gradient(circle at 30% 20%,#000 6%,transparent 11%);mask-image:radial-gradient(circle at 22% 67%,#000 6%,transparent 11%),radial-gradient(circle at 53% 32%,#000 6%,transparent 11%),radial-gradient(circle at 72% 47%,#000 6%,transparent 11%),radial-gradient(circle at 57% 77%,#000 6%,transparent 11%),radial-gradient(circle at 79% 39%,#000 6%,transparent 11%),radial-gradient(circle at 15% 66%,#000 6%,transparent 11%),radial-gradient(circle at 76% 78%,#000 6%,transparent 11%),radial-gradient(circle at 64% 54%,#000 6%,transparent 11%),radial-gradient(circle at 86% 36%,#000 6%,transparent 11%),radial-gradient(circle at 30% 20%,#000 6%,transparent 11%)}
+.spot{position:absolute;transform:translate(-50%,-50%) scale(.82);border-radius:50%;background:radial-gradient(circle,rgba(255,251,238,.98) 0%,rgba(255,236,180,.55) 26%,rgba(255,232,170,.16) 50%,rgba(255,232,170,0) 70%);opacity:0;transition:opacity .55s ease,transform .55s ease;mix-blend-mode:screen;pointer-events:none;z-index:3;filter:blur(1px)}
+.artwork.g-flower .spot[data-g="flower"],.artwork.g-leaf .spot[data-g="leaf"],.artwork.g-berry .spot[data-g="berry"]{opacity:1;transform:translate(-50%,-50%) scale(1)}
+.art-essence{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:36px}
+.art-essence > div{cursor:default;transition:opacity .3s}
+.art-essence h4{font-size:13px;letter-spacing:.12em;color:var(--ink);margin-bottom:10px;font-weight:700;display:flex;align-items:center;gap:9px}
+.art-essence h4::before{content:"";width:18px;height:1px;background:var(--ink-40)}
+.art-essence p{font-size:14px;color:var(--ink-60);line-height:1.85;font-weight:300}
+@media(max-width:760px){.art-essence{grid-template-columns:1fr;margin-top:30px;gap:5vh}.artwork{max-width:320px;margin:24px auto 0}}
+@media(max-width:680px){.artwork{max-width:280px}}
 .pullquote-band{position:relative;left:50%;margin-left:-50vw;width:100vw;margin-top:54px;padding:100px 6vw;background:#0c0a0e url('../img/mars-space.jpg') center top/cover no-repeat}
 .pullquote-band::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,6,10,.48),rgba(8,6,10,.64))}
 .pullquote-inner{position:relative;max-width:1080px;margin:0 auto}
@@ -272,7 +289,43 @@ body{font-family:var(--f);color:var(--ink);background:var(--white);-webkit-font-
   <section class="sec reveal">
     <p class="sec-label">視覺 / The Artwork</p>
     <h2 class="sec-h">視覺解讀</h2>
-    <p class="sec-text">主視覺以自然植物與「落葉紛飛」的詩意鋪陳——草本綠與深木色交織，呼應仙草、青草茶般清涼安定的風味印象。</p>
+    <p class="sec-text">主視覺以滿版草本花園鋪陳——洋甘菊、深綠香草葉與點點紅果，正好對應芳菲清雅的花香、青草茶般的草本回甘，與枸杞中藥茶的溫潤。</p>
+    <figure class="artwork">
+      <img class="base" src="../img/fangfei-hero-sq.jpg" alt="芳菲 FANGFEI 主視覺設計">
+      <img class="art-color" src="../img/fangfei-hero-sq.jpg" alt="" aria-hidden="true">
+      <span class="spot" data-g="flower" style="left:29%;top:45%;width:22%;height:22%"></span>
+      <span class="spot" data-g="flower" style="left:37%;top:30%;width:22%;height:22%"></span>
+      <span class="spot" data-g="flower" style="left:86%;top:60%;width:22%;height:22%"></span>
+      <span class="spot" data-g="flower" style="left:16%;top:83%;width:22%;height:22%"></span>
+      <span class="spot" data-g="flower" style="left:34%;top:83%;width:22%;height:22%"></span>
+      <span class="spot" data-g="flower" style="left:92%;top:82%;width:22%;height:22%"></span>
+      <span class="spot" data-g="flower" style="left:3%;top:73%;width:22%;height:22%"></span>
+      <span class="spot" data-g="flower" style="left:99%;top:29%;width:22%;height:22%"></span>
+      <span class="spot" data-g="leaf" style="left:9%;top:26%;width:16%;height:16%"></span>
+      <span class="spot" data-g="leaf" style="left:50%;top:30%;width:16%;height:16%"></span>
+      <span class="spot" data-g="leaf" style="left:55%;top:49%;width:16%;height:16%"></span>
+      <span class="spot" data-g="leaf" style="left:5%;top:52%;width:16%;height:16%"></span>
+      <span class="spot" data-g="leaf" style="left:38%;top:61%;width:16%;height:16%"></span>
+      <span class="spot" data-g="leaf" style="left:38%;top:71%;width:16%;height:16%"></span>
+      <span class="spot" data-g="leaf" style="left:80%;top:34%;width:16%;height:16%"></span>
+      <span class="spot" data-g="leaf" style="left:64%;top:63%;width:16%;height:16%"></span>
+      <span class="spot" data-g="leaf" style="left:24%;top:73%;width:16%;height:16%"></span>
+      <span class="spot" data-g="berry" style="left:22%;top:67%;width:13%;height:13%"></span>
+      <span class="spot" data-g="berry" style="left:53%;top:32%;width:13%;height:13%"></span>
+      <span class="spot" data-g="berry" style="left:72%;top:47%;width:13%;height:13%"></span>
+      <span class="spot" data-g="berry" style="left:57%;top:77%;width:13%;height:13%"></span>
+      <span class="spot" data-g="berry" style="left:79%;top:39%;width:13%;height:13%"></span>
+      <span class="spot" data-g="berry" style="left:15%;top:66%;width:13%;height:13%"></span>
+      <span class="spot" data-g="berry" style="left:76%;top:78%;width:13%;height:13%"></span>
+      <span class="spot" data-g="berry" style="left:64%;top:54%;width:13%;height:13%"></span>
+      <span class="spot" data-g="berry" style="left:86%;top:36%;width:13%;height:13%"></span>
+      <span class="spot" data-g="berry" style="left:30%;top:20%;width:13%;height:13%"></span>
+    </figure>
+    <div class="art-essence">
+      <div data-g="flower"><h4>菊花繁茂</h4><p>滿版盛開的洋甘菊白花，化作清雅花香，與夏桑菊般潔淨的甜感。</p></div>
+      <div data-g="leaf"><h4>草本綠葉</h4><p>深綠葉與針葉香草——仙草、薄荷、迷迭香的草本印象，是這支豆清涼回甘的來源。</p></div>
+      <div data-g="berry"><h4>枸杞紅果</h4><p>點點紅果與種子，枸杞、甘草的中藥茶飲記憶，溫潤、安定、不刺激。</p></div>
+    </div>
   </section>
 
 </div>
@@ -323,6 +376,12 @@ body{font-family:var(--f);color:var(--ink);background:var(--white);-webkit-font-
 (function(){var els=document.querySelectorAll('.reveal');if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in');});return;}var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.15});els.forEach(function(e){io.observe(e);});})();
 (function(){document.querySelectorAll('.share-btn,.share-ig').forEach(function(b){b.addEventListener('click',function(){var url=b.getAttribute('data-url'),title=b.getAttribute('data-title'),text=b.getAttribute('data-text'),msg=b.getAttribute('data-msg')||'已複製連結 ✓';if(navigator.share){navigator.share({title:title,text:text,url:url}).catch(function(){});}else if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(url).then(function(){var c=b.closest('.share-row').querySelector('.share-copied');if(c){c.textContent=msg;c.classList.add('show');setTimeout(function(){c.classList.remove('show');},2800);}});}else{window.prompt('複製連結：',url);}});});})();
 (function(){var els=document.querySelectorAll('.flavor-chart-img');if(!('IntersectionObserver' in window))return;var io=new IntersectionObserver(function(es){es.forEach(function(e){e.target.classList.toggle('in-view',e.isIntersecting);});},{threshold:0.4});els.forEach(function(e){io.observe(e);});})();
+/* 視覺解讀：滑到/捲到某欄→圖上該類元素黑白轉彩色＋暖光 */
+(function(){var art=document.querySelector('.artwork');var cols=document.querySelectorAll('.art-essence > div[data-g]');if(!art||!cols.length)return;var GS=['g-flower','g-leaf','g-berry'];
+function on(g,c){GS.forEach(function(x){art.classList.remove(x);});art.classList.add('g-active','g-'+g);cols.forEach(function(o){o.style.opacity=o===c?'1':'.4';});}
+function off(){art.classList.remove('g-active');GS.forEach(function(x){art.classList.remove(x);});cols.forEach(function(o){o.style.opacity='';});}
+cols.forEach(function(c){var g=c.getAttribute('data-g');c.addEventListener('mouseenter',function(){on(g,c);});c.addEventListener('mouseleave',off);});
+if('IntersectionObserver' in window){var io2=new IntersectionObserver(function(es){es.forEach(function(e){var g=e.target.getAttribute('data-g');if(e.isIntersecting){on(g,e.target);}else if(art.classList.contains('g-'+g)){off();}});},{rootMargin:'-38% 0px -38% 0px',threshold:0});cols.forEach(function(c){io2.observe(c);});}})();
 </script>
 </body>
 </html>

@@ -80,6 +80,23 @@ body{font-family:var(--f);color:var(--ink);background:var(--white);-webkit-font-
 .sec-text{font-size:16px;line-height:2;color:var(--ink-80);font-weight:300}
 .sec-text strong{font-weight:700;color:var(--ink)}
 .sec-text + .sec-text{margin-top:18px}
+.artwork{position:relative;margin:30px auto 0;max-width:440px;border:1px solid var(--fog);background:var(--mist);overflow:hidden}
+.artwork img{width:100%;display:block}
+.artwork .base{filter:grayscale(1);transition:filter .5s ease}
+.art-color{position:absolute;inset:0;height:100%;object-fit:cover;opacity:0;transition:opacity .5s ease;pointer-events:none;z-index:2;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}
+.artwork.g-active .art-color{opacity:1}
+.artwork.g-goddess .art-color{-webkit-mask-image:radial-gradient(circle at 18% 48%,#000 14%,transparent 20%),radial-gradient(circle at 10% 72%,#000 8%,transparent 14%),radial-gradient(circle at 82% 48%,#000 14%,transparent 20%),radial-gradient(circle at 90% 72%,#000 8%,transparent 14%);mask-image:radial-gradient(circle at 18% 48%,#000 14%,transparent 20%),radial-gradient(circle at 10% 72%,#000 8%,transparent 14%),radial-gradient(circle at 82% 48%,#000 14%,transparent 20%),radial-gradient(circle at 90% 72%,#000 8%,transparent 14%)}
+.artwork.g-fruit .art-color{-webkit-mask-image:radial-gradient(circle at 50% 21%,#000 12%,transparent 18%),radial-gradient(circle at 29% 28%,#000 7%,transparent 12%),radial-gradient(circle at 71% 28%,#000 7%,transparent 12%),radial-gradient(circle at 30% 53%,#000 6%,transparent 11%),radial-gradient(circle at 70% 53%,#000 6%,transparent 11%),radial-gradient(circle at 46% 85%,#000 8%,transparent 14%);mask-image:radial-gradient(circle at 50% 21%,#000 12%,transparent 18%),radial-gradient(circle at 29% 28%,#000 7%,transparent 12%),radial-gradient(circle at 71% 28%,#000 7%,transparent 12%),radial-gradient(circle at 30% 53%,#000 6%,transparent 11%),radial-gradient(circle at 70% 53%,#000 6%,transparent 11%),radial-gradient(circle at 46% 85%,#000 8%,transparent 14%)}
+.artwork.g-berry .art-color{-webkit-mask-image:radial-gradient(circle at 50% 43%,#000 6%,transparent 11%),radial-gradient(circle at 46% 55%,#000 6%,transparent 11%),radial-gradient(circle at 49% 66%,#000 7%,transparent 12%),radial-gradient(circle at 47% 73%,#000 6%,transparent 11%);mask-image:radial-gradient(circle at 50% 43%,#000 6%,transparent 11%),radial-gradient(circle at 46% 55%,#000 6%,transparent 11%),radial-gradient(circle at 49% 66%,#000 7%,transparent 12%),radial-gradient(circle at 47% 73%,#000 6%,transparent 11%)}
+.spot{position:absolute;transform:translate(-50%,-50%) scale(.82);border-radius:50%;background:radial-gradient(circle,rgba(255,251,238,.98) 0%,rgba(255,236,180,.55) 26%,rgba(255,232,170,.16) 50%,rgba(255,232,170,0) 70%);opacity:0;transition:opacity .55s ease,transform .55s ease;mix-blend-mode:screen;pointer-events:none;z-index:3;filter:blur(1px)}
+.artwork.g-goddess .spot[data-g="goddess"],.artwork.g-fruit .spot[data-g="fruit"],.artwork.g-berry .spot[data-g="berry"]{opacity:1;transform:translate(-50%,-50%) scale(1)}
+.art-essence{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:36px}
+.art-essence > div{cursor:default;transition:opacity .3s}
+.art-essence h4{font-size:13px;letter-spacing:.12em;color:var(--ink);margin-bottom:10px;font-weight:700;display:flex;align-items:center;gap:9px}
+.art-essence h4::before{content:"";width:18px;height:1px;background:var(--ink-40)}
+.art-essence p{font-size:14px;color:var(--ink-60);line-height:1.85;font-weight:300}
+@media(max-width:760px){.art-essence{grid-template-columns:1fr;margin-top:30px;gap:5vh}.artwork{max-width:320px;margin:24px auto 0}}
+@media(max-width:680px){.artwork{max-width:280px}}
 .pullquote-band{position:relative;left:50%;margin-left:-50vw;width:100vw;margin-top:54px;padding:100px 6vw;background:#0c0a0e url('../img/mars-space.jpg') center top/cover no-repeat}
 .pullquote-band::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,6,10,.48),rgba(8,6,10,.64))}
 .pullquote-inner{position:relative;max-width:1080px;margin:0 auto}
@@ -273,7 +290,30 @@ body{font-family:var(--f);color:var(--ink);background:var(--white);-webkit-font-
   <section class="sec reveal">
     <p class="sec-label">視覺 / The Artwork</p>
     <h2 class="sec-h">視覺解讀</h2>
-    <p class="sec-text">主視覺以神話與秋日果園的意象鋪陳——橘色到紫紅層層展開，呼應愛與豐饒女神 Freya 的甜美與豐盛。</p>
+    <p class="sec-text">主視覺以對稱的豐饒女神捧起果缽——滿盈的橘黃鮮果與垂掛的紅醋栗，正好對應芙蕾雅豐富厚實的果香，從橘黃濃縮到紫紅果乾的層次。</p>
+    <figure class="artwork">
+      <img class="base" src="../img/freya-hero-sq.jpg" alt="芙蕾雅 FREYA 主視覺設計">
+      <img class="art-color" src="../img/freya-hero-sq.jpg" alt="" aria-hidden="true">
+      <span class="spot" data-g="goddess" style="left:18%;top:48%;width:26%;height:26%"></span>
+      <span class="spot" data-g="goddess" style="left:10%;top:72%;width:16%;height:16%"></span>
+      <span class="spot" data-g="goddess" style="left:82%;top:48%;width:26%;height:26%"></span>
+      <span class="spot" data-g="goddess" style="left:90%;top:72%;width:16%;height:16%"></span>
+      <span class="spot" data-g="fruit" style="left:50%;top:21%;width:24%;height:24%"></span>
+      <span class="spot" data-g="fruit" style="left:29%;top:28%;width:13%;height:13%"></span>
+      <span class="spot" data-g="fruit" style="left:71%;top:28%;width:13%;height:13%"></span>
+      <span class="spot" data-g="fruit" style="left:30%;top:53%;width:12%;height:12%"></span>
+      <span class="spot" data-g="fruit" style="left:70%;top:53%;width:12%;height:12%"></span>
+      <span class="spot" data-g="fruit" style="left:46%;top:85%;width:16%;height:16%"></span>
+      <span class="spot" data-g="berry" style="left:50%;top:43%;width:13%;height:13%"></span>
+      <span class="spot" data-g="berry" style="left:46%;top:55%;width:13%;height:13%"></span>
+      <span class="spot" data-g="berry" style="left:49%;top:66%;width:14%;height:14%"></span>
+      <span class="spot" data-g="berry" style="left:47%;top:73%;width:13%;height:13%"></span>
+    </figure>
+    <div class="art-essence">
+      <div data-g="goddess"><h4>豐饒女神</h4><p>北歐愛與豐饒女神 Freya，雙手捧起滿盈的果實——象徵這支神話綜合豆的豐收與飽滿果香。</p></div>
+      <div data-g="fruit"><h4>橘黃果香</h4><p>柳橙、橘子與水蜜桃——濃縮裡奔放的橘黃果香，明亮而不刺鼻。</p></div>
+      <div data-g="berry"><h4>紅醋栗果</h4><p>垂掛的紅醋栗，呼應美式裡紅醋栗、加州梅與杏桃乾的紫紅果乾調。</p></div>
+    </div>
   </section>
 
 </div>
@@ -324,6 +364,12 @@ body{font-family:var(--f);color:var(--ink);background:var(--white);-webkit-font-
 (function(){var els=document.querySelectorAll('.reveal');if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in');});return;}var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.15});els.forEach(function(e){io.observe(e);});})();
 (function(){document.querySelectorAll('.share-btn,.share-ig').forEach(function(b){b.addEventListener('click',function(){var url=b.getAttribute('data-url'),title=b.getAttribute('data-title'),text=b.getAttribute('data-text'),msg=b.getAttribute('data-msg')||'已複製連結 ✓';if(navigator.share){navigator.share({title:title,text:text,url:url}).catch(function(){});}else if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(url).then(function(){var c=b.closest('.share-row').querySelector('.share-copied');if(c){c.textContent=msg;c.classList.add('show');setTimeout(function(){c.classList.remove('show');},2800);}});}else{window.prompt('複製連結：',url);}});});})();
 (function(){var els=document.querySelectorAll('.flavor-chart-img');if(!('IntersectionObserver' in window))return;var io=new IntersectionObserver(function(es){es.forEach(function(e){e.target.classList.toggle('in-view',e.isIntersecting);});},{threshold:0.4});els.forEach(function(e){io.observe(e);});})();
+/* 視覺解讀：滑到/捲到某欄→圖上該類元素黑白轉彩色＋暖光 */
+(function(){var art=document.querySelector('.artwork');var cols=document.querySelectorAll('.art-essence > div[data-g]');if(!art||!cols.length)return;var GS=['g-goddess','g-fruit','g-berry'];
+function on(g,c){GS.forEach(function(x){art.classList.remove(x);});art.classList.add('g-active','g-'+g);cols.forEach(function(o){o.style.opacity=o===c?'1':'.4';});}
+function off(){art.classList.remove('g-active');GS.forEach(function(x){art.classList.remove(x);});cols.forEach(function(o){o.style.opacity='';});}
+cols.forEach(function(c){var g=c.getAttribute('data-g');c.addEventListener('mouseenter',function(){on(g,c);});c.addEventListener('mouseleave',off);});
+if('IntersectionObserver' in window){var io2=new IntersectionObserver(function(es){es.forEach(function(e){var g=e.target.getAttribute('data-g');if(e.isIntersecting){on(g,e.target);}else if(art.classList.contains('g-'+g)){off();}});},{rootMargin:'-38% 0px -38% 0px',threshold:0});cols.forEach(function(c){io2.observe(c);});}})();
 </script>
 </body>
 </html>

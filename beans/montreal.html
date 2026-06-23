@@ -80,6 +80,23 @@ body{font-family:var(--f);color:var(--ink);background:var(--white);-webkit-font-
 .sec-text{font-size:16px;line-height:2;color:var(--ink-80);font-weight:300}
 .sec-text strong{font-weight:700;color:var(--ink)}
 .sec-text + .sec-text{margin-top:18px}
+.artwork{position:relative;margin:30px auto 0;max-width:440px;border:1px solid var(--fog);background:var(--mist);overflow:hidden}
+.artwork img{width:100%;display:block}
+.artwork .base{filter:grayscale(1);transition:filter .5s ease}
+.art-color{position:absolute;inset:0;height:100%;object-fit:cover;opacity:0;transition:opacity .5s ease;pointer-events:none;z-index:2;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}
+.artwork.g-active .art-color{opacity:1}
+.artwork.g-city .art-color{-webkit-mask-image:radial-gradient(circle at 28% 40%,#000 13%,transparent 21%),radial-gradient(circle at 60% 32%,#000 9%,transparent 16%),radial-gradient(circle at 60% 50%,#000 9%,transparent 16%),radial-gradient(circle at 75% 49%,#000 12%,transparent 20%),radial-gradient(circle at 70% 34%,#000 8%,transparent 15%),radial-gradient(circle at 15% 78%,#000 10%,transparent 17%),radial-gradient(circle at 55% 75%,#000 14%,transparent 22%),radial-gradient(circle at 82% 90%,#000 9%,transparent 16%);mask-image:radial-gradient(circle at 28% 40%,#000 13%,transparent 21%),radial-gradient(circle at 60% 32%,#000 9%,transparent 16%),radial-gradient(circle at 60% 50%,#000 9%,transparent 16%),radial-gradient(circle at 75% 49%,#000 12%,transparent 20%),radial-gradient(circle at 70% 34%,#000 8%,transparent 15%),radial-gradient(circle at 15% 78%,#000 10%,transparent 17%),radial-gradient(circle at 55% 75%,#000 14%,transparent 22%),radial-gradient(circle at 82% 90%,#000 9%,transparent 16%)}
+.artwork.g-whale .art-color{-webkit-mask-image:radial-gradient(circle at 45% 29%,#000 10%,transparent 18%),radial-gradient(circle at 35% 62%,#000 11%,transparent 19%),radial-gradient(circle at 58% 86%,#000 12%,transparent 20%),radial-gradient(circle at 82% 64%,#000 8%,transparent 15%);mask-image:radial-gradient(circle at 45% 29%,#000 10%,transparent 18%),radial-gradient(circle at 35% 62%,#000 11%,transparent 19%),radial-gradient(circle at 58% 86%,#000 12%,transparent 20%),radial-gradient(circle at 82% 64%,#000 8%,transparent 15%)}
+.artwork.g-nature .art-color{-webkit-mask-image:radial-gradient(circle at 48% 44%,#000 10%,transparent 17%),radial-gradient(circle at 48% 51%,#000 8%,transparent 14%),radial-gradient(circle at 81% 32%,#000 8%,transparent 14%),radial-gradient(circle at 16% 55%,#000 8%,transparent 14%),radial-gradient(circle at 16% 61%,#000 6%,transparent 12%);mask-image:radial-gradient(circle at 48% 44%,#000 10%,transparent 17%),radial-gradient(circle at 48% 51%,#000 8%,transparent 14%),radial-gradient(circle at 81% 32%,#000 8%,transparent 14%),radial-gradient(circle at 16% 55%,#000 8%,transparent 14%),radial-gradient(circle at 16% 61%,#000 6%,transparent 12%)}
+.spot{position:absolute;transform:translate(-50%,-50%) scale(.82);border-radius:50%;background:radial-gradient(circle,rgba(255,251,238,.98) 0%,rgba(255,236,180,.55) 26%,rgba(255,232,170,.16) 50%,rgba(255,232,170,0) 70%);opacity:0;transition:opacity .55s ease,transform .55s ease;mix-blend-mode:screen;pointer-events:none;z-index:3;filter:blur(1px)}
+.artwork.g-city .spot[data-g="city"],.artwork.g-whale .spot[data-g="whale"],.artwork.g-nature .spot[data-g="nature"]{opacity:1;transform:translate(-50%,-50%) scale(1)}
+.art-essence{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:36px}
+.art-essence > div{cursor:default;transition:opacity .3s}
+.art-essence h4{font-size:13px;letter-spacing:.12em;color:var(--ink);margin-bottom:10px;font-weight:700;display:flex;align-items:center;gap:9px}
+.art-essence h4::before{content:"";width:18px;height:1px;background:var(--ink-40)}
+.art-essence p{font-size:14px;color:var(--ink-60);line-height:1.85;font-weight:300}
+@media(max-width:760px){.art-essence{grid-template-columns:1fr;margin-top:30px;gap:5vh}.artwork{max-width:320px;margin:24px auto 0}}
+@media(max-width:680px){.artwork{max-width:280px}}
 .pullquote-band{position:relative;left:50%;margin-left:-50vw;width:100vw;margin-top:54px;padding:100px 6vw;background:#0c0a0e url('../img/mars-space.jpg') center top/cover no-repeat}
 .pullquote-band::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,6,10,.48),rgba(8,6,10,.64))}
 .pullquote-inner{position:relative;max-width:1080px;margin:0 auto}
@@ -271,7 +288,33 @@ body{font-family:var(--f);color:var(--ink);background:var(--white);-webkit-font-
   <section class="sec reveal">
     <p class="sec-label">視覺 / The Artwork</p>
     <h2 class="sec-h">視覺解讀</h2>
-    <p class="sec-text">主視覺以加拿大蒙特婁的城市與自然意象鋪陳——地標、楓葉與北方海域，呼應楓糖般溫潤自然的甜感。</p>
+    <p class="sec-text">主視覺以加拿大為核心，融合魁北克、多倫多等城市地標、橫跨東西岸的鯨魚海域與楓葉自然——三個層次，正好呼應這支豆的都會品味、深邃流動與楓糖甜感。</p>
+    <figure class="artwork">
+      <img class="base" src="../img/montreal-hero-sq.jpg" alt="蒙特婁 MONTREAL 主視覺設計">
+      <img class="art-color" src="../img/montreal-hero-sq.jpg" alt="" aria-hidden="true">
+      <span class="spot" data-g="city" style="left:28%;top:40%;width:30%;height:42%"></span>
+      <span class="spot" data-g="city" style="left:60%;top:32%;width:20%;height:22%"></span>
+      <span class="spot" data-g="city" style="left:60%;top:50%;width:20%;height:26%"></span>
+      <span class="spot" data-g="city" style="left:75%;top:49%;width:26%;height:26%"></span>
+      <span class="spot" data-g="city" style="left:70%;top:34%;width:17%;height:18%"></span>
+      <span class="spot" data-g="city" style="left:15%;top:78%;width:20%;height:20%"></span>
+      <span class="spot" data-g="city" style="left:55%;top:75%;width:30%;height:26%"></span>
+      <span class="spot" data-g="city" style="left:82%;top:90%;width:20%;height:20%"></span>
+      <span class="spot" data-g="whale" style="left:45%;top:29%;width:22%;height:22%"></span>
+      <span class="spot" data-g="whale" style="left:35%;top:62%;width:24%;height:22%"></span>
+      <span class="spot" data-g="whale" style="left:58%;top:86%;width:26%;height:22%"></span>
+      <span class="spot" data-g="whale" style="left:82%;top:64%;width:17%;height:17%"></span>
+      <span class="spot" data-g="nature" style="left:48%;top:44%;width:22%;height:22%"></span>
+      <span class="spot" data-g="nature" style="left:48%;top:51%;width:16%;height:16%"></span>
+      <span class="spot" data-g="nature" style="left:81%;top:32%;width:16%;height:16%"></span>
+      <span class="spot" data-g="nature" style="left:16%;top:55%;width:16%;height:16%"></span>
+      <span class="spot" data-g="nature" style="left:16%;top:61%;width:13%;height:13%"></span>
+    </figure>
+    <div class="art-essence">
+      <div data-g="city"><h4>加拿大地標</h4><p>芳堤娜城堡、CN 塔、紅磚教堂與英法殖民風的莊園街屋，鋪陳橫跨魁北克到多倫多的加拿大都會品味。</p></div>
+      <div data-g="whale"><h4>鯨魚海域</h4><p>聖羅倫斯河的座頭鯨與西岸的虎鯨，象徵橫跨東西岸的海洋文化，也暗示咖啡深邃、流動、多層次的風味。</p></div>
+      <div data-g="nature"><h4>楓糖自然</h4><p>橙紅與金黃的楓葉、堅果與花苞，點出這支豆楓糖般的甜感與堅果尾韻。</p></div>
+    </div>
   </section>
 
 </div>
@@ -322,6 +365,12 @@ body{font-family:var(--f);color:var(--ink);background:var(--white);-webkit-font-
 (function(){var els=document.querySelectorAll('.reveal');if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in');});return;}var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.15});els.forEach(function(e){io.observe(e);});})();
 (function(){document.querySelectorAll('.share-btn,.share-ig').forEach(function(b){b.addEventListener('click',function(){var url=b.getAttribute('data-url'),title=b.getAttribute('data-title'),text=b.getAttribute('data-text'),msg=b.getAttribute('data-msg')||'已複製連結 ✓';if(navigator.share){navigator.share({title:title,text:text,url:url}).catch(function(){});}else if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(url).then(function(){var c=b.closest('.share-row').querySelector('.share-copied');if(c){c.textContent=msg;c.classList.add('show');setTimeout(function(){c.classList.remove('show');},2800);}});}else{window.prompt('複製連結：',url);}});});})();
 (function(){var els=document.querySelectorAll('.flavor-chart-img');if(!('IntersectionObserver' in window))return;var io=new IntersectionObserver(function(es){es.forEach(function(e){e.target.classList.toggle('in-view',e.isIntersecting);});},{threshold:0.4});els.forEach(function(e){io.observe(e);});})();
+/* 視覺解讀：滑到/捲到某欄→圖上對應元素黑白轉彩色＋暖光 */
+(function(){var art=document.querySelector('.artwork');var cols=document.querySelectorAll('.art-essence > div[data-g]');if(!art||!cols.length)return;
+function on(g,c){art.classList.remove('g-city','g-whale','g-nature');art.classList.add('g-active','g-'+g);cols.forEach(function(o){o.style.opacity=o===c?'1':'.4';});}
+function off(){art.classList.remove('g-active','g-city','g-whale','g-nature');cols.forEach(function(o){o.style.opacity='';});}
+cols.forEach(function(c){var g=c.getAttribute('data-g');c.addEventListener('mouseenter',function(){on(g,c);});c.addEventListener('mouseleave',off);});
+if('IntersectionObserver' in window){var io2=new IntersectionObserver(function(es){es.forEach(function(e){var g=e.target.getAttribute('data-g');if(e.isIntersecting){on(g,e.target);}else if(art.classList.contains('g-'+g)){off();}});},{rootMargin:'-38% 0px -38% 0px',threshold:0});cols.forEach(function(c){io2.observe(c);});}})();
 </script>
 </body>
 </html>
