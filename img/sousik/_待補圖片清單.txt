@@ -1,0 +1,22 @@
+SOU SIK P-1 Solo 頁面（sousik.html）待補的官方素材
+================================================
+把官方產品照／影片丟進這個資料夾（img/sousik/），檔名照下面命名即可自動接上。
+頁面目前用「虛線留版位 + 原創尺寸線稿」呈現，補圖後只要替換對應檔案。
+
+必要：
+- intro.jpg        產品主圖（直式 4:5 最佳）          → 關於區塊
+- mechanical.jpg   機構特寫／齒輪剖視（橫式 16:10）   → Chapter 01
+- grind-scale.jpg  120 段位刻度盤特寫（橫式 16:10）   → Chapter 02
+- exploded.jpg     分解結構／層層堆疊（橫式 16:10）   → Chapter 03
+
+選用（補了會更完整）：
+- hero.jpg 或 hero.mp4 + hero-poster.jpg   首頁主視覺背景
+  （補上後，到 sousik.html 的 <header class="hero"> 取消那段註解擇一啟用）
+- spec.jpg         官方實拍規格圖（可替換 SVG 尺寸線稿）
+- burr01.jpg / burr02.jpg   兩款刀盤特寫
+- color-desert.jpg / color-glacier.jpg   兩色機身
+
+備註：
+- 圖片建議寬度 1080px 以上、JPG 品質 80 左右。
+- 影片用 H.264 MP4、靜音、可循環，建議 < 6MB。
+- 版權：以原廠／代理授權之官方產品素材為準。
