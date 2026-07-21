@@ -40,6 +40,7 @@ body{font-family:var(--f);color:var(--ink);background:var(--white);-webkit-font-
 .bn-back:hover{color:var(--ink)}
 .bn-shop{font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--white);background:var(--ink);padding:9px 18px;border-radius:999px;text-decoration:none;transition:opacity .25s}
 .bn-shop:hover{opacity:.78}
+.bn-shop.is-soon,.collect-btn.is-soon{background:transparent;color:var(--ink-40);border:1px solid var(--ink-20);cursor:not-allowed;pointer-events:none}
 @media(max-width:680px){.bn-back{display:none}}
 
 /* WRAP */
@@ -216,7 +217,7 @@ body{font-family:var(--f);color:var(--ink);background:var(--white);-webkit-font-
   <div class="bn-nav-right">
     <a class="bn-back" href="../index.html#products">← 咖啡作品</a>
     <a class="bn-back" href="../equipment.html">器材推薦</a>
-    <a class="bn-shop" href="https://www.cicacafe.shop/SalePage/Index/9907267" target="_blank" rel="noopener noreferrer">收藏</a>
+    <span class="bn-shop is-soon" aria-disabled="true">即將上架</span>
   </div>
 </nav>
 
@@ -335,7 +336,7 @@ body{font-family:var(--f);color:var(--ink);background:var(--white);-webkit-font-
     <div class="collect-copy">
       <h2 class="collect-h">收藏這件作品</h2>
       <p class="collect-sub">可庫・咖啡豆 250g／濾掛咖啡——把濃到底的甜，帶回杯裡。</p>
-      <a class="collect-btn" href="https://www.cicacafe.shop/SalePage/Index/9907267" target="_blank" rel="noopener noreferrer">前往選購 →</a>
+      <span class="collect-btn is-soon" aria-disabled="true">即將上架．敬請期待</span>
       <div class="share-row">
         <span class="share-label">喜歡嗎？分享給朋友</span>
         <div class="share-socials">
