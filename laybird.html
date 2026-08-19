@@ -140,8 +140,11 @@ section{padding:88px 0}
 
 /* BUNDLES */
 .bundle-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:40px}
-.bundle{border:1px solid var(--fog);padding:30px;display:flex;flex-direction:column;background:var(--white);transition:border-color .25s}
-.bundle:hover{border-color:var(--ink-40)}
+.bundle{border:1px solid var(--fog);padding:30px;display:flex;flex-direction:column;background:var(--white);transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s ease,border-color .25s,background .25s}
+.bundle:hover{border-color:var(--ink);transform:translateY(-6px);box-shadow:0 20px 44px -16px rgba(0,0,0,.22)}
+.bundle:not(.hot):hover{background:var(--mist)}
+.bundle.hot:hover{box-shadow:0 26px 52px -14px rgba(0,0,0,.45)}
+@media(prefers-reduced-motion:reduce){.bundle{transition:border-color .25s}.bundle:hover{transform:none;box-shadow:none}}
 .bundle.hot{background:var(--ink);color:var(--white);border-color:var(--ink)}
 .bundle-tag{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-40);margin-bottom:12px}
 .bundle.hot .bundle-tag{color:rgba(255,255,255,.6)}
