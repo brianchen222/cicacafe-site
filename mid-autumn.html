@@ -357,6 +357,15 @@ nav,.mcta{background:var(--navbg)}
 .v10 .sec-h2{letter-spacing:.03em}
 .v10 .box-name{letter-spacing:.04em}
 .v10 .path-tag{letter-spacing:.14em}
+
+/* === 藏月 售完標示 === */
+.sold-badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.1em;color:#fff;background:#a2483f;border-radius:5px;padding:3px 11px;vertical-align:middle}
+.box-name .sold-badge{margin-left:12px}
+.cmp-top .sold-badge{margin-left:10px;font-size:10px;padding:2px 9px}
+.btn-gold.is-sold,.btn-out.is-sold{background:transparent!important;color:var(--dim)!important;border:1px solid var(--line)!important;cursor:not-allowed;pointer-events:none;box-shadow:none!important}
+.sold-note{font-size:13.5px;color:var(--silver);line-height:1.85;margin-top:14px;font-weight:300}
+.sold-guide{color:var(--gold-lt);text-decoration:none;border-bottom:1px solid var(--gold);font-weight:500;white-space:nowrap}
+.op.sold .nm{color:var(--dim)}.op.sold .pr{text-decoration:line-through;opacity:.55}
 </style>
 </head>
 <body>
@@ -488,7 +497,7 @@ nav,.mcta{background:var(--navbg)}
     </div>
     <div class="box-info">
       <p class="box-sub">大禮盒 · LARGE</p>
-      <h3 class="box-name">藏月</h3>
+      <h3 class="box-name">藏月<span class="sold-badge">已全數售完</span></h3>
       <div class="price-box"><span class="price-now">NT$ 1,683</span><span class="price-old">NT$ 1,980</span><span class="price-save">現省 NT$297</span><span class="price-off">15% OFF</span></div>
       <p class="box-early">早鳥優惠價 · 09/10 前</p>
       <p class="box-tag">金獎咖啡豆 × 山丘芭娜娜 × 風味時光杯<br>以金獎三星串連「眾星拱月」，收藏中秋的相聚。</p>
@@ -498,7 +507,8 @@ nav,.mcta{background:var(--navbg)}
       <div class="layer"><h4>第三層 · 拱月</h4><p>三罐雷雕銀罐金獎咖啡豆，可收藏、可自磨自沖。三金串連成「眾星拱月」，禮盒左右展開、左擁右抱——故名<b>藏月</b>。</p></div>
       <ul class="incl"><li>金獎濾掛咖啡 9 入</li><li>金獎咖啡豆 120g（三罐 40g 雷雕銀罐）</li><li>山丘芭娜娜乙盒（三入，月兔造型糕餅）</li><li>風味時光杯一只</li></ul>
       
-      <a class="btn-gold" href="https://www.cicacafe.shop/products/2026-mid-autumn-moon-coffee-box" target="_blank" rel="noopener noreferrer">立即預購藏月 →</a>
+      <span class="btn-gold is-sold">藏月・已全數售完</span>
+      <p class="sold-note">感謝支持，藏月已全數售完 🙏　歡迎參考 <a class="sold-guide" href="https://www.cicacafe.shop/products/2026-mid-autumn-star-coffee-box" target="_blank" rel="noopener noreferrer">中秋・留星禮盒 →</a></p>
     </div>
   </div>
   <!-- 留星 -->
@@ -528,14 +538,14 @@ nav,.mcta{background:var(--navbg)}
   <h2 class="h2 center">兩款禮盒，怎麼選</h2>
   <div class="cmp" style="margin-top:40px">
     <div class="cmp-col feat">
-      <div class="cmp-top"><span class="cmp-name">藏月</span><span class="cmp-kind">體面收藏型</span></div>
+      <div class="cmp-top"><span class="cmp-name">藏月</span><span class="cmp-kind">體面收藏型</span><span class="sold-badge">已售完</span></div>
       <p class="cmp-pos">大禮盒 · LARGE</p>
       <div class="cmp-row"><div class="ck">適合對象</div><div class="cv">重要客戶、長輩、主管、VIP</div></div>
       <div class="cmp-row"><div class="ck">內容重點</div><div class="cv">金獎濾掛（沖泡簡單、免器材）＋ 山丘芭娜娜（月兔造型）糕點 ＋ <b>金獎咖啡豆（雷雕收藏罐）</b> ＋ <b>風味時光杯</b></div></div>
       <div class="cmp-row"><div class="ck">推薦情境</div><div class="cv">需要完整心意、體面收藏的送禮</div></div>
       <div class="cmp-row"><div class="ck">價格</div><div class="cv"><span class="cmp-price">NT$ 1,683<s>NT$ 1,980</s></span></div></div>
       <div class="cmp-cta">
-        <a class="btn-gold" href="https://www.cicacafe.shop/products/2026-mid-autumn-moon-coffee-box" target="_blank" rel="noopener noreferrer">立即預購藏月 →</a></div>
+        <span class="btn-gold is-sold">藏月・已售完</span></div>
     </div>
     <div class="cmp-col">
       <div class="cmp-top"><span class="cmp-name">留星</span><span class="cmp-kind">輕巧好送型</span></div>
@@ -606,12 +616,12 @@ nav,.mcta{background:var(--navbg)}
   <p class="eyebrow center">立即預購 · 早鳥優惠</p>
   <h2 class="h2">把這個中秋，收藏起來</h2>
   <div class="order-prices">
-    <div class="op"><div class="nm">藏月 · 大禮盒</div><div class="pr">NT$ 1,683</div><div class="od">NT$ 1,980</div></div>
+    <div class="op sold"><div class="nm">藏月 · 大禮盒（已售完）</div><div class="pr">NT$ 1,683</div><div class="od">NT$ 1,980</div></div>
     <div class="op"><div class="nm">留星 · 小禮盒</div><div class="pr">NT$ 842</div><div class="od">NT$ 990</div></div>
   </div>
   <div class="order-cta">
     
-    <a class="btn-gold" href="https://www.cicacafe.shop/products/2026-mid-autumn-moon-coffee-box" target="_blank" rel="noopener noreferrer">立即預購藏月 →</a>
+    <span class="btn-gold is-sold">藏月・已售完</span>
     <a class="btn-out" href="https://www.cicacafe.shop/products/2026-mid-autumn-star-coffee-box" target="_blank" rel="noopener noreferrer">立即預購留星 →</a>
     <a class="btn-line" href="#corporate">企業採購洽詢 ↗</a>
   </div>
