@@ -475,8 +475,8 @@ nav,.mcta{background:var(--navbg)}
 
   <div class="cta-row">
     <a class="btn-gold" href="https://line.me/ti/p/~brianchen222" target="_blank" rel="noopener noreferrer">LINE 洽詢企業方案</a>
-    <a class="btn-line" href="mailto:jackal.chiang@cica.com.tw?subject=CICACAFE%20企業中秋送禮%20索取報價&body=公司名稱：%0D%0A聯絡人／電話：%0D%0A欲採購禮盒與數量：%0D%0A是否需客製賀卡：%0D%0A配送地址數：">索取企業報價 ↗</a>
-    <a class="btn-line" href="img/ma-order.jpg" target="_blank" rel="noopener noreferrer">下載企業訂購單 ↗</a>
+    <a class="btn-line" onclick="window.gtag&&gtag('event','contact_quote',{location:'mid_autumn_corporate',method:'email'})" href="mailto:jackal.chiang@cica.com.tw?subject=CICACAFE%20企業中秋送禮%20索取報價&body=公司名稱：%0D%0A聯絡人／電話：%0D%0A欲採購禮盒與數量：%0D%0A是否需客製賀卡：%0D%0A配送地址數：">索取企業報價 ↗</a>
+    <a class="btn-line" onclick="window.gtag&&gtag('event','download_order_form',{location:'mid_autumn_corporate',file_name:'ma-order.jpg'})" href="img/ma-order.jpg" target="_blank" rel="noopener noreferrer">下載企業訂購單 ↗</a>
   </div>
   <p class="note">電話洽詢 <a href="tel:02-4128589" style="color:var(--gold-lt);border-bottom:1px solid var(--line)">02-4128589</a>　·　Email jackal.chiang@cica.com.tw</p>
 </div></section>
