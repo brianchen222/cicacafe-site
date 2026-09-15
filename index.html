@@ -211,6 +211,9 @@ nav.light .nav-cta:hover{background:var(--ink);color:var(--white)}
 .taste-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--fog)}
 .t-card{background:var(--white);padding:28px 22px}
 .t-dot{width:32px;height:32px;border-radius:50%;margin-bottom:14px}
+.t-img{display:block;width:100%;height:132px;object-fit:contain;object-position:center;margin-bottom:14px;filter:grayscale(1);transition:filter .55s ease}
+@media(hover:hover){ .t-card:hover .t-img{filter:grayscale(0)} }
+@media(max-width:900px){ .t-img.in-view{filter:grayscale(0)} }
 .t-num{font-size:10px;letter-spacing:.2em;color:var(--ink-40);text-transform:uppercase;margin-bottom:7px}
 .t-name{font-size:16px;font-weight:700;color:var(--ink);margin-bottom:10px}
 .t-desc{font-size:13px;color:var(--ink-60);line-height:1.75;margin-bottom:14px}
@@ -625,7 +628,7 @@ footer{background:#000;border-top:1px solid #111;padding:44px 6vw}
 
       <div class="taste-grid">
         <div class="t-card">
-          <div class="t-dot" style="background:linear-gradient(135deg,#8b4a9c,#d4803a)"></div>
+          <img class="t-img" src="/img/singles/taste-teshu.png" alt="特殊處理法單品豆插畫" loading="lazy" decoding="async">
           <p class="t-num">調性一</p>
           <h4 class="t-name">特殊處理法</h4>
           <p class="t-desc">厭氧、酒桶發酵、特殊日曬——以處理法本身為賣點，風味具實驗性與話題性，每一支都是一次全新的探索。</p>
@@ -636,7 +639,7 @@ footer{background:#000;border-top:1px solid #111;padding:44px 6vw}
           <p class="t-coming">品項持續更新中</p>
         </div>
         <div class="t-card">
-          <div class="t-dot" style="background:linear-gradient(135deg,#f0a04a,#e8d060)"></div>
+          <img class="t-img" src="/img/singles/taste-huaguo.png" alt="花果調性單品豆插畫" loading="lazy" decoding="async">
           <p class="t-num">調性二</p>
           <h4 class="t-name">花果調性</h4>
           <p class="t-desc">明亮果酸、花香為主——清爽活潑風格，讓每一口都像在品嚐一杯剛榨好的果汁。</p>
@@ -647,7 +650,7 @@ footer{background:#000;border-top:1px solid #111;padding:44px 6vw}
           <p class="t-coming">品項持續更新中</p>
         </div>
         <div class="t-card">
-          <div class="t-dot" style="background:linear-gradient(135deg,#8b5e3c,#c8a060)"></div>
+          <img class="t-img" src="/img/singles/taste-jianguo.png" alt="堅果調性單品豆插畫" loading="lazy" decoding="async">
           <p class="t-num">調性三</p>
           <h4 class="t-name">堅果調性</h4>
           <p class="t-desc">醇厚甜感、堅果巧克力為主——溫潤風格，易飲不挑人，是每天早晨都想打開的那一包。</p>
@@ -658,7 +661,7 @@ footer{background:#000;border-top:1px solid #111;padding:44px 6vw}
           <p class="t-coming">品項持續更新中</p>
         </div>
         <div class="t-card">
-          <div class="t-dot" style="background:linear-gradient(135deg,#3a6b4a,#7ab88c)"></div>
+          <img class="t-img" src="/img/singles/taste-caoben.png" alt="草本調性單品豆插畫" loading="lazy" decoding="async">
           <p class="t-num">調性四</p>
           <h4 class="t-name">草本調性</h4>
           <p class="t-desc">清涼草本、低酸微苦——仙草、甘草、青草茶般的安定調性，為不愛果酸、偏好沉穩感受的你而存在。</p>
@@ -947,5 +950,13 @@ if (philImgs.length) {
 })();
 </script>
 
+<script>
+(function(){
+  var t=document.querySelectorAll('.t-img');
+  if(!t.length||!('IntersectionObserver' in window))return;
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){e.target.classList.toggle('in-view',e.isIntersecting);});},{rootMargin:'-30% 0px -30% 0px',threshold:0});
+  t.forEach(function(el){io.observe(el);});
+})();
+</script>
 </body>
 </html>
