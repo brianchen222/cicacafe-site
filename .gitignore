@@ -4,3 +4,5 @@ mid-autumn_v1.0.html
 _preview_soldout.html
 _mock_combined.html
 _mock_order.html
+.fuse_hidden*
+**/.fuse_hidden*
