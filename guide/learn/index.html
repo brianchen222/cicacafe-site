@@ -219,5 +219,30 @@ m.addEventListener('click',function(e){if(e.target.tagName==='A'){m.classList.re
 <script>
 (function(){if(!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in-view");io.unobserve(e.target);}})},{threshold:.2});document.querySelectorAll(".hero").forEach(function(el){io.observe(el);});})();
 </script>
+<!-- TYPO:START 字級與對比規範（電腦版≥901px：內文17px、次要15–17px、標籤12–13px；淺灰#767676） -->
+<style>
+:root{--ink-40:#767676}
+
+@media(min-width:901px){
+ .cc-sm{padding:56px 6vw 48px!important}
+ .cc-sm-h{font-size:15px!important;margin-bottom:16px!important}
+ .cc-sm-col a{font-size:16px!important;color:#555!important;padding:6px 0!important}
+ .cc-sm-col a:hover{color:#000!important}
+ .footer-copy,.footer-social a{font-size:14px;color:#9a9a9a}
+ .footer-copy a{border-color:#666}
+ .footer-social{gap:24px}
+ .footer-logo{height:24px;color:#9a9a9a}
+ .sitefooter a{font-size:15px}
+ .sitefooter div:last-child{font-size:14px;color:rgba(255,255,255,.62)}
+}
+
+@media(min-width:901px){
+ html body .ghero div.eyebrow{font-size:12px!important;color:#767676!important}
+ html body .tags span.tag{font-size:12px!important}
+ html body .art p{font-size:16px!important}
+ html body .art span.go{font-size:15px!important;color:#767676!important}
+}
+</style>
+<!-- TYPO:END -->
 </body>
 </html>

@@ -740,5 +740,105 @@ if(bar&&hero){var ho=new IntersectionObserver(function(es){es.forEach(function(e
 /* 金獎三星：手機進入畫面變彩色，離開變黑白 */
 (function(){var stars=document.querySelectorAll('.stars .star');if(!stars.length||!('IntersectionObserver' in window))return;var io=new IntersectionObserver(function(es){es.forEach(function(e){e.target.classList.toggle('lit',e.isIntersecting);});},{threshold:0.4});stars.forEach(function(s){io.observe(s);});})();
 </script>
+<!-- TYPO:START 字級與對比規範（電腦版≥901px：內文17px、次要15–17px、標籤12–13px；淺灰#767676） -->
+<style>
+:root{--ink-40:#767676}
+
+@media(min-width:901px){
+ .cc-sm{padding:56px 6vw 48px!important}
+ .cc-sm-h{font-size:15px!important;margin-bottom:16px!important}
+ .cc-sm-col a{font-size:16px!important;color:#555!important;padding:6px 0!important}
+ .cc-sm-col a:hover{color:#000!important}
+ .footer-copy,.footer-social a{font-size:14px;color:#9a9a9a}
+ .footer-copy a{border-color:#666}
+ .footer-social{gap:24px}
+ .footer-logo{height:24px;color:#9a9a9a}
+ .sitefooter a{font-size:15px}
+ .sitefooter div:last-child{font-size:14px;color:rgba(255,255,255,.62)}
+}
+
+@media(min-width:901px){
+ html body div.season-note{font-size:15px!important}
+ html body .season-note a{font-size:15px!important}
+ html body .hero-card p.hero-eyebrow{font-size:12px!important;color:#767676!important}
+ html body .hero-card p.hero-note{font-size:16px!important;color:#767676!important}
+ html body .medal span{font-size:10px!important;color:#767676!important}
+ html body .hero-card p.hero-tags{font-size:12px!important;color:#767676!important}
+ html body .dual a.htog.h-b2b.on{font-size:15px!important}
+ html body .dual a.htog.h-b2c{font-size:15px!important;color:#767676!important}
+ html body .wrap p.eyebrow{font-size:12px!important}
+ html body .stat div.cap{font-size:13px!important}
+ html body .orb div.yr{font-size:11px!important}
+ html body .orb div.en{font-size:11px!important}
+ html body .feat-txt p.eyebrow{font-size:12px!important}
+ html body .d s{font-size:17px!important}
+ html body .c s{font-size:15px!important}
+ html body .vtl span.d{font-size:17px!important}
+ html body .vtl span.c{font-size:15px!important}
+ html body .hot span.d{font-size:17px!important}
+ html body .hot span.c{font-size:15px!important}
+ html body .feat-txt p.poster-cap{font-size:16px!important}
+ html body .wrap span.path{font-size:12px!important}
+ html body .point h4{font-size:16px!important}
+ html body .point p{font-size:15px!important}
+ html body .sl small{font-size:13px!important}
+ html body .spec-fold span.si{font-size:13px!important}
+ html body .spec-fold p.fold-sub{font-size:12px!important}
+ html body .srow dt{font-size:13px!important}
+ html body .srow dd{font-size:16px!important}
+ html body .spec-fold p.note{font-size:13px!important}
+ html body .flow span.ft{font-size:16px!important}
+ html body .cta-row a.btn-gold{font-size:15px!important}
+ html body .cta-row a.btn-line{font-size:15px!important}
+ html body .wrap p.note{font-size:13px!important}
+ html body .note a{font-size:13px!important}
+ html body .wrap span.path-tag{font-size:12px!important}
+ html body .box-info p.box-sub{font-size:12px!important}
+ html body .box-name span.sold-badge{font-size:12px!important}
+ html body .price-box span.price-old{font-size:16px!important}
+ html body .price-box span.price-save{font-size:13px!important;color:#767676!important}
+ html body .price-box span.price-off{font-size:13px!important;color:#a8a8a8!important}
+ html body .box-info p.box-early{font-size:12px!important}
+ html body .box-info p.box-tag{font-size:16px!important}
+ html body .layer h4{font-size:15px!important}
+ html body .layer p{font-size:15px!important}
+ html body .layer b{font-size:15px!important}
+ html body .incl li{font-size:15px!important}
+ html body .box-info span.btn-gold.is-sold{font-size:15px!important}
+ html body .box-info p.sold-note{font-size:16px!important}
+ html body .sold-note a.sold-guide{font-size:16px!important}
+ html body .box-info p.naming{font-size:15px!important}
+ html body .naming b{font-size:15px!important}
+ html body .wrap p.eyebrow.center{font-size:12px!important}
+ html body .cmp-top span.cmp-kind{font-size:12px!important}
+ html body .cmp-top span.sold-badge{font-size:11px!important}
+ html body .cmp-col p.cmp-pos{font-size:13px!important}
+ html body .cmp-row div.ck{font-size:12px!important}
+ html body .cmp-row div.cv{font-size:16px!important}
+ html body .cv b{font-size:16px!important}
+ html body .cmp-price s{font-size:15px!important}
+ html body .cmp-cta span.btn-gold.is-sold{font-size:15px!important}
+ html body .cmp-cta span.btn-out.is-sold{font-size:15px!important}
+ html body .wrap p.note.center{font-size:13px!important}
+ html body .star p.star-yr{font-size:11px!important}
+ html body .star div.star-en{font-size:11px!important}
+ html body .star p.star-fl{font-size:13px!important}
+ html body .why div.n{font-size:12px!important;color:#767676!important}
+ html body .why h4{font-size:17px!important}
+ html body .why p{font-size:15px!important}
+ html body .wrap p.faq-cat{font-size:12px!important}
+ html body .faq summary{font-size:17px!important}
+ html body .faq p{font-size:16px!important}
+ html body .reveal p.eyebrow.center{font-size:12px!important}
+ html body .op div.nm{font-size:16px!important}
+ html body .op div.od{font-size:13px!important}
+ html body .order-cta span.btn-gold.is-sold{font-size:15px!important}
+ html body .order-cta span.btn-out.is-sold{font-size:15px!important}
+ html body .order-cta a.btn-line{font-size:15px!important}
+ html body .mcta a.m-b2b.on{font-size:15px!important}
+ html body .mcta a.m-b2c{font-size:15px!important}
+}
+</style>
+<!-- TYPO:END -->
 </body>
 </html>

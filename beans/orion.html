@@ -361,5 +361,51 @@ body{font-family:var(--f);color:var(--ink);background:var(--white);-webkit-font-
 <script>
 (function(){document.querySelectorAll('.share-btn,.share-ig').forEach(function(b){b.addEventListener('click',function(){var url=b.getAttribute('data-url'),title=b.getAttribute('data-title'),text=b.getAttribute('data-text'),msg=b.getAttribute('data-msg')||'已複製連結 ✓';if(navigator.share){navigator.share({title:title,text:text,url:url}).catch(function(){});}else if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(url).then(function(){var c=b.closest('.share-row').querySelector('.share-copied');if(c){c.textContent=msg;c.classList.add('show');setTimeout(function(){c.classList.remove('show');},2800);}});}else{window.prompt('複製連結：',url);}});});})();
 </script>
+<!-- TYPO:START 字級與對比規範（電腦版≥901px：內文17px、次要15–17px、標籤12–13px；淺灰#767676） -->
+<style>
+:root{--ink-40:#767676}
+
+@media(min-width:901px){
+ .cc-sm{padding:56px 6vw 48px!important}
+ .cc-sm-h{font-size:15px!important;margin-bottom:16px!important}
+ .cc-sm-col a{font-size:16px!important;color:#555!important;padding:6px 0!important}
+ .cc-sm-col a:hover{color:#000!important}
+ .footer-copy,.footer-social a{font-size:14px;color:#9a9a9a}
+ .footer-copy a{border-color:#666}
+ .footer-social{gap:24px}
+ .footer-logo{height:24px;color:#9a9a9a}
+ .sitefooter a{font-size:15px}
+ .sitefooter div:last-child{font-size:14px;color:rgba(255,255,255,.62)}
+}
+
+@media(min-width:901px){
+ html body .crumb a{font-size:12px!important}
+ html body .wrap p.crumb{font-size:12px!important}
+ html body .hero-info p.hero-meta{font-size:12px!important}
+ html body .hero-info p.hero-zone{font-size:13px!important}
+ html body .hero-tags span.badge.solid{font-size:12px!important}
+ html body .hero-tags span.badge{font-size:12px!important}
+ html body .sec p.sec-label{font-size:12px!important}
+ html body .flavor-tags span.ftag.lead{font-size:16px!important}
+ html body .flavor-tags span.ftag{font-size:16px!important}
+ html body .flavor-copy p.roast-note{font-size:13px!important}
+ html body .flavor-chart p.radar-cap{font-size:12px!important}
+ html body .award-info p.award-meta{font-size:15px!important}
+ html body .award-cert figcaption{font-size:12px!important;color:#767676!important}
+ html body .timecode p.timecode-cap{font-size:12px!important;color:#767676!important}
+ html body .collect-copy p.collect-sub{font-size:16px!important}
+ html body .collect-copy span.collect-btn.is-soon{font-size:16px!important}
+ html body .share-row span.share-label{font-size:13px!important}
+ html body .share-socials button.share-btn{font-size:13px!important}
+ html body .share-socials a.share-line{font-size:13px!important}
+ html body .share-socials a.share-line.share-fb{font-size:13px!important}
+ html body .share-socials button.share-line.share-ig{font-size:13px!important}
+ html body .share-row span.share-copied{font-size:13px!important}
+ html body .related p.sec-label{font-size:12px!important}
+ html body .rcard-body div.rcard-zh{font-size:17px!important}
+ html body .rcard-body div.rcard-en{font-size:12px!important;color:#767676!important}
+}
+</style>
+<!-- TYPO:END -->
 </body>
 </html>

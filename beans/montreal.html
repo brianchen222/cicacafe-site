@@ -390,5 +390,52 @@ function off(){art.classList.remove('g-active','g-city','g-whale','g-nature');co
 cols.forEach(function(c){var g=c.getAttribute('data-g');c.addEventListener('mouseenter',function(){on(g,c);});c.addEventListener('mouseleave',off);});
 if('IntersectionObserver' in window){var io2=new IntersectionObserver(function(es){es.forEach(function(e){var g=e.target.getAttribute('data-g');if(e.isIntersecting){on(g,e.target);}else if(art.classList.contains('g-'+g)){off();}});},{rootMargin:'-38% 0px -38% 0px',threshold:0});cols.forEach(function(c){io2.observe(c);});}})();
 </script>
+<!-- TYPO:START 字級與對比規範（電腦版≥901px：內文17px、次要15–17px、標籤12–13px；淺灰#767676） -->
+<style>
+:root{--ink-40:#767676}
+
+@media(min-width:901px){
+ .cc-sm{padding:56px 6vw 48px!important}
+ .cc-sm-h{font-size:15px!important;margin-bottom:16px!important}
+ .cc-sm-col a{font-size:16px!important;color:#555!important;padding:6px 0!important}
+ .cc-sm-col a:hover{color:#000!important}
+ .footer-copy,.footer-social a{font-size:14px;color:#9a9a9a}
+ .footer-copy a{border-color:#666}
+ .footer-social{gap:24px}
+ .footer-logo{height:24px;color:#9a9a9a}
+ .sitefooter a{font-size:15px}
+ .sitefooter div:last-child{font-size:14px;color:rgba(255,255,255,.62)}
+}
+
+@media(min-width:901px){
+ html body .crumb a{font-size:12px!important}
+ html body .wrap p.crumb{font-size:12px!important}
+ html body .hero-info p.hero-meta{font-size:12px!important}
+ html body .hero-info p.hero-zone{font-size:13px!important}
+ html body .hero-tags span.badge.solid{font-size:12px!important}
+ html body .hero-tags span.badge{font-size:12px!important}
+ html body .sec p.sec-label{font-size:12px!important}
+ html body .flavor-tags span.ftag.lead{font-size:16px!important}
+ html body .flavor-tags span.ftag{font-size:16px!important}
+ html body .swatch-row span.swatch{font-size:13px!important}
+ html body .flavor-chart-img figcaption{font-size:12px!important}
+ html body .spec-line b{font-size:15px!important}
+ html body .sec p.spec-line{font-size:15px!important}
+ html body .art-essence h4{font-size:15px!important}
+ html body .art-essence p{font-size:16px!important}
+ html body .collect-copy p.collect-sub{font-size:16px!important}
+ html body .collect-copy span.collect-btn.is-soon{font-size:16px!important}
+ html body .share-row span.share-label{font-size:13px!important}
+ html body .share-socials button.share-btn{font-size:13px!important}
+ html body .share-socials a.share-line{font-size:13px!important}
+ html body .share-socials a.share-line.share-fb{font-size:13px!important}
+ html body .share-socials button.share-line.share-ig{font-size:13px!important}
+ html body .share-row span.share-copied{font-size:13px!important}
+ html body .related p.sec-label{font-size:12px!important}
+ html body .rcard-body div.rcard-zh{font-size:17px!important}
+ html body .rcard-body div.rcard-en{font-size:12px!important;color:#767676!important}
+}
+</style>
+<!-- TYPO:END -->
 </body>
 </html>
