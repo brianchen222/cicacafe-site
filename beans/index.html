@@ -295,5 +295,24 @@ h1.s-name{font-size:clamp(30px,5vw,46px);font-weight:800;letter-spacing:.03em;ma
 }
 </style>
 <!-- TYPO:END -->
+<!-- NAVM:START 手機版導覽收合（scripts/navmobile.py 產生） -->
+<style>
+.nav-tog{display:none}
+@media(max-width:820px){
+ .nav.has-tog{flex-wrap:nowrap}
+ .nav.has-tog .nav-tog{display:flex;flex-direction:column;justify-content:center;align-items:flex-end;gap:5px;width:44px;height:44px;margin-right:-8px;background:none;border:0;cursor:pointer;padding:10px}
+ .nav-tog span{display:block;height:1.5px;width:24px;background:#fff;transition:transform .3s ease,opacity .3s ease}
+ .nav.open .nav-tog span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+ .nav.open .nav-tog span:nth-child(2){opacity:0}
+ .nav.open .nav-tog span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+ .nav.has-tog .nav-links{display:none!important;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0!important;background:#000;padding:4px 6vw 26px;box-shadow:0 14px 28px rgba(0,0,0,.28)}
+ .nav.has-tog.open .nav-links{display:flex!important}
+ .nav.has-tog .nav-links a{font-size:16px!important;letter-spacing:.1em;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.86)}
+ .nav.has-tog .nav-links a[aria-current]{color:#fff;font-weight:700}
+ .nav.has-tog .nav-links a.nav-shop{margin-top:20px;text-align:center;border:1px solid #fff;border-radius:2px;padding:14px 0;background:#fff;color:#000!important;font-weight:700}
+}
+</style>
+<script>(function(){var n=document.querySelector('nav.nav');if(!n)return;var l=n.querySelector('.nav-links');if(!l)return;l.id=l.id||'nav-menu';var b=document.createElement('button');b.className='nav-tog';b.type='button';b.setAttribute('aria-controls',l.id);b.innerHTML='<span></span><span></span><span></span>';n.insertBefore(b,l);n.classList.add('has-tog');function set(o){n.classList.toggle('open',o);b.setAttribute('aria-expanded',o?'true':'false');b.setAttribute('aria-label',o?'關閉選單':'開啟選單')}set(false);b.addEventListener('click',function(e){e.stopPropagation();set(!n.classList.contains('open'))});l.addEventListener('click',function(e){if(e.target.closest('a'))set(false)});document.addEventListener('click',function(e){if(!n.contains(e.target))set(false)});document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false)})})();</script>
+<!-- NAVM:END -->
 </body>
 </html>
