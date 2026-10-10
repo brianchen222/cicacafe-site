@@ -78,7 +78,7 @@ body{font-family:var(--f);color:var(--ink);background:var(--white);-webkit-font-
 .sec-text{font-size:16px;line-height:2;color:var(--ink-80);font-weight:300}
 .sec-text strong{font-weight:700;color:var(--ink)}
 .sec-text + .sec-text{margin-top:18px}
-.pullquote-band{position:relative;left:50%;margin-left:-50vw;width:100vw;margin-top:54px;padding:100px 6vw;background:#0c0a0e url('../img/mars-space.jpg') center top/cover no-repeat}
+.pullquote-band{position:relative;left:50%;margin-left:-50vw;width:100vw;margin-top:54px;padding:100px 6vw;background:#0c0a0e url('../img/opt/mars-space.webp') center top/cover no-repeat}
 .pullquote-band::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,6,10,.48),rgba(8,6,10,.64))}
 .pullquote-inner{position:relative;max-width:1080px;margin:0 auto}
 .pullquote-inner p{font-size:clamp(26px,4.2vw,48px);font-weight:300;line-height:1.45;letter-spacing:.02em;color:#fff}
@@ -283,15 +283,15 @@ body{font-family:var(--f);color:var(--ink);background:var(--white);-webkit-font-
   <p class="sec-label">繼續探索 / Keep Exploring</p>
   <div class="related-grid">
     <a class="rcard" href="mars.html">
-      <img src="../img/mars.jpg" alt="火星 MARS 主視覺">
+      <img width="720" height="834" decoding="async" fetchpriority="high" src="../img/opt/mars.webp" alt="火星 MARS 主視覺">
       <div class="rcard-body"><div class="rcard-zh">火星</div><div class="rcard-en">Mars</div></div>
     </a>
     <a class="rcard" href="venus.html">
-      <img src="../img/venus.jpg" alt="金星 VENUS 主視覺">
+      <img width="720" height="834" decoding="async" loading="lazy" src="../img/opt/venus.webp" alt="金星 VENUS 主視覺">
       <div class="rcard-body"><div class="rcard-zh">金星</div><div class="rcard-en">Venus</div></div>
     </a>
     <a class="rcard" href="orion.html">
-      <img src="../img/orion.jpg" alt="獵戶座 ORION 主視覺">
+      <img width="720" height="834" decoding="async" loading="lazy" src="../img/opt/orion.webp" alt="獵戶座 ORION 主視覺">
       <div class="rcard-body"><div class="rcard-zh">獵戶座</div><div class="rcard-en">Orion</div></div>
     </a>
   </div>
@@ -379,5 +379,9 @@ body{font-family:var(--f);color:var(--ink);background:var(--white);-webkit-font-
 }
 </style>
 <!-- TYPO:END -->
+<!-- MLIT:START 手機版黑白圖滑到中央轉彩色（scripts/mobilelit.py 產生） -->
+<style>@media(max-width:900px){.m-lit{filter:grayscale(0)!important}}</style>
+<script>(function(){if(!('IntersectionObserver' in window))return;var els=Array.prototype.filter.call(document.querySelectorAll('img,.artwork .base'),function(e){return /grayscale/.test(getComputedStyle(e).filter);});if(!els.length)return;var io=new IntersectionObserver(function(es){es.forEach(function(e){e.target.classList.toggle('m-lit',e.isIntersecting);});},{rootMargin:'-30% 0px -30% 0px',threshold:0});els.forEach(function(e){io.observe(e);});})();</script>
+<!-- MLIT:END -->
 </body>
 </html>

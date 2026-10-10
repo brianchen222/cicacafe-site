@@ -162,7 +162,7 @@ h1.s-name{font-size:clamp(30px,5vw,46px);font-weight:800;letter-spacing:.03em;ma
     <p class="ex-sub">ARCHIVE · 我們做過的每一件節慶作品</p>
     <p class="year-h">2026</p>
     <a class="arc-card" href="/gift/2026-mid-autumn/">
-      <img src="/img/ma-dm-poster.jpg" alt="2026 金獎中秋禮盒 藏月・留星 主視覺" loading="lazy">
+      <img width="480" height="674" decoding="async" src="/img/opt/ma-dm-poster.webp" alt="2026 金獎中秋禮盒 藏月・留星 主視覺" loading="lazy">
       <div>
         <span class="status gray">2026 中秋 · 首檔特展 · 已完售・典藏</span>
         <h3>2026 金獎中秋禮盒｜藏月・留星</h3>
@@ -268,5 +268,9 @@ h1.s-name{font-size:clamp(30px,5vw,46px);font-weight:800;letter-spacing:.03em;ma
 </style>
 <script>(function(){var n=document.querySelector('nav.nav');if(!n)return;var l=n.querySelector('.nav-links');if(!l)return;l.id=l.id||'nav-menu';var b=document.createElement('button');b.className='nav-tog';b.type='button';b.setAttribute('aria-controls',l.id);b.innerHTML='<span></span><span></span><span></span>';n.insertBefore(b,l);n.classList.add('has-tog');function set(o){n.classList.toggle('open',o);b.setAttribute('aria-expanded',o?'true':'false');b.setAttribute('aria-label',o?'關閉選單':'開啟選單')}set(false);b.addEventListener('click',function(e){e.stopPropagation();set(!n.classList.contains('open'))});l.addEventListener('click',function(e){if(e.target.closest('a'))set(false)});document.addEventListener('click',function(e){if(!n.contains(e.target))set(false)});document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false)})})();</script>
 <!-- NAVM:END -->
+<!-- MLIT:START 手機版黑白圖滑到中央轉彩色（scripts/mobilelit.py 產生） -->
+<style>@media(max-width:900px){.m-lit{filter:grayscale(0)!important}}</style>
+<script>(function(){if(!('IntersectionObserver' in window))return;var els=Array.prototype.filter.call(document.querySelectorAll('img,.artwork .base'),function(e){return /grayscale/.test(getComputedStyle(e).filter);});if(!els.length)return;var io=new IntersectionObserver(function(es){es.forEach(function(e){e.target.classList.toggle('m-lit',e.isIntersecting);});},{rootMargin:'-30% 0px -30% 0px',threshold:0});els.forEach(function(e){io.observe(e);});})();</script>
+<!-- MLIT:END -->
 </body>
 </html>

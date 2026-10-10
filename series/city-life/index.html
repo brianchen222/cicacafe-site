@@ -99,21 +99,21 @@ h1.s-name{font-size:clamp(30px,5vw,46px);font-weight:800;letter-spacing:.03em;ma
   </section>
   <section class="grid g3">
 <a class="card" href="/beans/honus.html">
-<div class="card-img"><img src="/img/honus.jpg" alt="赫諾斯 01 主視覺" loading="lazy"></div>
+<div class="card-img"><img width="540" height="540" decoding="async" src="/img/opt/honus.webp" alt="赫諾斯 01 主視覺" loading="lazy"></div>
 <div class="card-body"><div class="dot" style="background:#d4873a"></div>
 <p class="card-name">赫諾斯 01</p><p class="card-sub">HONUS · 衣索比亞、瓜地馬拉、哥倫比亞、巴西 · 中焙</p>
 <p class="card-flavor">花香、柑橘、奶油、焦糖、黑巧克力、堅果——都會輕盈感，溫潤平衡不刺激，橘香奶油是風味記憶點。</p>
 <div class="card-pkg"><span class="pkg">豆 200g</span><span class="pkg">濾掛 10g</span></div>
 <p class="card-note">MLB 名人堂 Honus Wagner · 早午餐首選</p></div></a>
 <a class="card" href="/beans/montreal.html">
-<div class="card-img"><img src="/img/montreal.jpg" alt="蒙特婁 02 主視覺" loading="lazy"></div>
+<div class="card-img"><img width="700" height="700" decoding="async" src="/img/opt/montreal.webp" alt="蒙特婁 02 主視覺" loading="lazy"></div>
 <div class="card-body"><div class="dot" style="background:#b87a3a"></div>
 <p class="card-name">蒙特婁 02</p><p class="card-sub">MONTREAL · 中焙 · 含低因羅布斯塔</p>
 <p class="card-flavor">楓糖尾韻、榛果、可可、開心果——如加拿大楓糖漿般自然飽滿的甜感，口感豐富不厚重，搭配烘焙甜點絕配。</p>
 <div class="card-pkg"><span class="pkg">豆 200g</span><span class="pkg">濾掛 10g</span></div>
 <p class="card-note">加拿大城市意象 · 楓糖甜感</p></div></a>
 <a class="card" href="/beans/hola.html">
-<div class="card-img"><img src="/img/hola.jpg" alt="早安 03 主視覺" loading="lazy"></div>
+<div class="card-img"><img width="700" height="700" decoding="async" src="/img/opt/hola.webp" alt="早安 03 主視覺" loading="lazy"></div>
 <div class="card-body"><div class="dot" style="background:#3d2a1a"></div>
 <p class="card-name">早安 03</p><p class="card-sub">HOLA · 印度、哥倫比亞 · 深焙</p>
 <p class="card-flavor">黑巧克力、咖啡烘焙香、黑胡椒辛香——濃郁厚實，風味集中，為喚醒一天的早晨量身打造的第一杯。</p>
@@ -211,5 +211,9 @@ h1.s-name{font-size:clamp(30px,5vw,46px);font-weight:800;letter-spacing:.03em;ma
 </style>
 <script>(function(){var n=document.querySelector('nav.nav');if(!n)return;var l=n.querySelector('.nav-links');if(!l)return;l.id=l.id||'nav-menu';var b=document.createElement('button');b.className='nav-tog';b.type='button';b.setAttribute('aria-controls',l.id);b.innerHTML='<span></span><span></span><span></span>';n.insertBefore(b,l);n.classList.add('has-tog');function set(o){n.classList.toggle('open',o);b.setAttribute('aria-expanded',o?'true':'false');b.setAttribute('aria-label',o?'關閉選單':'開啟選單')}set(false);b.addEventListener('click',function(e){e.stopPropagation();set(!n.classList.contains('open'))});l.addEventListener('click',function(e){if(e.target.closest('a'))set(false)});document.addEventListener('click',function(e){if(!n.contains(e.target))set(false)});document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false)})})();</script>
 <!-- NAVM:END -->
+<!-- MLIT:START 手機版黑白圖滑到中央轉彩色（scripts/mobilelit.py 產生） -->
+<style>@media(max-width:900px){.m-lit{filter:grayscale(0)!important}}</style>
+<script>(function(){if(!('IntersectionObserver' in window))return;var els=Array.prototype.filter.call(document.querySelectorAll('img,.artwork .base'),function(e){return /grayscale/.test(getComputedStyle(e).filter);});if(!els.length)return;var io=new IntersectionObserver(function(es){es.forEach(function(e){e.target.classList.toggle('m-lit',e.isIntersecting);});},{rootMargin:'-30% 0px -30% 0px',threshold:0});els.forEach(function(e){io.observe(e);});})();</script>
+<!-- MLIT:END -->
 </body>
 </html>

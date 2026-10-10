@@ -99,14 +99,14 @@ h1.s-name{font-size:clamp(30px,5vw,46px);font-weight:800;letter-spacing:.03em;ma
   </section>
   <section class="grid g2">
 <a class="card" href="/beans/kokoo.html">
-<div class="card-img"><img src="/img/kokoo.jpg" alt="可庫 主視覺" loading="lazy"></div>
+<div class="card-img"><img width="540" height="540" decoding="async" src="/img/opt/kokoo.webp" alt="可庫 主視覺" loading="lazy"></div>
 <div class="card-body"><div class="dot" style="background:#2a1a0a"></div>
 <p class="card-name">可庫</p><p class="card-sub">KOKOO · 祕魯、薩爾瓦多、衣索比亞 · 中深焙</p>
 <p class="card-flavor">黑巧克力、焦糖、烤堅果——加奶猶如偉特糖，冰飲表現極佳。讓過去回憶的味道，活在你當下的記憶。</p>
 <div class="card-pkg"><span class="pkg">豆 200g</span><span class="pkg">濾掛 10g</span></div>
 <p class="card-note">🌿 有機 · 永續 · 雨林聯盟 · MAYACERT · HACCP</p></div></a>
 <a class="card" href="/beans/herbland.html">
-<div class="card-img"><img src="/img/herbland.jpg" alt="芳菲 主視覺" loading="lazy"></div>
+<div class="card-img"><img width="700" height="700" decoding="async" src="/img/opt/herbland.webp" alt="芳菲 主視覺" loading="lazy"></div>
 <div class="card-body"><div class="dot" style="background:#4a7a5c"></div>
 <p class="card-name">芳菲</p><p class="card-sub">HERB LAND · 中深焙</p>
 <p class="card-flavor">仙草、甘草、迷迭香、青草茶、薄荷、松木——低酸微苦回甘，如夏桑菊花茶的清涼調性，展現草本系咖啡的沉穩與清爽。</p>
@@ -204,5 +204,9 @@ h1.s-name{font-size:clamp(30px,5vw,46px);font-weight:800;letter-spacing:.03em;ma
 </style>
 <script>(function(){var n=document.querySelector('nav.nav');if(!n)return;var l=n.querySelector('.nav-links');if(!l)return;l.id=l.id||'nav-menu';var b=document.createElement('button');b.className='nav-tog';b.type='button';b.setAttribute('aria-controls',l.id);b.innerHTML='<span></span><span></span><span></span>';n.insertBefore(b,l);n.classList.add('has-tog');function set(o){n.classList.toggle('open',o);b.setAttribute('aria-expanded',o?'true':'false');b.setAttribute('aria-label',o?'關閉選單':'開啟選單')}set(false);b.addEventListener('click',function(e){e.stopPropagation();set(!n.classList.contains('open'))});l.addEventListener('click',function(e){if(e.target.closest('a'))set(false)});document.addEventListener('click',function(e){if(!n.contains(e.target))set(false)});document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false)})})();</script>
 <!-- NAVM:END -->
+<!-- MLIT:START 手機版黑白圖滑到中央轉彩色（scripts/mobilelit.py 產生） -->
+<style>@media(max-width:900px){.m-lit{filter:grayscale(0)!important}}</style>
+<script>(function(){if(!('IntersectionObserver' in window))return;var els=Array.prototype.filter.call(document.querySelectorAll('img,.artwork .base'),function(e){return /grayscale/.test(getComputedStyle(e).filter);});if(!els.length)return;var io=new IntersectionObserver(function(es){es.forEach(function(e){e.target.classList.toggle('m-lit',e.isIntersecting);});},{rootMargin:'-30% 0px -30% 0px',threshold:0});els.forEach(function(e){io.observe(e);});})();</script>
+<!-- MLIT:END -->
 </body>
 </html>

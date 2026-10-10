@@ -99,14 +99,14 @@ h1.s-name{font-size:clamp(30px,5vw,46px);font-weight:800;letter-spacing:.03em;ma
   </section>
   <section class="grid g2">
 <a class="card" href="/beans/freya.html">
-<div class="card-img"><img src="/img/freya.jpg" alt="芙蕾雅 主視覺" loading="lazy"></div>
+<div class="card-img"><img width="540" height="540" decoding="async" src="/img/opt/freya.webp" alt="芙蕾雅 主視覺" loading="lazy"></div>
 <div class="card-body"><div class="dot" style="background:#d4853a"></div>
 <p class="card-name">芙蕾雅</p><p class="card-sub">FREJYA · 北歐神話豐饒女神</p>
 <p class="card-flavor">柳橙、橘子、水蜜桃的橘黃果香（濃縮）；紅醋栗、加州梅、杏桃乾的紫紅果乾（美式）——秋日果園層層展開。</p>
 <div class="card-pkg"><span class="pkg">豆 200g</span><span class="pkg">濾掛 10g</span></div>
 <p class="card-note">象徵果實豐收的甜美與豐盛</p></div></a>
 <a class="card" href="/beans/nysus.html">
-<div class="card-img"><img src="/img/nysus.jpg" alt="尼修斯 主視覺" loading="lazy"></div>
+<div class="card-img"><img width="700" height="700" decoding="async" src="/img/opt/nysus.webp" alt="尼修斯 主視覺" loading="lazy"></div>
 <div class="card-body"><div class="dot" style="background:#d4803a"></div>
 <p class="card-name">尼修斯</p><p class="card-sub">NYSUS · 酒神戴奧尼修斯 · 中至中深焙</p>
 <p class="card-flavor">紅酒般的酸感 × 柳丁甜香——有重量的酸，如蜜餞般圓潤，稀釋後清爽有果汁感，夏天冰飲極適合。</p>
@@ -204,5 +204,9 @@ h1.s-name{font-size:clamp(30px,5vw,46px);font-weight:800;letter-spacing:.03em;ma
 </style>
 <script>(function(){var n=document.querySelector('nav.nav');if(!n)return;var l=n.querySelector('.nav-links');if(!l)return;l.id=l.id||'nav-menu';var b=document.createElement('button');b.className='nav-tog';b.type='button';b.setAttribute('aria-controls',l.id);b.innerHTML='<span></span><span></span><span></span>';n.insertBefore(b,l);n.classList.add('has-tog');function set(o){n.classList.toggle('open',o);b.setAttribute('aria-expanded',o?'true':'false');b.setAttribute('aria-label',o?'關閉選單':'開啟選單')}set(false);b.addEventListener('click',function(e){e.stopPropagation();set(!n.classList.contains('open'))});l.addEventListener('click',function(e){if(e.target.closest('a'))set(false)});document.addEventListener('click',function(e){if(!n.contains(e.target))set(false)});document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false)})})();</script>
 <!-- NAVM:END -->
+<!-- MLIT:START 手機版黑白圖滑到中央轉彩色（scripts/mobilelit.py 產生） -->
+<style>@media(max-width:900px){.m-lit{filter:grayscale(0)!important}}</style>
+<script>(function(){if(!('IntersectionObserver' in window))return;var els=Array.prototype.filter.call(document.querySelectorAll('img,.artwork .base'),function(e){return /grayscale/.test(getComputedStyle(e).filter);});if(!els.length)return;var io=new IntersectionObserver(function(es){es.forEach(function(e){e.target.classList.toggle('m-lit',e.isIntersecting);});},{rootMargin:'-30% 0px -30% 0px',threshold:0});els.forEach(function(e){io.observe(e);});})();</script>
+<!-- MLIT:END -->
 </body>
 </html>

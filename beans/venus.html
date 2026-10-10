@@ -77,7 +77,7 @@ body{font-family:var(--f);color:var(--ink);background:var(--white);-webkit-font-
 .sec-text{font-size:16px;line-height:2;color:var(--ink-80);font-weight:300}
 .sec-text strong{font-weight:700;color:var(--ink)}
 .sec-text + .sec-text{margin-top:18px}
-.pullquote-band{position:relative;left:50%;margin-left:-50vw;width:100vw;margin-top:54px;padding:100px 6vw;background:#0c0a0e url('../img/venus-space.jpg') center top/cover no-repeat}
+.pullquote-band{position:relative;left:50%;margin-left:-50vw;width:100vw;margin-top:54px;padding:100px 6vw;background:#0c0a0e url('../img/opt/venus-space.webp') center top/cover no-repeat}
 .pullquote-band::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,6,10,.48),rgba(8,6,10,.64))}
 .pullquote-inner{position:relative;max-width:1080px;margin:0 auto}
 .pullquote-inner p{font-size:clamp(26px,4.2vw,48px);font-weight:300;line-height:1.45;letter-spacing:.02em;color:#fff}
@@ -209,7 +209,7 @@ body{font-family:var(--f);color:var(--ink);background:var(--white);-webkit-font-
       </div>
     </div>
     <div class="hero-art" id="heroArt">
-      <img class="lit-media" src="../img/venus-hero.jpg" alt="金星 VENUS 主視覺">
+      <img width="720" height="833" decoding="async" fetchpriority="high" class="lit-media" src="../img/opt/venus-hero.webp" alt="金星 VENUS 主視覺">
     </div>
   </header>
 </div>
@@ -266,14 +266,14 @@ body{font-family:var(--f);color:var(--ink);background:var(--white);-webkit-font-
     <p class="sec-label">得獎認證 / The Award</p>
     <h2 class="sec-h">90.08 分，金獎的重量</h2>
     <div class="award-row">
-      <div class="award-badge"><img src="../img/award-badge-2025.jpg" alt="IIAC International Coffee Tasting 2025 Gold Medal 金牌標章"></div>
+      <div class="award-badge"><img width="300" height="301" decoding="async" loading="lazy" src="../img/opt/award-badge-2025.webp" alt="IIAC International Coffee Tasting 2025 Gold Medal 金牌標章"></div>
       <div class="award-info">
         <p class="award-score">90.08<small> / 100</small></p>
         <p class="award-meta">International Coffee Tasting 2025 — Gold Medal<br>單場排名前 25% 方授予金獎</p>
       </div>
     </div>
     <figure class="award-cert">
-      <img class="lit-media" src="../img/venus-cert.jpg" alt="金星 VENUS 2025 IIAC 國際咖啡品鑑金獎獎狀">
+      <img width="1100" height="778" decoding="async" loading="lazy" class="lit-media" src="../img/opt/venus-cert.webp" alt="金星 VENUS 2025 IIAC 國際咖啡品鑑金獎獎狀">
       <figcaption>IIAC 金獎獎狀 · Brescia, Italy · 2025.10.26</figcaption>
     </figure>
   </section>
@@ -298,7 +298,7 @@ body{font-family:var(--f);color:var(--ink);background:var(--white);-webkit-font-
 
 <section class="collect reveal">
   <div class="collect-inner">
-    <div class="collect-img"><img src="../img/venus-pack.png" alt="金星 VENUS 金獎咖啡豆包裝"></div>
+    <div class="collect-img"><img width="720" height="640" decoding="async" loading="lazy" src="../img/opt/venus-pack.webp" alt="金星 VENUS 金獎咖啡豆包裝"></div>
     <div class="collect-copy">
       <h2 class="collect-h">收藏這件作品</h2>
       <p class="collect-sub">金星・咖啡豆 200g／濾掛咖啡 金獎典藏——為你的每一杯，打下溫柔而穩定的底。</p>
@@ -322,11 +322,11 @@ body{font-family:var(--f);color:var(--ink);background:var(--white);-webkit-font-
   <p class="sec-label">繼續探索 / Keep Exploring</p>
   <div class="related-grid">
     <a class="rcard" href="mars.html">
-      <img src="../img/mars.jpg" alt="火星 主視覺">
+      <img width="720" height="834" decoding="async" loading="lazy" src="../img/opt/mars.webp" alt="火星 主視覺">
       <div class="rcard-body"><div class="rcard-zh">火星</div><div class="rcard-en">Mars</div></div>
     </a>
     <a class="rcard" href="orion.html">
-      <img src="../img/orion.jpg" alt="獵戶座 主視覺">
+      <img width="720" height="834" decoding="async" loading="lazy" src="../img/opt/orion.webp" alt="獵戶座 主視覺">
       <div class="rcard-body"><div class="rcard-zh">獵戶座</div><div class="rcard-en">Orion</div></div>
     </a>
   </div>
@@ -408,5 +408,9 @@ body{font-family:var(--f);color:var(--ink);background:var(--white);-webkit-font-
 }
 </style>
 <!-- TYPO:END -->
+<!-- MLIT:START 手機版黑白圖滑到中央轉彩色（scripts/mobilelit.py 產生） -->
+<style>@media(max-width:900px){.m-lit{filter:grayscale(0)!important}}</style>
+<script>(function(){if(!('IntersectionObserver' in window))return;var els=Array.prototype.filter.call(document.querySelectorAll('img,.artwork .base'),function(e){return /grayscale/.test(getComputedStyle(e).filter);});if(!els.length)return;var io=new IntersectionObserver(function(es){es.forEach(function(e){e.target.classList.toggle('m-lit',e.isIntersecting);});},{rootMargin:'-30% 0px -30% 0px',threshold:0});els.forEach(function(e){io.observe(e);});})();</script>
+<!-- MLIT:END -->
 </body>
 </html>

@@ -145,7 +145,7 @@ h1.s-name{font-size:clamp(30px,5vw,46px);font-weight:800;letter-spacing:.03em;ma
   </section>
 
   <section class="ex-sec">
-    <div class="poster"><img src="/img/ma-dm-poster.jpg" alt="CICACAFE 2026 金獎中秋禮盒 藏月・留星 主視覺 DM"></div>
+    <div class="poster"><img width="480" height="674" decoding="async" fetchpriority="high" src="/img/opt/ma-dm-poster.webp" alt="CICACAFE 2026 金獎中秋禮盒 藏月・留星 主視覺 DM"></div>
   </section>
 
   <section class="ex-sec">
@@ -164,7 +164,7 @@ h1.s-name{font-size:clamp(30px,5vw,46px);font-weight:800;letter-spacing:.03em;ma
     <h2 class="ex-h2">兩件作品</h2>
     <p class="ex-sub">THE WORKS</p>
     <article class="work">
-      <img src="/img/ma-dm-cangyue.jpg" alt="藏月 2026 金獎中秋禮盒 開箱與內容物" loading="lazy">
+      <img width="920" height="1291" decoding="async" src="/img/opt/ma-dm-cangyue.webp" alt="藏月 2026 金獎中秋禮盒 開箱與內容物" loading="lazy">
       <div>
         <h3>藏月</h3><p class="en">CANG YUE · 大禮盒</p>
         <p>以金獎三星串連「眾星拱月」，收藏中秋的相聚。</p>
@@ -176,7 +176,7 @@ h1.s-name{font-size:clamp(30px,5vw,46px);font-weight:800;letter-spacing:.03em;ma
       </div>
     </article>
     <article class="work">
-      <img src="/img/ma-dm-liuxing.jpg" alt="留星 2026 金獎中秋禮盒 開箱與內容物" loading="lazy">
+      <img width="920" height="1291" decoding="async" src="/img/opt/ma-dm-liuxing.webp" alt="留星 2026 金獎中秋禮盒 開箱與內容物" loading="lazy">
       <div>
         <h3>留星</h3><p class="en">LIU XING · 小禮盒</p>
         <p>收藏屬於月光下的重逢時刻。以山丘芭娜娜象徵月兔；金獎濾掛 9 包連成通道，象徵月兔穿越、把久別的思念串連。CICA＝自家・回家——真正把對方留在心裡，故名留星。</p>
@@ -279,5 +279,9 @@ h1.s-name{font-size:clamp(30px,5vw,46px);font-weight:800;letter-spacing:.03em;ma
 </style>
 <script>(function(){var n=document.querySelector('nav.nav');if(!n)return;var l=n.querySelector('.nav-links');if(!l)return;l.id=l.id||'nav-menu';var b=document.createElement('button');b.className='nav-tog';b.type='button';b.setAttribute('aria-controls',l.id);b.innerHTML='<span></span><span></span><span></span>';n.insertBefore(b,l);n.classList.add('has-tog');function set(o){n.classList.toggle('open',o);b.setAttribute('aria-expanded',o?'true':'false');b.setAttribute('aria-label',o?'關閉選單':'開啟選單')}set(false);b.addEventListener('click',function(e){e.stopPropagation();set(!n.classList.contains('open'))});l.addEventListener('click',function(e){if(e.target.closest('a'))set(false)});document.addEventListener('click',function(e){if(!n.contains(e.target))set(false)});document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false)})})();</script>
 <!-- NAVM:END -->
+<!-- MLIT:START 手機版黑白圖滑到中央轉彩色（scripts/mobilelit.py 產生） -->
+<style>@media(max-width:900px){.m-lit{filter:grayscale(0)!important}}</style>
+<script>(function(){if(!('IntersectionObserver' in window))return;var els=Array.prototype.filter.call(document.querySelectorAll('img,.artwork .base'),function(e){return /grayscale/.test(getComputedStyle(e).filter);});if(!els.length)return;var io=new IntersectionObserver(function(es){es.forEach(function(e){e.target.classList.toggle('m-lit',e.isIntersecting);});},{rootMargin:'-30% 0px -30% 0px',threshold:0});els.forEach(function(e){io.observe(e);});})();</script>
+<!-- MLIT:END -->
 </body>
 </html>

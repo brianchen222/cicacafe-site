@@ -102,21 +102,21 @@ h1.s-name{font-size:clamp(30px,5vw,46px);font-weight:800;letter-spacing:.03em;ma
   </section>
   <section class="grid g3">
 <a class="card" href="/beans/mars.html">
-<div class="card-img"><img src="/img/mars.jpg" alt="MARS 火星 主視覺" loading="lazy"></div>
+<div class="card-img"><img width="720" height="834" decoding="async" src="/img/opt/mars.webp" alt="MARS 火星 主視覺" loading="lazy"></div>
 <div class="card-body"><div class="dot" style="background:#c0442a"></div>
 <p class="card-name">MARS 火星</p><p class="card-sub">全球多產區拼配 · 中深焙</p>
 <p class="card-flavor">棗蜜、煙燻烏梅、麥芽糖、巧克力、杉木——像冬日木屋裡慢火熬煮的果蜜茶。橘紅色的熱烈能量，醇厚低酸，堅果木質尾韻。</p>
 <div class="card-pkg"><span class="pkg">豆 200g</span><span class="pkg">濾掛 10g</span></div>
 <p class="card-note">🏅 2024 IIAC 國際咖啡品鑑大賽 金獎 · 自家首隻得獎豆</p></div></a>
 <a class="card" href="/beans/venus.html">
-<div class="card-img"><img src="/img/venus.jpg" alt="金星 #1930 主視覺" loading="lazy"></div>
+<div class="card-img"><img width="720" height="834" decoding="async" src="/img/opt/venus.webp" alt="金星 #1930 主視覺" loading="lazy"></div>
 <div class="card-body"><div class="dot" style="background:#d4c88a"></div>
 <p class="card-name">金星 #1930</p><p class="card-sub">CICA #1930 · 甜濃縮基底</p>
 <p class="card-flavor">奶油核果調性，乳白帶淡黃的光澤。如愛與美的女神維納斯——溫柔豐饒，是 Espresso 飲品的絕佳風味支撐。</p>
 <div class="card-pkg"><span class="pkg">豆 200g</span><span class="pkg">濾掛 10g</span></div>
 <p class="card-note">🏅 2025 IIAC 國際咖啡品鑑大賽 金獎</p></div></a>
 <a class="card" href="/beans/orion.html">
-<div class="card-img"><img src="/img/orion.jpg" alt="獵戶座 #1955 主視覺" loading="lazy"></div>
+<div class="card-img"><img width="720" height="834" decoding="async" src="/img/opt/orion.webp" alt="獵戶座 #1955 主視覺" loading="lazy"></div>
 <div class="card-body"><div class="dot" style="background:#7b4f8c"></div>
 <p class="card-name">獵戶座 #1955</p><p class="card-sub">CICA #1955 · 單一產區混合處理法</p>
 <p class="card-flavor">花香、新鮮果香、果乾交織——獵戶座星雲的紫紅色，個性鮮明，層次豐富。手沖與義式皆宜。</p>
@@ -228,5 +228,9 @@ h1.s-name{font-size:clamp(30px,5vw,46px);font-weight:800;letter-spacing:.03em;ma
 </style>
 <script>(function(){var n=document.querySelector('nav.nav');if(!n)return;var l=n.querySelector('.nav-links');if(!l)return;l.id=l.id||'nav-menu';var b=document.createElement('button');b.className='nav-tog';b.type='button';b.setAttribute('aria-controls',l.id);b.innerHTML='<span></span><span></span><span></span>';n.insertBefore(b,l);n.classList.add('has-tog');function set(o){n.classList.toggle('open',o);b.setAttribute('aria-expanded',o?'true':'false');b.setAttribute('aria-label',o?'關閉選單':'開啟選單')}set(false);b.addEventListener('click',function(e){e.stopPropagation();set(!n.classList.contains('open'))});l.addEventListener('click',function(e){if(e.target.closest('a'))set(false)});document.addEventListener('click',function(e){if(!n.contains(e.target))set(false)});document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false)})})();</script>
 <!-- NAVM:END -->
+<!-- MLIT:START 手機版黑白圖滑到中央轉彩色（scripts/mobilelit.py 產生） -->
+<style>@media(max-width:900px){.m-lit{filter:grayscale(0)!important}}</style>
+<script>(function(){if(!('IntersectionObserver' in window))return;var els=Array.prototype.filter.call(document.querySelectorAll('img,.artwork .base'),function(e){return /grayscale/.test(getComputedStyle(e).filter);});if(!els.length)return;var io=new IntersectionObserver(function(es){es.forEach(function(e){e.target.classList.toggle('m-lit',e.isIntersecting);});},{rootMargin:'-30% 0px -30% 0px',threshold:0});els.forEach(function(e){io.observe(e);});})();</script>
+<!-- MLIT:END -->
 </body>
 </html>
