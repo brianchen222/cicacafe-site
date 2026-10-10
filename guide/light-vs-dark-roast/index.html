@@ -115,6 +115,13 @@ a:focus-visible,summary:focus-visible{outline:2px solid var(--ink-60);outline-of
 .sitefooter .row{display:flex;gap:26px;flex-wrap:wrap;margin-bottom:18px;letter-spacing:1.3px;font-size:13px;text-transform:uppercase}
 @media (max-width:640px){.wrap{padding:0 20px}article section{padding-top:36px}.toc{padding:22px 20px}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.pick{margin:28px 0 0;padding:22px 24px;border:1px solid var(--ink);background:var(--white);display:grid;gap:8px}
+.pick-k{font-size:11px;letter-spacing:.16em;color:var(--ink-60)}
+.pick-t{margin:0;font-size:18px;line-height:1.5;color:var(--ink)}
+.pick-d{margin:0;font-size:15px;line-height:1.75;color:var(--ink-80)}
+.pick-a{justify-self:start;margin-top:6px;display:inline-block;padding:11px 22px;background:var(--ink);color:var(--white);font-size:14px;letter-spacing:.06em;text-decoration:none;border:1px solid var(--ink);transition:.2s}
+.pick-a:hover{background:var(--white);color:var(--ink)}
+@media(max-width:600px){.pick{padding:18px}.pick-t{font-size:17px}.pick-a{justify-self:stretch;text-align:center}}
 </style>
 <style id="img-hint">:where(img[width][height]){height:auto}</style><script id="late-3p">(function(){function go(){var d=document;var l=d.createElement('link');l.rel='stylesheet';l.href='https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;800&family=Noto+Sans+TC:wght@300;400;500;700&display=swap';d.head.appendChild(l);(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,d,'script','dataLayer','GTM-58HC86J3');var a=d.createElement('script');a.src='https://analytics.ahrefs.com/analytics.js';a.async=true;a.setAttribute('data-key','J2+gkobBeVGNdd7pKYKBZg');d.head.appendChild(a);}if(document.readyState==='complete'){setTimeout(go,0)}else{window.addEventListener('load',function(){setTimeout(go,0)})}})();</script></head>
 <body>
@@ -154,6 +161,12 @@ a:focus-visible,summary:focus-visible{outline:2px solid var(--ink-60);outline-of
     <span class="eyebrow">風味指南 · 認識咖啡</span>
     <h1>淺焙 vs 中深焙差在哪？用風味顏色 3 分鐘看懂焙度</h1>
     <p class="answer">焙度就是烘豆的深淺，它決定風味走向：<b>愈淺愈酸香明亮</b>（像果汁）、<b>愈深愈濃郁苦甜</b>（像黑巧克力），中焙則均衡好入口。不用背術語——CICACAFE 把風味翻成顏色：橘紅的熱烈、乳白的溫柔、花果的明亮。選哪個，看你想要的感受與沖煮方式。</p>
+    <aside class="pick" aria-label="CICACAFE 推薦">
+      <span class="pick-k">CICACAFE 推薦</span>
+      <p class="pick-t">第一次選焙度？先從均衡的中焙開始——<b>赫諾斯 HONUS</b></p>
+      <p class="pick-d">柳橙包巧克力、橘香奶油焦糖交織，溫潤平衡、喝得舒服。喝過再往淺焙的明亮或深焙的濃郁調整，最不容易踩雷。</p>
+      <a class="pick-a" href="/beans/honus.html">認識這支風味 →</a>
+    </aside>
     <div class="byline"><span>CICACAFE 風味指南</span><span>認識咖啡 · 焙度</span></div>
   </header>
   <figure class="hero"><img src="/img/og-roast.jpg" alt="淺焙 vs 中深焙差在哪？用風味顏色 3 分鐘看懂焙度" width="1200" height="630" loading="eager"></figure>
