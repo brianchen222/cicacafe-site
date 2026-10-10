@@ -31,3 +31,5 @@ User-agent: Bingbot
 Allow: /
 
 Sitemap: https://www.cicacafe.com.tw/sitemap.xml
+
+# AI 摘要（LLM-readable site summary）：https://www.cicacafe.com.tw/llms.txt
