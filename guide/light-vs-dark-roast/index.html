@@ -122,6 +122,15 @@ a:focus-visible,summary:focus-visible{outline:2px solid var(--ink-60);outline-of
 .pick-a{justify-self:start;margin-top:6px;display:inline-block;padding:11px 22px;background:var(--ink);color:var(--white);font-size:14px;letter-spacing:.06em;text-decoration:none;border:1px solid var(--ink);transition:.2s}
 .pick-a:hover{background:var(--white);color:var(--ink)}
 @media(max-width:600px){.pick{padding:18px}.pick-t{font-size:17px}.pick-a{justify-self:stretch;text-align:center}}
+.bp-intro{margin:26px 0 0;font-size:15px;color:var(--ink-80)}
+.beanpair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:22px}
+.beanpair a{display:flex;flex-direction:column;gap:6px;padding:20px 22px;border:1px solid var(--ink);text-decoration:none;color:var(--ink)}
+.beanpair a:hover{background:var(--mist)}
+.beanpair .k{font-size:11px;letter-spacing:.16em;color:var(--ink-60)}
+.beanpair b{font-size:18px}
+.beanpair p{margin:0;font-size:14.5px;line-height:1.75;color:var(--ink-80)}
+.beanpair .go{font-size:14px;margin-top:4px}
+@media (max-width:620px){.beanpair{grid-template-columns:1fr}}
 </style>
 <style id="img-hint">:where(img[width][height]){height:auto}</style><script id="late-3p">(function(){function go(){var d=document;var l=d.createElement('link');l.rel='stylesheet';l.href='https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;800&family=Noto+Sans+TC:wght@300;400;500;700&display=swap';d.head.appendChild(l);(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,d,'script','dataLayer','GTM-58HC86J3');var a=d.createElement('script');a.src='https://analytics.ahrefs.com/analytics.js';a.async=true;a.setAttribute('data-key','J2+gkobBeVGNdd7pKYKBZg');d.head.appendChild(a);}if(document.readyState==='complete'){setTimeout(go,0)}else{window.addEventListener('load',function(){setTimeout(go,0)})}})();</script><style id="navu-css">
 html{scrollbar-gutter:stable}
@@ -234,6 +243,11 @@ html{scrollbar-gutter:stable}
     <section id="color">
       <h2>用顏色記憶風味</h2>
       <p>術語難記，但顏色很直覺。CICACAFE 把每支豆的風味對應到一個顏色與心情——<b>橘紅</b>是深焙的熱烈能量、<b>乳白帶淡黃</b>是中焙的溫柔奶香、<b>紫紅</b>是淺中焙的花果星雲。你感受到的顏色，就是這支豆想告訴你的一切，不需要先懂咖啡。</p>
+      <p class="bp-intro">用兩支豆，喝出焙度的兩端：</p>
+      <div class="beanpair">
+        <a href="/beans/freya.html"><span class="k">淺中焙 · 橘黃到紫紅</span><b>芙蕾雅 FREJYA</b><p>明亮果香、酸柔甜自然，專注水果，是淺焙「像果汁」的代表。</p><span class="go">認識這支風味 →</span></a>
+        <a href="/beans/kokoo.html"><span class="k">深焙 · 深黑巧克力</span><b>可庫 KOKOO</b><p>焦糖、核果、香草與黑巧克力，甜感極高；加奶如偉特糖，是深焙「苦甜濃郁」的代表。</p><span class="go">認識這支風味 →</span></a>
+      </div>
     </section>
 
     <section id="pick">
@@ -320,7 +334,7 @@ html{scrollbar-gutter:stable}
 </footer>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"淺焙 vs 中深焙差在哪？用風味顏色 3 分鐘看懂焙度","inLanguage":"zh-Hant-TW","author":{"@type":"Organization","name":"CICACAFE"},"publisher":{"@id":"https://www.cicacafe.com.tw/#organization","@type":"Organization","name":"CICACAFE"},"mainEntityOfPage":"https://www.cicacafe.com.tw/guide/light-vs-dark-roast/","datePublished":"2026-09-06","dateModified":"2026-09-06"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首頁","item":"https://www.cicacafe.com.tw/"},{"@type":"ListItem","position":2,"name":"風味指南","item":"https://www.cicacafe.com.tw/guide/"},{"@type":"ListItem","position":3,"name":"認識咖啡","item":"https://www.cicacafe.com.tw/guide/learn/"},{"@type":"ListItem","position":4,"name":"淺焙 vs 中深焙差在哪？用風味顏色 3 分鐘看懂焙度","item":"https://www.cicacafe.com.tw/guide/light-vs-dark-roast/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"新手適合淺焙還是深焙？","acceptedAnswer":{"@type":"Answer","text":"先從中焙均衡入門最安全，喝過再往淺焙或深焙調整。"}},{"@type":"Question","name":"拿鐵、加奶要用哪種焙度？","acceptedAnswer":{"@type":"Answer","text":"中深焙到深焙，body 夠厚才壓得住牛奶。"}},{"@type":"Question","name":"焙度會影響咖啡因嗎？","acceptedAnswer":{"@type":"Answer","text":"影響很小，同份量下淺焙甚至略高；差別主要在風味。"}}]}]}
+{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"淺焙 vs 中深焙差在哪？用風味顏色 3 分鐘看懂焙度","inLanguage":"zh-Hant-TW","author":{"@type":"Organization","name":"CICACAFE"},"publisher":{"@id":"https://www.cicacafe.com.tw/#organization","@type":"Organization","name":"CICACAFE"},"mainEntityOfPage":"https://www.cicacafe.com.tw/guide/light-vs-dark-roast/","datePublished":"2026-09-06","dateModified":"2026-10-20"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首頁","item":"https://www.cicacafe.com.tw/"},{"@type":"ListItem","position":2,"name":"風味指南","item":"https://www.cicacafe.com.tw/guide/"},{"@type":"ListItem","position":3,"name":"認識咖啡","item":"https://www.cicacafe.com.tw/guide/learn/"},{"@type":"ListItem","position":4,"name":"淺焙 vs 中深焙差在哪？用風味顏色 3 分鐘看懂焙度","item":"https://www.cicacafe.com.tw/guide/light-vs-dark-roast/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"新手適合淺焙還是深焙？","acceptedAnswer":{"@type":"Answer","text":"先從中焙均衡入門最安全，喝過再往淺焙或深焙調整。"}},{"@type":"Question","name":"拿鐵、加奶要用哪種焙度？","acceptedAnswer":{"@type":"Answer","text":"中深焙到深焙，body 夠厚才壓得住牛奶。"}},{"@type":"Question","name":"焙度會影響咖啡因嗎？","acceptedAnswer":{"@type":"Answer","text":"影響很小，同份量下淺焙甚至略高；差別主要在風味。"}}]}]}
 </script>
 
 <script>
