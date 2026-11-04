@@ -1683,12 +1683,12 @@ if(matchMedia('(max-width:760px)').matches){
    var a=e.target.closest('a[href]');if(!a)return;
    var h=a.getAttribute('href')||'',where=pos(a),label=(a.textContent||'').replace(/\s+/g,' ').trim().slice(0,40);
    var isBtn=a.matches('.btn,.btn-line,.htog,.nav-cta');
-   var type=/line\.me/.test(h)?'line':/corporate\.html|#quote/.test(h)?'b2b':/cicacafe\.shop|#products/.test(h)?'b2c':'other';
+   var type=/line\.me/.test(h)?'line':/corporate\.html|corporate\/|#quote/.test(h)?'b2b':/cicacafe\.shop|#products/.test(h)?'b2c':'other';
    if(isBtn)send('cta_click',{cta_type:type,cta_position:where,cta_text:label});
    if(/cicacafe\.shop/.test(h))send('begin_checkout',{currency:'TWD',value:lnyPrice(),cta_position:where,
       items:[{item_id:'LNY2027',item_name:'2027 豐饒慶賀過年禮盒',price:lnyPrice(),quantity:1}]});
    if(/line\.me/.test(h))send('line_click',{line_purpose:/oaMessage/.test(h)?'b2b_inquiry':'teaser_signup',cta_position:where});
-   if(/corporate\.html/.test(h))send('corporate_click',{cta_position:where});
+   if(/corporate\.html|corporate\//.test(h))send('corporate_click',{cta_position:where});
  },true);
  /* 常見問題：點開哪一題 */
  document.querySelectorAll('#faq details').forEach(function(d){
