@@ -921,6 +921,11 @@ details.more{margin-top:0}
 .oilfig2{background:#f4f2f0!important}
 .oilfig2 img{mix-blend-mode:multiply;object-fit:contain!important}
 @media (max-width:760px){.oilfig2 img{aspect-ratio:4/5!important;max-height:440px;margin:0 auto}}
+
+/* v7.8 照片原色顯示（2026-11-06）：取消 multiply 疊色（會把整張照片乘暗約 3%、偏暖，與校色檔不符）；
+   攝影棚照都是純白底，相框改白底即可無縫融入 */
+.b-item,.b-bag,.layers.pics figure,.layers.pics div:first-child figure,.oilfig2,.g-stage,.g-th{background:#fff!important}
+.b-item img,.layers.pics figure img,.layers.pics div:first-child figure img,.oilfig2 img,.g-stage img,.g-th img{mix-blend-mode:normal!important;background:#fff!important}
 </style>
 
 <script type="application/ld+json">
