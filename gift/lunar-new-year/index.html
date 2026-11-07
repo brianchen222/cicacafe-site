@@ -1235,6 +1235,18 @@ details.more{margin-top:0}
 }
 </script>
 <script id="late-3p">(function(){function go(){var d=document;var l=d.createElement('link');l.rel='stylesheet';l.href='https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;700;800&family=Noto+Sans+TC:wght@300;400;500;700&display=swap';d.head.appendChild(l);(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,d,'script','dataLayer','GTM-58HC86J3');var a=d.createElement('script');a.src='https://analytics.ahrefs.com/analytics.js';a.async=true;a.setAttribute('data-key','J2+gkobBeVGNdd7pKYKBZg');d.head.appendChild(a);}if(document.readyState==='complete'){setTimeout(go,0)}else{window.addEventListener('load',function(){setTimeout(go,0)})}})();</script><script id="lny-dl">/* v2 2026-11-05：每次推送先把前一事件用過的參數設為 undefined，避免 GTM 資料層沿用舊值（例：faq_open 帶到上一筆 cta_text） */window.dataLayer=window.dataLayer||[];if(typeof window.gtag!=="function"){(function(){var K={};window.gtag=function(c,n,p){if(c==="event"){p=p||{};var o={event:n},k;for(k in K)o[k]=undefined;for(k in p){o[k]=p[k];K[k]=1}window.dataLayer.push(o)}}})()}</script>
+<style id="lny-lead-css">
+.line-note{font-size:13.5px;line-height:1.7;color:rgba(255,255,255,.78);margin:14px 0 0;letter-spacing:.5px}
+.line-note b{color:var(--rg-lt);font-weight:500}
+.line-note a{color:var(--rg-lt);text-decoration:underline;text-underline-offset:3px}
+.rv-tip{position:fixed;right:20px;bottom:20px;z-index:200;max-width:340px;background:#1b1b1b;color:#fff;border-radius:14px;padding:18px 44px 18px 20px;box-shadow:0 10px 30px rgba(0,0,0,.28);font-size:14px;line-height:1.7;transform:translateY(16px);opacity:0;transition:opacity .35s,transform .35s}
+.rv-tip.on{opacity:1;transform:none}
+.rv-tip b{display:block;font-size:15.5px;margin-bottom:4px;color:var(--rg-lt);font-weight:500}
+.rv-tip .rv-go{display:inline-block;margin-top:10px;background:var(--rg-btn,#e8c2b4);color:#1b1b1b;border-radius:999px;padding:8px 16px;font-size:14px;text-decoration:none;font-weight:500}
+.rv-tip .rv-x{position:absolute;top:8px;right:8px;width:30px;height:30px;border:0;background:none;color:#aaa;font-size:20px;line-height:30px;cursor:pointer}
+@media (max-width:760px){.rv-tip{left:14px;right:14px;max-width:none;bottom:calc(86px + env(safe-area-inset-bottom))}}
+@media (prefers-reduced-motion:reduce){.rv-tip{transition:none}}
+</style>
 </head>
 <body data-phase="sale">
 <script>(function(){var t=new Date(Date.now()+288e5).toISOString().slice(0,10);document.body.dataset.phase=t<"2026-11-10"?"teaser":"sale"})();</script>
@@ -1275,19 +1287,21 @@ details.more{margin-top:0}
         <span class="c-bs"><img class="bs-logo" src="img/blueseeds-logo.png" alt="Blueseeds 芙彤園" onerror="this.style.display='none';this.parentNode.classList.add('nologo')"><b class="bs-word">Blueseeds 芙彤園</b></span>
       </div>
       <p class="c-note">攜手 B 型企業 Blueseeds 芙彤園｜金獎咖啡團隊 × 台東自然農法香氛</p>
-      <!-- 檔期狀態：body[data-phase] = teaser（預告）/ sale（開賣）。開賣日把 data-phase 改成 sale 即可 -->
+      <!-- 檔期狀態：body[data-phase] = teaser（預告）/ sale（開賣）。body 開頭的小程式依台北日期自動切換（11/10 前 teaser、之後 sale），不用手動改 -->
       <div class="ph-teaser">
         <p class="launch"><b>11/10 開賣</b>　超早鳥價 NT$1,280<s>NT$1,680</s></p>
         <div class="dual">
           <a class="btn btn-rg" href="https://line.me/R/ti/p/@cicacafe" target="_blank" rel="noopener">加 LINE 搶先登記・開賣通知</a>
           <a class="btn htog" href="corporate/#lny" target="_blank" rel="noopener">企業先詢價</a>
         </div>
+        <p class="line-note">加 LINE 好友：<b>11/10 開賣當天</b>第一時間通知你，<b>超早鳥 1/10 截止前</b>再提醒一次。</p>
       </div>
       <div class="ph-sale">
         <div class="dual">
           <a class="btn htog h-b2c on" href="#products">我是個人送禮｜立即預購</a>
           <a class="btn htog h-b2b" href="corporate/#lny" target="_blank" rel="noopener">我是企業採購｜索取報價</a>
         </div>
+        <p class="line-note"><a href="https://line.me/R/ti/p/@cicacafe" target="_blank" rel="noopener">加 LINE 收超早鳥 1/10 截止提醒 →</a></p>
       </div>
     </div>
     <figure class="hero-img" style="margin:0">
@@ -1769,5 +1783,22 @@ document.querySelectorAll('.dm-dl').forEach(function(a){a.addEventListener('clic
  if(typeof window.gtag==='function'){gtag('event','dm_download',p)}else{try{console.log('[GA4 預覽] dm_download',p)}catch(e){}}
 })});
 </script>
-<script id="lny-track">/* 看完率與段落到達（v1 2026-11-04）：scroll_depth 25/50/75/100、section_view；每次載入各送一次，不含個資 */(function(){var P=document.documentElement.getAttribute('data-page')||'lny_2027';function s(n,p){p=p||{};p.page_type=P;if(typeof window.gtag==='function'){window.gtag('event',n,p)}else{try{console.log('[GA4 預覽]',n,p)}catch(e){}}}var M=[25,50,75,100],D={},t;function sc(){var h=document.documentElement,mx=h.scrollHeight-window.innerHeight;if(mx<=0)return;var pc=window.scrollY/mx*100;for(var i=0;i<M.length;i++){if(!D[M[i]]&&pc>=M[i]-1){D[M[i]]=1;s('scroll_depth',{percent:M[i]})}}}window.addEventListener('scroll',function(){clearTimeout(t);t=setTimeout(sc,250)},{passive:true});if('IntersectionObserver' in window){var V={},io=new IntersectionObserver(function(es){es.forEach(function(e){var id=e.target.id;if(e.isIntersecting&&!V[id]){V[id]=1;s('section_view',{section:id});io.unobserve(e.target)}})},{rootMargin:'0px 0px -50% 0px',threshold:0});document.querySelectorAll('section[id]').forEach(function(el){io.observe(el)})}})();</script></body>
+<script id="lny-track">/* 看完率與段落到達（v1 2026-11-04）：scroll_depth 25/50/75/100、section_view；每次載入各送一次，不含個資 */(function(){var P=document.documentElement.getAttribute('data-page')||'lny_2027';function s(n,p){p=p||{};p.page_type=P;if(typeof window.gtag==='function'){window.gtag('event',n,p)}else{try{console.log('[GA4 預覽]',n,p)}catch(e){}}}var M=[25,50,75,100],D={},t;function sc(){var h=document.documentElement,mx=h.scrollHeight-window.innerHeight;if(mx<=0)return;var pc=window.scrollY/mx*100;for(var i=0;i<M.length;i++){if(!D[M[i]]&&pc>=M[i]-1){D[M[i]]=1;s('scroll_depth',{percent:M[i]})}}}window.addEventListener('scroll',function(){clearTimeout(t);t=setTimeout(sc,250)},{passive:true});if('IntersectionObserver' in window){var V={},io=new IntersectionObserver(function(es){es.forEach(function(e){var id=e.target.id;if(e.isIntersecting&&!V[id]){V[id]=1;s('section_view',{section:id});io.unobserve(e.target)}})},{rootMargin:'0px 0px -50% 0px',threshold:0});document.querySelectorAll('section[id]').forEach(function(el){io.observe(el)})}})();</script><script id="lny-revisit">/* 回訪提示（2026-11-07）：第 2 次以上造訪本頁、停留 8 秒後顯示；關閉後 3 天內不再出現；第一次來的人不顯示。事件：return_prompt_view；點按鈕走全站 line_click（line_purpose 依連結判斷）＋ return_prompt_click */
+(function(){
+  var K='cc_lny_visits',KX='cc_lny_tip_closed',n=0,closed=0;
+  try{n=(parseInt(localStorage.getItem(K),10)||0)+1;localStorage.setItem(K,String(n));closed=parseInt(localStorage.getItem(KX),10)||0}catch(e){return}
+  if(n<2||(closed&&Date.now()-closed<3*864e5))return;
+  function ev(name,p){p=p||{};p.page_type='lny_2027';if(typeof window.gtag==='function')window.gtag('event',name,p)}
+  setTimeout(function(){
+    var sale=document.body.getAttribute('data-phase')==='sale';
+    var d=document.createElement('div');d.className='rv-tip';d.setAttribute('role','dialog');d.setAttribute('aria-label','開賣提醒');
+    d.innerHTML='<button class="rv-x" type="button" aria-label="關閉">×</button><b>'+(sale?'還在比較嗎？':'歡迎回來！')+'</b>'+(sale?'超早鳥價 NT$1,280 只到 1/10。加 LINE，截止前提醒你一次。':'豐饒慶賀 11/10 開賣。加 LINE，開賣當天第一時間通知你。')+'<br><a class="rv-go" href="https://line.me/R/ti/p/@cicacafe" target="_blank" rel="noopener">加 LINE 收提醒</a>';
+    document.body.appendChild(d);requestAnimationFrame(function(){d.classList.add('on')});
+    ev('return_prompt_view',{visit_count:n,phase:sale?'sale':'teaser'});
+    d.querySelector('.rv-x').addEventListener('click',function(){d.remove();try{localStorage.setItem(KX,String(Date.now()))}catch(e){}});
+    d.querySelector('.rv-go').addEventListener('click',function(){ev('return_prompt_click',{visit_count:n});try{localStorage.setItem(KX,String(Date.now()))}catch(e){}setTimeout(function(){d.remove()},300)});
+  },8000);
+})();
+</script>
+</body>
 </html>
