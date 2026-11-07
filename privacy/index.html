@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<!--
+CICACAFE ／ 隱私權政策
+路徑：/privacy/
+內容：個資法第 8 條告知事項＋本站 Cookie／追蹤工具（GA4、Clarity、Ahrefs、Meta 像素）。新增或移除追蹤工具時要同步改第四節與生效日期。
+-->
+<html lang="zh-Hant-TW" data-page="privacy">
+<head>
+<!-- Google Tag Manager -->
+
+<!-- End Google Tag Manager -->
+<!-- Ahrefs Web Analytics -->
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>隱私權政策｜CICACAFE</title>
+<meta name="description" content="CICACAFE 官網（www.cicacafe.com.tw）隱私權政策：說明本站蒐集哪些資料、使用目的、使用的 Cookie 與追蹤工具（Google Analytics、Microsoft Clarity、Meta 像素等）、保存期間，以及您如何拒絕追蹤或行使個資權利。">
+<link rel="canonical" href="https://www.cicacafe.com.tw/privacy/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CICACAFE">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:title" content="隱私權政策｜CICACAFE">
+<meta property="og:description" content="CICACAFE 官網（www.cicacafe.com.tw）隱私權政策：說明本站蒐集哪些資料、使用目的、使用的 Cookie 與追蹤工具（Google Analytics、Microsoft Clarity、Meta 像素等）、保存期間，以及您如何拒絕追蹤或行使個資權利。">
+<meta property="og:url" content="https://www.cicacafe.com.tw/privacy/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#000000">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;800&family=Noto+Sans+TC:wght@300;400;500;700&display=swap"></noscript>
+
+<style>
+/* ==================================================================
+   CICACAFE VI tokens —— 品牌層（對齊官網線上實測值）
+   改用共用檔時換成================================================================== */
+:root{
+  --ink:#000;
+  --ink-80:#333;
+  --ink-60:#666;
+  --ink-40:#999;
+  --ink-20:#ccc;
+  --white:#fff;
+  --mist:#f7f8f8;
+  --fog:#efefef;
+  --f:'Alexandria','Noto Sans TC',-apple-system,'PingFang TC','Microsoft JhengHei',sans-serif;
+  --maxw:1120px;
+  --readw:720px;   /* 文章可讀寬 */
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scrollbar-gutter:stable}
+body{margin:0;background:var(--white);padding-top:64px;color:var(--ink);font-family:var(--f);
+     font-weight:400;font-size:16px;line-height:1.9;-webkit-font-smoothing:antialiased}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+.read{max-width:var(--readw);margin:0 auto}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-underline-offset:3px}
+
+h1,h2,h3{text-wrap:balance;margin:0}
+h1{font-weight:800;font-size:clamp(30px,5.2vw,54px);line-height:1.18}
+h2{font-weight:700;font-size:clamp(23px,3.6vw,34px);line-height:1.25}
+h3{font-weight:700;font-size:19px;line-height:1.35}
+p{margin:0 0 20px}
+.eyebrow{font-size:13px;letter-spacing:1.3px;text-transform:uppercase;color:var(--ink-40)}
+
+/* ---------- 導覽列：照 cicacafe.com.tw 線上 #nav 重建（見 nav-partial.html） ---------- */
+#nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;height:64px;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 clamp(20px,7vw,94px);
+  background:rgba(0,0,0,.92);
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+  border-bottom:1px solid #1a1a1a;
+}
+.nav-logo{height:26px;color:var(--white);transition:color .35s}
+.nav-menu{display:flex;align-items:center;gap:2rem}
+.nav-links{display:flex;gap:2rem;list-style:none;margin:0;padding:0}
+.nav-links a{font-size:13px;letter-spacing:.1em;color:var(--ink-40);text-decoration:none;transition:color .2s}
+.nav-links a:hover,.nav-links a[aria-current]{color:var(--white)}
+.nav-links a.nav-gift{color:#c2a04e}
+.nav-links a.nav-gift:hover{color:#e0c373}
+.nav-cta{font-size:11px;letter-spacing:.12em;padding:8px 20px;border:1px solid #444;
+         color:var(--ink-40);text-decoration:none;transition:.2s}
+.nav-cta:hover{border-color:var(--white);color:var(--white)}
+nav.light{background:rgba(255,255,255,.95);border-bottom:1px solid var(--fog)}
+nav.light .nav-logo{color:var(--ink)}
+nav.light .nav-links a{color:var(--ink-60)}
+nav.light .nav-links a:hover,nav.light .nav-links a[aria-current]{color:var(--ink)}
+nav.light .nav-cta{border-color:var(--ink);color:var(--ink)}
+nav.light .nav-shop{background:var(--ink);border-color:var(--ink);color:var(--white)}
+nav.light .nav-shop:hover{background:#333;border-color:#333;color:var(--white)}
+.nav-toggle{display:none;flex-direction:column;justify-content:center;gap:5px;
+            width:30px;height:30px;background:none;border:0;cursor:pointer;padding:0}
+.nav-toggle span{display:block;height:1px;width:100%;background:var(--white);transition:.25s}
+nav.light .nav-toggle span{background:var(--ink)}
+.nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+@media (max-width:860px){
+  .nav-toggle{display:flex}
+  .nav-menu{position:fixed;top:64px;left:0;right:0;flex-direction:column;align-items:flex-start;
+            gap:0;background:#000;border-bottom:1px solid #1a1a1a;padding:16px clamp(20px,7vw,94px) 26px;display:none}
+  nav.light .nav-menu{background:#fff;border-bottom:1px solid var(--fog)}
+  .nav-menu.open{display:flex}
+  .nav-links{flex-direction:column;gap:0;width:100%}
+  .nav-links a{display:block;padding:14px 0;font-size:15px}
+  .nav-cta{margin-top:14px}
+}
+.crumbs{font-size:12.5px;color:var(--ink-60);padding:18px 0 0}
+.crumbs a{color:var(--ink-60)}
+
+/* ---------- 文章頭 ---------- */
+.hero{margin:36px 0 0}
+.hero img{width:100%;height:auto;display:block;border-radius:2px;aspect-ratio:1200/630;object-fit:cover;filter:grayscale(1);transition:filter .6s ease}
+@media(hover:hover){.hero:hover img{filter:grayscale(0)}}
+@media(hover:none){.hero.in-view img{filter:grayscale(0)}}
+.articlehead{padding:56px 0 40px;border-bottom:1.5px solid var(--ink)}
+.articlehead h1{margin:14px 0 24px}
+.byline{display:flex;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--ink-40);
+        letter-spacing:1.3px;margin-top:28px}
+/* AEO 直答段：文章前段直接把答案講完 */
+.answer{font-size:17.5px;line-height:1.85;color:var(--ink-80);
+        border-left:2px solid var(--ink);padding-left:22px;margin:0}
+
+/* ---------- 目錄 ---------- */
+.toc{background:var(--mist);padding:28px 30px;margin:44px 0 0}
+.toc h2{font-size:13px;letter-spacing:1.3px;text-transform:uppercase;color:var(--ink-40);
+        font-weight:400;margin-bottom:14px}
+.toc ol{margin:0;padding-left:20px;font-size:15px;line-height:2}
+.toc a{color:var(--ink-80)}
+
+/* ---------- 文章主體 ---------- */
+article{padding:56px 0 0}
+article section{padding:48px 0 0;border:0}
+article h2{margin-bottom:18px;padding-top:12px}
+article h3{margin:32px 0 10px}
+article p{max-width:none}
+.lead{font-size:17px;color:var(--ink-80)}
+ul.plain{margin:0 0 22px;padding-left:20px}
+ul.plain li{margin-bottom:10px}
+.note{background:var(--mist);padding:22px 26px;margin:28px 0;font-size:15px;line-height:1.85}
+.note b{display:block;margin-bottom:6px}
+
+/* ---------- 表格 ---------- */
+.tablewrap{overflow-x:auto;border-top:1.5px solid var(--ink);margin:28px 0}
+table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:560px}
+th,td{text-align:left;padding:14px 16px 14px 0;border-bottom:1px solid var(--fog);
+      vertical-align:top;line-height:1.7}
+th{font-size:13px;letter-spacing:1.3px;text-transform:uppercase;color:var(--ink-40);font-weight:400}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+caption{caption-side:bottom;text-align:left;font-size:12.5px;color:var(--ink-60);padding-top:12px}
+
+/* ---------- 地雷清單 ---------- */
+ol.traps{list-style:none;counter-reset:t;padding:0;margin:28px 0 0;border-top:1.5px solid var(--ink)}
+ol.traps li{counter-increment:t;display:grid;grid-template-columns:38px 1fr;gap:0 18px;
+            padding:22px 0;border-bottom:1px solid var(--fog)}
+ol.traps li::before{content:counter(t,decimal-leading-zero);font-size:13px;letter-spacing:1.3px;
+                    color:var(--ink-40);padding-top:5px}
+ol.traps b{display:block;font-weight:700;font-size:17px;margin-bottom:6px}
+ol.traps span{color:var(--ink-60);font-size:15px;line-height:1.8}
+
+/* ---------- FAQ ---------- */
+.faq{border-top:1.5px solid var(--ink);margin-top:28px}
+.faq details{border-bottom:1px solid var(--fog)}
+.faq summary{padding:20px 0;font-size:16px;font-weight:500;cursor:pointer;list-style:none;
+             display:flex;justify-content:space-between;gap:18px;align-items:baseline}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"＋";color:var(--ink-40);font-size:15px}
+.faq details[open] summary::after{content:"−"}
+.faq .a{padding:0 0 22px;color:var(--ink-80);font-size:15px}
+.faq .a p{margin:0}
+
+/* ---------- 段末導流 ---------- */
+.cta-band{background:var(--ink);color:var(--white);margin-top:72px;padding:56px 0}
+.cta-band h2{margin-bottom:14px}
+.cta-band p{color:var(--ink-20);max-width:56ch}
+.cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px}
+.btn{display:inline-block;padding:14px 30px;font-size:13px;letter-spacing:1.04px;font-weight:500;
+     text-decoration:none;border:1px solid currentColor}
+.btn.primary{background:var(--white);color:var(--ink);border-color:var(--white)}
+a:focus-visible,summary:focus-visible{outline:2px solid var(--ink-60);outline-offset:3px}
+
+/* ---------- 延伸閱讀 ---------- */
+.related{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0;
+         border-top:1.5px solid var(--ink);margin-top:28px}
+.related a{display:block;padding:24px 24px 24px 0;border-bottom:1px solid var(--fog);text-decoration:none}
+.related a span{display:block;font-size:13px;letter-spacing:1.3px;color:var(--ink-40);
+                margin-bottom:8px;text-transform:uppercase}
+.related a b{font-weight:700;font-size:17px}
+.related a:hover b{text-decoration:underline}
+
+/* ---------- 站尾 ---------- */
+.sitefooter{background:var(--ink);color:var(--ink-40);padding:56px 0;font-size:13px;line-height:1.9}
+.sitefooter a{color:var(--white);text-decoration:none}
+.sitefooter a:hover{text-decoration:underline}
+.sitefooter .row{display:flex;gap:26px;flex-wrap:wrap;margin-bottom:18px;
+                 letter-spacing:1.3px;font-size:13px;text-transform:uppercase}
+
+@media (max-width:640px){
+  .wrap{padding:0 20px}
+  article section{padding-top:36px}
+  .toc{padding:22px 20px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+<style id="img-hint">:where(img[width][height]){height:auto}</style><script id="lny-dl">/* v2 2026-11-05：每次推送先把前一事件用過的參數設為 undefined，避免 GTM 資料層沿用舊值（例：faq_open 帶到上一筆 cta_text） */window.dataLayer=window.dataLayer||[];if(typeof window.gtag!=="function"){(function(){var K={};window.gtag=function(c,n,p){if(c==="event"){p=p||{};var o={event:n},k;for(k in K)o[k]=undefined;for(k in p){o[k]=p[k];K[k]=1}window.dataLayer.push(o)}}})()}</script><script id="late-3p">(function(){function go(){var d=document;var l=d.createElement('link');l.rel='stylesheet';l.href='https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;800&family=Noto+Sans+TC:wght@300;400;500;700&display=swap';d.head.appendChild(l);(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,d,'script','dataLayer','GTM-58HC86J3');var a=d.createElement('script');a.src='https://analytics.ahrefs.com/analytics.js';a.async=true;a.setAttribute('data-key','J2+gkobBeVGNdd7pKYKBZg');d.head.appendChild(a);}if(document.readyState==='complete'){setTimeout(go,0)}else{window.addEventListener('load',function(){setTimeout(go,0)})}})();</script><style id="navu-css">
+html{scrollbar-gutter:stable}
+#nav.cc-nav{position:fixed;top:0;left:0;right:0;z-index:1000;margin:0;width:auto;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 6vw;box-sizing:border-box;background:rgba(0,0,0,.92);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid #1a1a1a;transition:background .35s,border-color .35s;font-family:'Alexandria','Noto Sans TC',-apple-system,'PingFang TC','Microsoft JhengHei',sans-serif;line-height:1.6}
+#nav .cc-home{display:flex;align-items:center;line-height:0;text-decoration:none;border:0}
+#nav .cc-logo{display:block;height:26px;width:auto;color:#fff;transition:color .35s}
+#nav .cc-menu{display:flex;align-items:center;gap:2rem}
+#nav .cc-links{display:flex;gap:2rem;list-style:none;margin:0;padding:0}
+#nav .cc-links li{margin:0;padding:0;list-style:none}
+#nav .cc-links a{display:inline;padding:0;border:0;background:none;font-size:13px;font-weight:400;letter-spacing:.1em;line-height:1.6;color:#767676;text-decoration:none;transition:color .2s}
+#nav .cc-links a:hover,#nav .cc-links a[aria-current="page"]{color:#fff}
+#nav .cc-links a.cc-gift{color:#c2a04e}
+#nav .cc-links a.cc-gift:hover,#nav .cc-links a.cc-gift[aria-current="page"]{color:#e0c373}
+#nav .cc-shop{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.12em;line-height:1.6;padding:8px 20px;border:1px solid #fff;border-radius:0;background:#fff;color:#000;text-decoration:none;transition:all .2s}
+#nav .cc-shop:hover{background:#ccc;border-color:#ccc;color:#000}
+#nav .cc-tog{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:30px;height:30px;margin:0;padding:0;background:none;border:0;cursor:pointer}
+#nav .cc-tog span{display:block;width:22px;height:2px;background:#fff;transition:transform .3s ease,opacity .25s ease}
+#nav.light{background:rgba(255,255,255,.95);border-bottom-color:#efefef}
+#nav.light .cc-logo{color:#000}
+#nav.light .cc-links a{color:#666}
+#nav.light .cc-links a:hover{color:#000}
+#nav.light .cc-links a.cc-gift{color:#c2a04e}
+#nav.light .cc-shop{background:#000;border-color:#000;color:#fff}
+#nav.light .cc-shop:hover{background:#333;border-color:#333}
+#nav.light .cc-tog span{background:#000}
+.cc-nav-sp{height:64px}
+@media(max-width:900px){
+#nav .cc-tog{display:flex}
+#nav .cc-menu{position:absolute;top:64px;left:0;right:0;flex-direction:column;align-items:flex-start;gap:0;padding:8px 6vw 22px;background:#000;border-bottom:1px solid #1a1a1a;max-height:0;overflow:hidden;opacity:0;pointer-events:none;transition:max-height .35s ease,opacity .3s ease}
+#nav.light .cc-menu{background:#fff;border-bottom-color:#efefef}
+#nav.open .cc-menu{max-height:380px;opacity:1;pointer-events:auto}
+#nav .cc-links{flex-direction:column;gap:0;width:100%}
+#nav .cc-links a{display:block;padding:14px 0;font-size:15px}
+#nav .cc-shop{margin-top:14px}
+#nav.open .cc-tog span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+#nav.open .cc-tog span:nth-child(2){opacity:0}
+#nav.open .cc-tog span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+}
+</style><style id="pp-css">.pp-table th,.pp-table td{vertical-align:top}.pp-table td a{word-break:break-all}.read article h2{margin-top:44px}.read article ul{padding-left:1.3em}.read article li{margin:6px 0;line-height:1.85}</style></head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-58HC86J3" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- ============ 導覽列 ============
+     照 cicacafe.com.tw 線上的 nav#nav 重建，class 與樣式完全沿用現有的。
+     ★ 唯一要手動補的：把 index.html 裡的 <svg class="nav-logo">…</svg>
+       整段複製貼到下面標示的位置。
+     ★ 首頁的 #gift「節慶特展」已改指 /gift/「送禮專區」——詳見 nav-partial.html
+     ================================================ -->
+<!-- NAVU:START 全站統一導覽（scripts/navunify.py 產生，請勿手改） -->
+<nav id="nav" class="cc-nav" aria-label="主選單"><a class="cc-home" href="/" aria-label="CICACAFE 首頁"><svg class="cc-logo" viewBox="0 0 590.6 120" xmlns="http://www.w3.org/2000/svg" aria-label="CICACAFE" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTowZmQ1NmYwOC04NjFiLTQyNjQtOTBlZC1hMDVmMjcyNzE4MDgAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaFYkxW0knzmn1PFdYffMZboAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDpjNzZjMjA3ZC1mNzA1LTQwMDgtOGE2MS05ODE5MTgwN2Y5MGNscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNohXJdMb3e+dObj8hXbri2FgAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFgggJEYGV0vDHYrCUbXVcWiBdEGx8D3/3A3MLMETgQ6ThykZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaAUBtxXt4ZfuiexkHgVmUJwAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCDslHN6rcJ1d7HCunV0Q84rjRH0AW/ouirAEp6/Z8s/W2RuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBilZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjBmZDU2ZjA4LTg2MWItNDI2NC05MGVkLWEwNWYyNzI3MTgwOC9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjhkMTBkOGVlLWU3ZGUtNDUyNy05NDg5LTgzOWI2NjYyN2M3YnJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCCAkRgZXS8MdisJRtdVxaIF0QbHwPf/cDcwswROBDpOHKJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggck4P1K2JDIo0rLJLUQ07LlnL09i7y7oU9MQ5C82Jc5aiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggV8Szzt5iDDHy/fdrGEEkFPTcpF0+XkiKQwrR4Sp5t6F0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQEZob6WBt/ljdCJ56KYUZHng+SnR2WInp3d0EFkd86x3jiyhHfYQ7fV0kJ8vkQcfRwGKu1H95RwXrQjLjz4ohPs=</c2pa:manifest></metadata>
+    <g transform="translate(0,0) scale(0.21505)"><path d="M0,0 L42,0 L69,4 L92,10 L112,18 L128,26 L144,36 L158,47 L170,58 L177,65 L186,76 L199,94 L211,116 L220,136 L229,164 L235,191 L239,220 L240,232 L240,286 L237,315 L232,342 L225,367 L217,389 L206,412 L194,431 L185,443 L173,457 L163,467 L152,476 L135,488 L108,502 L88,509 L69,514 L51,517 L41,518 L1,518 L-16,516 L-21,513 L-22,509 L-17,504 L3,495 L22,484 L34,475 L47,464 L60,451 L71,437 L83,419 L93,401 L103,377 L110,355 L116,329 L120,301 L122,269 L122,249 L120,217 L116,189 L109,159 L100,133 L90,111 L77,89 L64,72 L52,59 L43,50 L29,39 L14,29 L-7,18 L-19,13 L-22,9 L-20,4 L-16,2 Z" fill="currentColor" transform="translate(226,20)"/><path d="M0,0 L23,0 L38,4 L54,12 L71,24 L86,37 L94,45 L103,56 L113,69 L122,84 L127,93 L126,95 L111,87 L97,83 L92,82 L65,82 L49,86 L33,94 L25,100 L20,104 L11,115 L2,130 L-5,147 L-11,167 L-15,188 L-18,220 L-18,264 L-15,296 L-9,325 L-2,345 L6,361 L15,374 L27,386 L38,393 L49,398 L65,402 L91,402 L108,398 L124,390 L127,389 L125,395 L113,415 L103,428 L94,438 L87,446 L75,457 L60,468 L45,477 L32,482 L22,484 L0,484 L-15,480 L-31,472 L-48,460 L-63,447 L-72,438 L-81,427 L-92,412 L-101,397 L-114,370 L-124,340 L-130,315 L-134,288 L-136,264 L-136,220 L-133,188 L-129,164 L-123,140 L-114,114 L-105,94 L-94,75 L-82,58 L-69,43 L-58,32 L-44,21 L-34,14 L-20,6 L-5,1 Z" fill="currentColor" transform="translate(156,37)"/></g>
+    <g transform="translate(150.52,25) scale(0.37838)"><path d="M0,0 L25,0 L42,4 L56,11 L69,22 L70,25 L53,41 L51,43 L48,43 L43,38 L34,32 L26,29 L20,28 L8,28 L-4,31 L-12,35 L-21,43 L-26,51 L-29,60 L-30,65 L-30,79 L-27,91 L-21,101 L-14,108 L-2,114 L5,116 L23,116 L35,112 L46,104 L50,101 L58,108 L70,119 L68,123 L58,132 L42,140 L27,144 L18,145 L7,145 L-7,143 L-22,138 L-33,132 L-43,124 L-51,115 L-59,100 L-63,86 L-64,77 L-64,67 L-61,50 L-56,38 L-49,27 L-37,15 L-24,7 L-6,1 Z" fill="currentColor" transform="translate(84,20)"/><path d="M0,0 L25,0 L42,4 L56,11 L67,20 L70,25 L54,40 L50,43 L46,41 L38,34 L26,29 L20,28 L8,28 L-4,31 L-12,35 L-22,44 L-28,56 L-30,64 L-30,80 L-26,93 L-20,102 L-19,105 L-15,107 L-5,113 L5,116 L22,116 L32,113 L41,108 L49,101 L55,105 L64,114 L70,119 L67,124 L59,131 L45,139 L32,143 L18,145 L7,145 L-7,143 L-20,139 L-35,131 L-48,119 L-57,105 L-62,91 L-64,78 L-64,66 L-61,50 L-56,38 L-49,27 L-42,19 L-31,11 L-19,5 L-6,1 Z" fill="currentColor" transform="translate(317,20)"/><path d="M0,0 L25,0 L41,4 L57,12 L67,20 L70,25 L54,40 L50,43 L46,41 L38,34 L26,29 L20,28 L8,28 L-4,31 L-14,36 L-22,44 L-28,56 L-30,64 L-30,80 L-26,93 L-19,104 L-11,110 L-3,114 L5,116 L22,116 L32,113 L41,108 L47,103 L48,101 L52,103 L60,110 L70,119 L67,124 L56,133 L42,140 L27,144 L18,145 L7,145 L-7,143 L-20,139 L-35,131 L-48,119 L-57,105 L-62,91 L-64,79 L-64,66 L-61,50 L-56,38 L-49,27 L-42,19 L-31,11 L-17,4 Z" fill="currentColor" transform="translate(633,20)"/><path d="M0,0 L33,0 L33,140 L0,140 Z" fill="currentColor" transform="translate(186,22)"/><path d="M0,0 L33,0 L50,38 L67,76 L80,105 L95,139 L95,140 L61,140 L51,117 L49,110 L-17,110 L-18,115 L-28,139 L-29,140 L-62,140 L-53,119 L-33,74 L-15,34 Z M16,32 L10,45 L-5,82 L-6,86 L38,86 L37,80 L21,42 L17,32 Z" fill="currentColor" transform="translate(460,22)"/><path d="M0,0 L33,0 L50,38 L70,83 L88,123 L95,140 L61,140 L56,129 L49,112 L49,110 L-17,110 L-20,120 L-28,139 L-29,140 L-62,140 L-53,119 L-33,74 L-15,34 Z M16,32 L10,45 L-6,84 L-6,86 L38,86 L37,81 L22,44 L17,32 Z" fill="currentColor" transform="translate(776,22)"/><path d="M0,0 L106,0 L106,26 L32,26 L32,63 L97,63 L97,89 L32,89 L32,140 L0,140 Z" fill="currentColor" transform="translate(896,22)"/><path d="M0,0 L106,0 L106,26 L32,26 L33,56 L98,57 L98,81 L97,82 L32,82 L32,114 L109,114 L109,140 L0,140 Z" fill="currentColor" transform="translate(1034,22)"/></g>
+  </svg></a><button class="cc-tog" type="button" aria-label="開啟選單" aria-expanded="false" aria-controls="cc-menu"><span></span><span></span><span></span></button><div class="cc-menu" id="cc-menu"><ul class="cc-links"><li><a href="/about/">品牌故事</a></li><li><a href="/beans/">咖啡作品</a></li><li><a href="/guide/" aria-current="page">風味指南</a></li><li><a href="/gift/" class="cc-gift">節慶特展</a></li><li><a href="/equipment.html">器材推薦</a></li></ul><a class="cc-shop" href="https://www.cicacafe.shop/" target="_blank" rel="noopener noreferrer">選購收藏</a></div></nav>
+<!-- NAVU:END -->
+
+<div class="wrap">
+  <nav class="crumbs" aria-label="麵包屑">
+    <a href="/">首頁</a> ／ 隱私權政策
+  </nav>
+</div>
+
+<div class="wrap">
+<div class="read">
+
+  <header class="articlehead">
+    <span class="eyebrow">CICACAFE・網站政策</span>
+    <h1>隱私權政策</h1>
+    <p class="answer">
+      CICACAFE 官網（www.cicacafe.com.tw）由<b>自家股份有限公司</b>經營。本頁說明我們在官網蒐集哪些資料、為什麼蒐集、怎麼使用，以及您可以怎麼拒絕追蹤或要求刪除資料。
+    </p>
+    <div class="byline">
+      <span>自家股份有限公司</span>
+      <span>生效日期：2026 年 11 月 7 日</span>
+    </div>
+  </header>
+
+  <article>
+<section id="scope"><h2>一、適用範圍</h2>
+<p>本政策適用於 CICACAFE 官網 www.cicacafe.com.tw。</p>
+<ul>
+<li>在 CICACAFE 線上商城（www.cicacafe.shop，由 SHOPLINE 平台提供）註冊會員、下單或付款時，另依線上商城頁面公告的隱私權政策處理。</li>
+<li>本站連到的其他網站，例如社群平台、合作品牌或其他品牌官網，不適用本政策，請參閱各網站自己的隱私權政策。</li>
+</ul>
+</section>
+
+<section id="collect"><h2>二、我們蒐集哪些資料</h2>
+<p><b>您主動提供的資料：</b>您透過 Email、電話或 LINE 官方帳號（@cicacafe）向我們詢價、預約或聯繫時，提供的姓名、公司名稱、聯絡方式與詢問內容。</p>
+<p><b>瀏覽時自動蒐集的資料：</b>透過 Cookie 與類似技術取得的裝置與瀏覽資訊，例如瀏覽的頁面、停留時間、點擊與捲動、來源網站、瀏覽器與裝置類型，以及由 IP 位址推估的概略地區。這些資料不包含您的姓名或聯絡方式，我們也不會用它來辨識您是誰。</p>
+</section>
+
+<section id="purpose"><h2>三、使用目的</h2>
+<ul>
+<li>回覆詢價，提供報價、訂購、出貨與售後服務。</li>
+<li>統計與分析網站使用情形，改善內容、版面與操作體驗。</li>
+<li>衡量廣告與行銷活動的成效。</li>
+<li>在 Facebook、Instagram 等平台，向曾造訪本站的訪客顯示相關的商品或活動資訊（再行銷廣告）。</li>
+</ul>
+</section>
+
+<section id="cookies"><h2>四、本站使用的 Cookie 與追蹤工具</h2>
+<p>本站透過 Google 代碼管理工具（Google Tag Manager）載入下列工具。這些工具由第三方提供，會依各自的隱私權政策處理資料。</p>
+<div class="tablewrap"><table class="pp-table"><thead><tr><th>工具</th><th>提供者</th><th>用途</th><th>如何拒絕或了解更多</th></tr></thead><tbody>
+<tr><td>Google Analytics 4</td><td>Google</td><td>網站流量與瀏覽行為統計</td><td>封鎖或刪除 Cookie，或安裝 <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics 停用外掛程式</a>；<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隱私權政策</a></td></tr>
+<tr><td>Microsoft Clarity</td><td>Microsoft</td><td>熱點圖與瀏覽過程重播，用來找出版面與操作上的問題</td><td>封鎖或刪除 Cookie；<a href="https://privacy.microsoft.com/" target="_blank" rel="noopener">Microsoft 隱私權聲明</a></td></tr>
+<tr><td>Ahrefs Web Analytics</td><td>Ahrefs</td><td>網站流量統計</td><td><a href="https://ahrefs.com/privacy" target="_blank" rel="noopener">Ahrefs 隱私權政策</a></td></tr>
+<tr><td>Meta 像素</td><td>Meta Platforms</td><td>衡量廣告成效，建立再行銷廣告受眾</td><td>在 <a href="https://www.facebook.com/adpreferences" target="_blank" rel="noopener">Facebook 廣告偏好設定</a>調整，或封鎖第三方 Cookie；<a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">Meta 隱私政策</a></td></tr>
+</tbody></table></div>
+<p>本站目前沒有提供線上表單，也不會透過上述工具蒐集您的姓名、Email 或電話。</p>
+</section>
+
+<section id="share"><h2>五、資料的分享與跨境傳輸</h2>
+<ul>
+<li>我們不會出售您的個人資料。</li>
+<li>除了上述工具的提供者、為完成出貨所需的物流業者，以及法律規定或司法、主管機關依法要求的情形外，我們不會將您的個人資料提供給第三人。</li>
+<li>上述工具的伺服器可能位於台灣以外的國家或地區，資料會在當地處理與保存。</li>
+</ul>
+</section>
+
+<section id="retention"><h2>六、保存期間</h2>
+<ul>
+<li>詢價與聯繫資料：在提供服務所需期間及法令規定的保存期間內保存，期滿後刪除或去識別化。</li>
+<li>瀏覽統計與廣告相關資料：依各工具的保存設定處理；例如 Meta 的網站再行銷受眾，最長保留 180 天。</li>
+</ul>
+</section>
+
+<section id="rights"><h2>七、您的權利</h2>
+<p>依《個人資料保護法》第 3 條，您可以就您的個人資料向我們請求：</p>
+<ul>
+<li>查詢或請求閱覽</li>
+<li>請求製給複製本</li>
+<li>請求補充或更正</li>
+<li>請求停止蒐集、處理或利用</li>
+<li>請求刪除</li>
+</ul>
+<p>請來信 <a href="mailto:service@cica.com.tw">service@cica.com.tw</a>，我們會在確認身分後盡快處理。您可以選擇不提供個人資料，這不影響瀏覽本站，但我們可能無法回覆您的詢價或提供服務。</p>
+</section>
+
+<section id="optout"><h2>八、如何拒絕追蹤</h2>
+<ul>
+<li>在瀏覽器設定中封鎖或刪除 Cookie，或使用無痕（私密）瀏覽模式。</li>
+<li>使用上方表格中各工具提供的停用方式。</li>
+<li>拒絕或刪除 Cookie 不影響瀏覽本站的主要內容。</li>
+</ul>
+</section>
+
+<section id="security"><h2>九、資料安全</h2>
+<p>本站全程使用 HTTPS 加密連線。我們會採取合理的管理與技術措施保護您提供的資料，並只讓處理相關業務的人員接觸。</p>
+</section>
+
+<section id="changes"><h2>十、政策修訂</h2>
+<p>本政策可能因法令或服務調整而修訂，修訂後會公告在本頁並更新生效日期。</p>
+</section>
+
+<section id="contact"><h2>十一、聯絡我們</h2>
+<p>自家股份有限公司（CICACAFE）<br>地址：新北市汐止區南陽街 201 號 2 樓<br>Email：<a href="mailto:service@cica.com.tw">service@cica.com.tw</a></p>
+</section>
+  </article>
+
+</div><!-- /.read -->
+</div><!-- /.wrap -->
+
+<!-- ============ 站尾 ============ -->
+<!-- SITEMAP:START 全站站內地圖（統一區塊，修改請改 scripts 或全站同步替換） -->
+<style>
+.cc-sm{position:static;display:block;height:auto;backdrop-filter:none;background:#f7f8f8;border-top:1px solid #efefef;padding:44px 6vw 36px;font-family:'Alexandria','Noto Sans TC',-apple-system,'PingFang TC','Microsoft JhengHei',sans-serif}
+.cc-sm-in{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:repeat(6,1fr);gap:24px}
+.cc-sm-h{font-size:12px;font-weight:700;letter-spacing:.12em;color:#000;margin:0 0 12px}
+.cc-sm-col a{display:block;font-size:13px;line-height:1.5;color:#666;text-decoration:none;padding:4px 0}
+.cc-sm-col a:hover{color:#000}
+@media(max-width:820px){.cc-sm-in{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:520px){.cc-sm-in{grid-template-columns:repeat(2,1fr);gap:20px 16px}}
+</style>
+<div class="cc-sm" role="navigation" aria-label="網站地圖"><div class="cc-sm-in"><div class="cc-sm-col"><p class="cc-sm-h">品牌</p><a href="/about/">品牌故事</a><a href="/beans/">咖啡作品</a><a href="https://www.cicacafe.shop/" target="_blank" rel="noopener noreferrer">選購收藏</a><a href="/privacy/">隱私權政策</a></div><div class="cc-sm-col"><p class="cc-sm-h">咖啡作品</p><a href="/series/galaxy/">銀河系列</a><a href="/series/city-life/">城市生活系列</a><a href="/series/botanical/">自然植物系列</a><a href="/series/myth/">人物神話系列</a><a href="/series/single-origin/">季節豆單</a></div><div class="cc-sm-col"><p class="cc-sm-h">風味指南</p><a href="/guide/">風味指南</a><a href="/guide/learn/">認識咖啡</a><a href="/guide/brewing/">沖煮</a><a href="/guide/choosing/">選購</a><a href="/guide/glossary/">咖啡字典</a></div><div class="cc-sm-col"><p class="cc-sm-h">節慶特展</p><a href="/gift/">節慶特展</a><a href="/gift/2026-mid-autumn/">2026 金獎中秋禮盒</a><a href="/mid-autumn.html">中秋禮盒</a><a href="/gift/corporate/">企業送禮</a><a href="/guide/gifting/">送禮指南</a></div><div class="cc-sm-col"><p class="cc-sm-h">器材推薦</p><a href="/equipment.html">器材推薦</a><a href="/laybird.html">LAYBIRD</a><a href="/sousik.html">SOU SIK</a></div><div class="cc-sm-col"><p class="cc-sm-h">關注我們</p><a href="https://line.me/R/ti/p/@cicacafe" target="_blank" rel="noopener noreferrer">LINE @cicacafe</a><a href="https://www.instagram.com/CICACAFE.TW" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://www.facebook.com/cicacafe.tw" target="_blank" rel="noopener noreferrer">Facebook</a></div></div></div>
+<!-- SITEMAP:END -->
+<footer class="sitefooter" style="margin-top:72px">
+  <div class="wrap">
+    <div class="row">
+      <a href="https://www.facebook.com/cicacafe.tw">Facebook</a>
+      <a href="https://www.instagram.com/CICACAFE.TW">Instagram</a>
+      <a href="https://www.cicacafe.shop/">線上商城</a>
+      <a href="https://www.cica.com.tw/">CICA Group</a>
+    </div>
+    <div>CICACAFE ／ 自家股份有限公司　新北市汐止區南陽街 201 號 2 樓</div>
+  </div>
+</footer>
+
+<!-- 手機漢堡選單（與 nav-partial.html 同一份） -->
+<script>
+(function(){
+  var btn=document.querySelector('.nav-toggle'), menu=document.getElementById('nav-menu');
+  if(!btn||!menu) return;
+  btn.addEventListener('click',function(){
+    var open=menu.classList.toggle('open');
+    btn.setAttribute('aria-expanded',open?'true':'false');
+    btn.setAttribute('aria-label',open?'關閉選單':'開啟選單');
+  });
+  menu.addEventListener('click',function(e){
+    if(e.target.tagName==='A'){menu.classList.remove('open');btn.setAttribute('aria-expanded','false');}
+  });
+})();
+</script>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.cicacafe.com.tw/#organization","name":"CICACAFE","alternateName":"自家股份有限公司","url":"https://www.cicacafe.com.tw/","email":"service@cica.com.tw"},{"@type":"WebPage","@id":"https://www.cicacafe.com.tw/privacy/#webpage","url":"https://www.cicacafe.com.tw/privacy/","name":"隱私權政策","inLanguage":"zh-Hant-TW","datePublished":"2026-11-07","dateModified":"2026-11-07","isPartOf":{"@id":"https://www.cicacafe.com.tw/#website"},"publisher":{"@id":"https://www.cicacafe.com.tw/#organization"},"breadcrumb":{"@id":"https://www.cicacafe.com.tw/privacy/#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://www.cicacafe.com.tw/privacy/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"首頁","item":"https://www.cicacafe.com.tw/"},{"@type":"ListItem","position":2,"name":"隱私權政策","item":"https://www.cicacafe.com.tw/privacy/"}]}]}</script>
+
+<!-- TYPO:START 字級與對比規範（電腦版≥901px：內文17px、次要15–17px、標籤12–13px；淺灰#767676） -->
+<style>
+:root{--ink-40:#767676}
+
+@media(min-width:901px){
+ .cc-sm{padding:56px 6vw 48px!important}
+ .cc-sm-h{font-size:15px!important;margin-bottom:16px!important}
+ .cc-sm-col a{font-size:16px!important;color:#555!important;padding:6px 0!important}
+ .cc-sm-col a:hover{color:#000!important}
+ .footer-copy,.footer-social a{font-size:14px;color:#9a9a9a}
+ .footer-copy a{border-color:#666}
+ .footer-social{gap:24px}
+ .footer-logo{height:24px;color:#9a9a9a}
+ .sitefooter a{font-size:15px}
+ .sitefooter div:last-child{font-size:14px;color:rgba(255,255,255,.62)}
+}
+
+@media(min-width:901px){
+ html body .articlehead span.eyebrow{font-size:15px!important}
+ html body .byline span{font-size:15px!important}
+ html body .tablewrap th{font-size:15px!important}
+ html body .tablewrap td{font-size:16px!important}
+ html body .note b{font-size:17px!important}
+ html body #s1 div.note{font-size:17px!important}
+ html body #s2 div.note{font-size:17px!important}
+ html body .tablewrap caption{font-size:13px!important}
+ html body .tablewrap th.num{font-size:15px!important}
+ html body .tablewrap td.num{font-size:16px!important}
+ html body .traps span{font-size:17px!important}
+ html body .tablewrap a{font-size:16px!important}
+ html body .a p{font-size:17px!important}
+ html body .a a{font-size:17px!important}
+ html body .cta a.btn.primary{font-size:15px!important}
+ html body .cta a.btn{font-size:15px!important}
+ html body .read span.eyebrow{font-size:15px!important}
+}
+</style>
+<!-- TYPO:END -->
+<script id="navu-js">(function(){var n=document.getElementById('nav');if(!n)return;var b=n.querySelector('.cc-tog'),m=document.getElementById('cc-menu');if(!b||!m)return;function set(o){n.classList.toggle('open',o);b.setAttribute('aria-expanded',o?'true':'false');b.setAttribute('aria-label',o?'關閉選單':'開啟選單')}b.addEventListener('click',function(e){e.stopPropagation();set(!n.classList.contains('open'))});m.addEventListener('click',function(e){if(e.target.closest('a'))set(false)});document.addEventListener('click',function(e){if(!n.contains(e.target))set(false)});document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false)})})();</script><script id="lny-track">/* 看完率與段落到達（v1 2026-11-04）：scroll_depth 25/50/75/100、section_view；每次載入各送一次，不含個資 */(function(){var P=document.documentElement.getAttribute('data-page')||'guide';function s(n,p){p=p||{};p.page_type=P;if(typeof window.gtag==='function'){window.gtag('event',n,p)}else{try{console.log('[GA4 預覽]',n,p)}catch(e){}}}var M=[25,50,75,100],D={},t;function sc(){var h=document.documentElement,mx=h.scrollHeight-window.innerHeight;if(mx<=0)return;var pc=window.scrollY/mx*100;for(var i=0;i<M.length;i++){if(!D[M[i]]&&pc>=M[i]-1){D[M[i]]=1;s('scroll_depth',{percent:M[i]})}}}window.addEventListener('scroll',function(){clearTimeout(t);t=setTimeout(sc,250)},{passive:true});if('IntersectionObserver' in window){var V={},io=new IntersectionObserver(function(es){es.forEach(function(e){var id=e.target.id;if(e.isIntersecting&&!V[id]){V[id]=1;s('section_view',{section:id});io.unobserve(e.target)}})},{rootMargin:'0px 0px -50% 0px',threshold:0});document.querySelectorAll('section[id]').forEach(function(el){io.observe(el)})}function sec(el){var x=el.closest('section[id],header,footer,nav');return x?(x.id||x.tagName.toLowerCase()):'body'}document.addEventListener('click',function(e){var a=e.target.closest('a[href]');if(!a)return;var h=a.getAttribute('href')||'',ps=sec(a);if(h.indexOf('/gift/lunar-new-year/corporate')>-1){s('corporate_click',{cta_position:ps})}else if(/\/gift\/lunar-new-year\/?$/.test(h)){s('cta_click',{cta_type:'b2c',cta_position:ps,cta_text:(a.textContent||'').trim().slice(0,40)})}else if(h.indexOf('cicacafe.shop')>-1){s('begin_checkout',{currency:'TWD',cta_position:ps})}else if(/line\.me|lin\.ee/.test(h)){s('line_click',{line_purpose:'guide',cta_position:ps})}else if(/^https?:/.test(h)&&h.indexOf('cicacafe.com.tw')<0){try{s('outbound_click',{link_domain:new URL(h).hostname,cta_position:ps})}catch(_){}}});document.querySelectorAll('details').forEach(function(d){var q0=d.querySelector('summary');if(q0)q0.addEventListener('click',function(){d.__u=1});d.addEventListener('toggle',function(){if(d.open&&d.__u){d.__u=0;var q=d.querySelector('summary');s('faq_open',{faq_question:q?q.textContent.trim().slice(0,80):''})}})});})();</script></body>
+</html>
