@@ -127,7 +127,36 @@ html{scrollbar-gutter:stable}
 #nav.open .cc-tog span:nth-child(2){opacity:0}
 #nav.open .cc-tog span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 }
-</style></head>
+</style><style id="trust-css">
+.tb{color:var(--ink,#000)}
+.tb-h{font-size:13px;letter-spacing:.16em;color:var(--ink-60,#666);margin:22px 0 10px}
+.tb-k{font-size:11px;letter-spacing:.2em;color:var(--ink-60,#666);margin:0 0 6px}
+.tb-h2{font-size:22px;font-weight:800;margin:0 0 18px}
+.tb-list{list-style:none;margin:0;padding:0;display:grid;gap:0;border-top:1px solid var(--fog,#e5e5e5)}
+.tb-list li{display:grid;grid-template-columns:64px 1fr;gap:12px;padding:10px 0;border-bottom:1px solid var(--fog,#e5e5e5);font-size:13.5px;line-height:1.7}
+.tb-list b{font-weight:700;letter-spacing:.04em}
+.tb-list span{color:var(--ink-80,#333)}
+.tb-list a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+.tb-links{display:flex;flex-wrap:wrap;gap:6px 16px;margin:10px 0 0;font-size:12.5px}
+.tb-links a{color:var(--ink,#000);text-decoration:underline;text-underline-offset:3px}
+.tb-compact{text-align:left;max-width:520px;margin:6px 0 22px}
+.tb-line{font-size:12px;letter-spacing:.08em;color:var(--ink-60,#666);margin:0 0 6px}
+.tb-more summary{display:inline-block;cursor:pointer;font-size:12px;letter-spacing:.16em;color:var(--ink,#000);border-bottom:1px solid currentColor;padding-bottom:1px;list-style:none}
+.tb-more summary::-webkit-details-marker{display:none}
+.tb-more summary::after{content:' +'}
+.tb-more[open] summary::after{content:' −'}
+.tb-more .tb-list{margin-top:12px}
+.lc-line{font-size:12px;line-height:1.8;letter-spacing:.04em;color:var(--ink-60,#666);margin:14px 0 0}
+.lc-line a{color:var(--ink,#000);text-decoration:underline;text-underline-offset:3px}
+.tb-compact .tb-list li{font-size:12.5px;padding:8px 0}
+.tb-sec{padding:56px 6vw;background:var(--mist,#f6f6f6)}
+.tb-wrap{max-width:1080px;margin:0 auto}
+.tb-full .tb-list{grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:0 28px;border-top:0}
+.tb-full .tb-list li{grid-template-columns:1fr;gap:4px;border-bottom:0;border-top:2px solid #000;padding:14px 0 0}
+mark.tb-todo{background:#ffe58a;color:#000;padding:0 3px}
+@media(max-width:680px){.tb-compact{margin-left:auto;margin-right:auto}.tb-sec{padding:40px 20px}}
+</style>
+</head>
 <body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-58HC86J3" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -192,6 +221,7 @@ html{scrollbar-gutter:stable}
   <div class="cta"><a class="primary" href="https://www.cicacafe.shop/categories/collectionscoffee-beans" target="_blank" rel="noopener noreferrer">前往選購</a><a class="ghost" href="/beans/">看全部咖啡作品</a></div>
 </div></div>
 <div class="brandband"><div class="wrap"><img src="/img/cicacafe-logo.png" alt="CICACAFE" width="449" height="321"></div></div>
+<!--TRUST:START--><section class="tb-sec" aria-label="購買保證"><div class="tb-wrap"><div class="tb tb-full"><p class="tb-k">BUY WITH CONFIDENCE</p><h2 class="tb-h2">購買保證</h2><ul class="tb-list"><li><b>運費</b><span>7-11／全家超商取貨 NT$65；新竹物流宅配 NT$120；滿 NT$1,500 免運（特價品與部分器材除外）</span></li><li><b>出貨</b><span>下單後約 3 個工作天內出貨，出貨後約 3–5 個工作天送達</span></li><li><b>新鮮度</b><span>包裝標示烘焙日期，有效期限 12 個月；建議未開封於烘焙後 8 個月內、開封後 1 個月內喝完；保存方式見<a href="/guide/how-to-store-coffee-beans/">〈咖啡豆怎麼保存〉</a></span></li><li><b>退換貨</b><span>商品瑕疵、寄錯或運送損壞，收到後聯繫客服並附照片即協助處理；咖啡屬食品，拆封後依法不適用七天解除權</span></li><li><b>付款</b><span>信用卡、Apple Pay、LINE Pay、ATM 轉帳、7-11／全家取貨付款</span></li></ul><p class="tb-links"><a href="https://www.cicacafe.shop/about/delivery-policy" target="_blank" rel="noopener noreferrer">運送說明</a><a href="https://www.cicacafe.shop/about/policy" target="_blank" rel="noopener noreferrer">退換貨政策</a><a href="https://line.me/R/ti/p/@cicacafe" target="_blank" rel="noopener noreferrer">LINE 客服 @cicacafe</a></p></div></div></section><!--TRUST:END-->
 <!-- SITEMAP:START 全站站內地圖（統一區塊，修改請改 scripts 或全站同步替換） -->
 <style>
 .cc-sm{position:static;display:block;height:auto;backdrop-filter:none;background:#f7f8f8;border-top:1px solid #efefef;padding:44px 6vw 36px;font-family:'Alexandria','Noto Sans TC',-apple-system,'PingFang TC','Microsoft JhengHei',sans-serif}

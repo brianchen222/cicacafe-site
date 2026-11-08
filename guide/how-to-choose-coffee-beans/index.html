@@ -165,7 +165,41 @@ html{scrollbar-gutter:stable}
 #nav.open .cc-tog span:nth-child(2){opacity:0}
 #nav.open .cc-tog span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 }
-</style></head>
+</style><style id="buy-css">
+.bp-price{font-size:14px;line-height:1.8;color:var(--ink-80,#333);margin:-4px 0 14px}
+.bp-price b{color:var(--ink,#000);font-weight:700}
+.bp-price small{display:block;font-size:12px;color:var(--ink-60,#666)}
+.bp-card{position:relative}
+.bp-card .bp-cover{position:absolute;inset:0;z-index:1}
+.bp-row{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:10px;margin:2px 0 12px;padding-top:12px;border-top:1px solid var(--fog,#e5e5e5)}
+.bp-row .bp-p{font-size:13px;line-height:1.5;color:var(--ink-60,#666)}
+.bp-row .bp-p b{display:block;font-size:15px;color:var(--ink,#000)}
+a.bp-buy{position:relative;z-index:2;flex:none;display:inline-block;padding:9px 16px;background:#000;color:#fff!important;border:1px solid #000;font-size:13px;letter-spacing:.06em;text-decoration:none;white-space:nowrap}
+a.bp-buy:hover{background:#fff;color:#000!important}
+a.bp-buy.ghost{background:#fff;color:#000!important}
+.beanpair .bp-pair{position:relative;display:flex;flex-direction:column;gap:6px;padding:20px 22px;border:1px solid var(--ink,#000);color:var(--ink,#000)}
+.beanpair .bp-pair:hover{background:var(--mist,#f4f4f4)}
+.beanpair a.bp-cover{position:absolute;inset:0;z-index:1;padding:0;border:0;background:none}
+.beanpair .bp-row{margin:6px 0 0}
+.beanpair a.bp-buy{display:inline-block;padding:8px 14px}
+.pick .bp-pick{margin:0;font-size:14px;color:var(--ink-80,#333)}
+.pick .bp-pick b{color:var(--ink,#000)}
+.pick .bp-acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.pick .bp-acts .pick-a{margin-top:0}
+.pick .bp-acts a.bp-buy{padding:11px 22px;font-size:14px}
+.bp-bar{display:none}
+@media(max-width:900px){
+ .bp-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;position:fixed;left:0;right:0;bottom:0;z-index:950;background:#000;color:#fff;padding:10px 16px calc(10px + env(safe-area-inset-bottom));transform:translateY(110%);transition:transform .3s ease;box-shadow:0 -4px 18px rgba(0,0,0,.18)}
+ .bp-bar.on{transform:none}
+ .bp-bar-t{min-width:0;line-height:1.35}
+ .bp-bar-t b{display:block;font-size:14px;letter-spacing:.04em}
+ .bp-bar-t span{display:block;font-size:12px;color:rgba(255,255,255,.75)}
+ .bp-bar a{flex:none;padding:10px 18px;background:#fff;color:#000;font-size:14px;font-weight:700;text-decoration:none;letter-spacing:.06em}
+ body.has-bp-bar{padding-bottom:72px}
+ .pick .bp-acts a{flex:1 1 100%;text-align:center}
+}
+</style>
+</head>
 <body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-58HC86J3" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -192,7 +226,8 @@ html{scrollbar-gutter:stable}
       <span class="pick-k">CICACAFE 推薦</span>
       <p class="pick-t">不知道從哪一支開始？先喝這支金獎作——<b>火星 MARS</b></p>
       <p class="pick-d">CICACAFE 首度參賽即奪 2024 ICT 義大利國際咖啡品鑑金獎，烏梅為主軸的深沉風味。想先喝一支被評審認證過的，從這裡開始。</p>
-      <a class="pick-a" href="/beans/mars.html">認識這支風味 →</a>
+      <p class="bp-pick"><b>咖啡豆 200g NT$580</b>（每杯約 NT$29）・<b>濾掛 NT$50／包</b></p>
+      <div class="bp-acts"><a class="pick-a" href="/beans/mars.html">認識這支風味 →</a><a class="bp-buy" href="https://www.cicacafe.shop/products/cicacafe-mars-house-blend-2024-gold-award-200g" target="_blank" rel="noopener noreferrer">直接選購 →</a></div>
     </aside>
     <div class="byline"><span>CICACAFE 風味指南</span><span>選購 · 咖啡豆</span></div>
   </header>
@@ -384,5 +419,6 @@ m.addEventListener('click',function(e){if(e.target.tagName==='A'){m.classList.re
 }
 </style>
 <!-- TYPO:END -->
-<script id="navu-js">(function(){var n=document.getElementById('nav');if(!n)return;var b=n.querySelector('.cc-tog'),m=document.getElementById('cc-menu');if(!b||!m)return;function set(o){n.classList.toggle('open',o);b.setAttribute('aria-expanded',o?'true':'false');b.setAttribute('aria-label',o?'關閉選單':'開啟選單')}b.addEventListener('click',function(e){e.stopPropagation();set(!n.classList.contains('open'))});m.addEventListener('click',function(e){if(e.target.closest('a'))set(false)});document.addEventListener('click',function(e){if(!n.contains(e.target))set(false)});document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false)})})();</script></body>
+<script id="navu-js">(function(){var n=document.getElementById('nav');if(!n)return;var b=n.querySelector('.cc-tog'),m=document.getElementById('cc-menu');if(!b||!m)return;function set(o){n.classList.toggle('open',o);b.setAttribute('aria-expanded',o?'true':'false');b.setAttribute('aria-label',o?'關閉選單':'開啟選單')}b.addEventListener('click',function(e){e.stopPropagation();set(!n.classList.contains('open'))});m.addEventListener('click',function(e){if(e.target.closest('a'))set(false)});document.addEventListener('click',function(e){if(!n.contains(e.target))set(false)});document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false)})})();</script>
+</body>
 </html>
