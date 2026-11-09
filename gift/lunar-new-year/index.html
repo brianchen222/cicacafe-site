@@ -1785,15 +1785,17 @@ document.querySelectorAll('.dm-dl').forEach(function(a){a.addEventListener('clic
 </script>
 <script id="lny-track">/* 看完率與段落到達（v1 2026-11-04）：scroll_depth 25/50/75/100、section_view；每次載入各送一次，不含個資 */(function(){var P=document.documentElement.getAttribute('data-page')||'lny_2027';function s(n,p){p=p||{};p.page_type=P;if(typeof window.gtag==='function'){window.gtag('event',n,p)}else{try{console.log('[GA4 預覽]',n,p)}catch(e){}}}var M=[25,50,75,100],D={},t;function sc(){var h=document.documentElement,mx=h.scrollHeight-window.innerHeight;if(mx<=0)return;var pc=window.scrollY/mx*100;for(var i=0;i<M.length;i++){if(!D[M[i]]&&pc>=M[i]-1){D[M[i]]=1;s('scroll_depth',{percent:M[i]})}}}window.addEventListener('scroll',function(){clearTimeout(t);t=setTimeout(sc,250)},{passive:true});if('IntersectionObserver' in window){var V={},io=new IntersectionObserver(function(es){es.forEach(function(e){var id=e.target.id;if(e.isIntersecting&&!V[id]){V[id]=1;s('section_view',{section:id});io.unobserve(e.target)}})},{rootMargin:'0px 0px -50% 0px',threshold:0});document.querySelectorAll('section[id]').forEach(function(el){io.observe(el)})}})();</script><script id="lny-revisit">/* 回訪提示（2026-11-07）：第 2 次以上造訪本頁、停留 8 秒後顯示；關閉後 3 天內不再出現；第一次來的人不顯示。事件：return_prompt_view；點按鈕走全站 line_click（line_purpose 依連結判斷）＋ return_prompt_click */
 (function(){
-  var K='cc_lny_visits',KX='cc_lny_tip_closed',n=0,closed=0;
-  try{n=(parseInt(localStorage.getItem(K),10)||0)+1;localStorage.setItem(K,String(n));closed=parseInt(localStorage.getItem(KX),10)||0}catch(e){return}
-  if(n<2||(closed&&Date.now()-closed<3*864e5))return;
+  /* v2（2026-11-09）：改成「每次造訪」才計 1 次——距上次看本頁超過 30 分鐘才算新造訪（同 GA4 工作階段概念），重新整理／返回不再累加；同一個分頁工作階段只跳一次提示 */
+  var K='cc_lny_visits',KT='cc_lny_last',KX='cc_lny_tip_closed',KS='cc_lny_tip_shown',n=0,closed=0,now=Date.now();
+  try{var last=parseInt(localStorage.getItem(KT),10)||0;n=parseInt(localStorage.getItem(K),10)||0;if(!last||now-last>18e5){n++;localStorage.setItem(K,String(n))}localStorage.setItem(KT,String(now));closed=parseInt(localStorage.getItem(KX),10)||0;if(sessionStorage.getItem(KS))return}catch(e){return}
+  if(n<2||(closed&&now-closed<3*864e5))return;
   function ev(name,p){p=p||{};p.page_type='lny_2027';if(typeof window.gtag==='function')window.gtag('event',name,p)}
   setTimeout(function(){
     var sale=document.body.getAttribute('data-phase')==='sale';
     var d=document.createElement('div');d.className='rv-tip';d.setAttribute('role','dialog');d.setAttribute('aria-label','開賣提醒');
     d.innerHTML='<button class="rv-x" type="button" aria-label="關閉">×</button><b>'+(sale?'還在比較嗎？':'歡迎回來！')+'</b>'+(sale?'超早鳥價 NT$1,280 只到 1/10。加 LINE，截止前提醒你一次。':'豐饒慶賀 11/10 開賣。加 LINE，開賣當天第一時間通知你。')+'<br><a class="rv-go" href="https://line.me/R/ti/p/@cicacafe" target="_blank" rel="noopener">加 LINE 收提醒</a>';
     document.body.appendChild(d);requestAnimationFrame(function(){d.classList.add('on')});
+    try{sessionStorage.setItem(KS,'1')}catch(e){}
     ev('return_prompt_view',{visit_count:n,phase:sale?'sale':'teaser'});
     d.querySelector('.rv-x').addEventListener('click',function(){d.remove();try{localStorage.setItem(KX,String(Date.now()))}catch(e){}});
     d.querySelector('.rv-go').addEventListener('click',function(){ev('return_prompt_click',{visit_count:n});try{localStorage.setItem(KX,String(Date.now()))}catch(e){}setTimeout(function(){d.remove()},300)});
