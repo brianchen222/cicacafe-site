@@ -1625,7 +1625,7 @@ details.more{margin-top:0}
 </section>
 
 <section class="offseason" id="offseason" hidden>
-  <div class="wrap"><p>2027 年節禮盒已結束訂購，2027 年 11 月見。</p></div>
+  <div class="wrap"><p id="offseasonMsg"></p></div>
 </section>
 
 <footer class="sitefooter">
@@ -1754,6 +1754,8 @@ if(matchMedia('(max-width:760px)').matches){
             {end:'9999-12-31',p:'1,680',t:'',off:'',until:'',next:'',meta:'本檔期訂購已截止'}];
  var d=new Date(Date.now()+8*3600e3).toISOString().slice(0,10),T=tiers.filter(function(x){return d<=x.end})[0];
  function $(i){return document.getElementById(i)}
+ /* 1/25 最後訂購日過後才顯示檔期結束橫幅；文字由這裡寫入，平常不出現在 HTML 原始碼，避免被 AI／搜尋引擎讀成「已結束」 */
+ if(!T.t&&$('offseason')){$('offseasonMsg').textContent='2027 年節禮盒已結束訂購，2027 年 11 月見。';$('offseason').hidden=false}
  if(!$('prNow'))return;
  $('prNow').textContent=T.p;
  var meta=$('prTier').parentNode;
